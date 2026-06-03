@@ -1,29 +1,41 @@
 ---
-import RevealLayout from '../layouts/RevealLayout.astro';
+import RevealLayout from "../layouts/RevealLayout.astro";
 // Acá se importan los componentes de diapositiva (slides)
 // EJEMPLO: import Slide01_Intro from '../components/slides/Slide01_Intro.astro';
 ---
 
 <RevealLayout>
-	<div class="reveal">
-		<div class="slides">
-			<!-- Ejemplo de slide inicial. Reemplaza esto con los componentes -->
-			<section>
-				<h1>Título de la presentación</h1>
-				<p>Las diapositivas funcionan como componentes Astro.</p>
-			</section>
-			
-			<section>
-				<h2>Estructura Recomendada</h2>
-				<ul>
-					<li><code>src/components/slides/</code> - Para diapositivas</li>
-					<li><code>src/components/ui/</code> - Para componentes reutilizables</li>
-					<li><code>src/layouts/RevealLayout.astro</code> - La configuración base</li>
-				</ul>
-			</section>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Ejemplo de slide inicial. Reemplaza esto con los componentes -->
+            <section>
+                <h3>Título de la presentación</h3>
+                <p>
+                    <small
+                        >Las diapositivas funcionan como componentes Astro</small>
+                </p>
+            </section>
 
-			<!-- EJEMPLO: -->
-			<!-- <Slide01_Intro /> -->
-		</div>
-	</div>
+            <section>
+                <h3>Estructura Recomendada</h3>
+                <ul>
+                    <small>
+                        <li>
+                            <code>src/components/slides/</code> - Para diapositivas
+                        </li>
+                        <li>
+                            <code>src/components/ui/</code> - Para componentes reutilizables
+                        </li>
+                        <li>
+                            <code>src/layouts/RevealLayout.astro</code> - La configuración
+                            base
+                        </li>
+                    </small>
+                </ul>
+            </section>
+
+            <!-- EJEMPLO: -->
+            <!-- <Slide01_Intro /> -->
+        </div>
+    </div>
 </RevealLayout>

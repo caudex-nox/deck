@@ -19,6 +19,9 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		<!-- Botón Home -->
 		<button class="home-btn" id="homeBtn" style="display: none;">Inicio</button>
 
+		<!-- Botón Fullscreen -->
+		<button id="fullscreenBtn" class="fullscreen-btn">Fullscreen</button>
+
 		<!-- Botones navegación -->
 		<div class="nav-overlay">
 			<button id="prevBtn">◀</button>
@@ -38,10 +41,27 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 				});
 
 				const homeBtn = document.getElementById('homeBtn');
+				const fullscreenBtn = document.getElementById('fullscreenBtn');
 
 				const updateHomeBtnVisibility = () => {
 					if (homeBtn) {
 						homeBtn.style.display = deck.isLastSlide() ? 'block' : 'none';
+					}
+				};
+
+				const toggleFullscreen = () => {
+					if (!document.fullscreenElement) {
+						document.documentElement.requestFullscreen();
+					} else {
+						if (document.exitFullscreen) {
+							document.exitFullscreen();
+						}
+					}
+				};
+
+				const updateFullscreenBtn = () => {
+					if (fullscreenBtn) {
+						fullscreenBtn.textContent = document.fullscreenElement ? 'Windowed' : 'Fullscreen';
 					}
 				};
 
@@ -52,6 +72,9 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 					document.getElementById('prevBtn')?.addEventListener('click', () => deck.prev());
 					document.getElementById('nextBtn')?.addEventListener('click', () => deck.next());
 					homeBtn?.addEventListener('click', () => deck.slide(0));
+
+					fullscreenBtn?.addEventListener('click', toggleFullscreen);
+					document.addEventListener('fullscreenchange', updateFullscreenBtn);
 
 					deck.on('slidechanged', updateHomeBtnVisibility);
 				});
@@ -80,6 +103,7 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		right: 0;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		transform: translateY(-50%);
 		pointer-events: none;
 		padding: 0 20px;
@@ -88,26 +112,51 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 
 	.nav-overlay button {
 		pointer-events: auto;
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.15);
 		color: #fff;
 		border: none;
-		width: 24px;
-		height: 24px;
 		border-radius: 6px;
 		cursor: pointer;
 		font-weight: bold;
-		font-size: 10px; 
-		transition: background 0.3s ease;
+		transition: background 0.3s ease, opacity 0.3s ease;
+		user-select: none;
+		line-height: 1;
+		opacity: 0.4;
+	}
+
+	#prevBtn, #nextBtn {
+		width: 24px;
+		height: 24px;
+		font-size: 10px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		line-height: 1;
 		padding: 0;
-		user-select: none; /* Evita que se seleccione el texto */
 	}
 
-	.nav-overlay button:hover {
+	.fullscreen-btn {
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: rgba(0, 0, 0, 0.05);
+		color: #fff;
+		border: none;
+		border-radius: 6px;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 9px;
+		padding: 6px 10px;
+		opacity: 0.2;
+		z-index: 1001;
+		transition: background 0.3s ease, opacity 0.3s ease;
+		user-select: none;
+		line-height: 1;
+	}
+
+	.fullscreen-btn:hover, .nav-overlay button:hover, .home-btn:hover {
 		background: rgba(0, 0, 0, 0.8);
+		opacity: 1;
 	}
 
 	/* Botón Home */
@@ -116,7 +165,7 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		top: 20px;
 		left: 50%;
 		transform: translateX(-50%);
-		background: rgba(0, 0, 0, 0.5);
+		background: rgba(0, 0, 0, 0.15);
 		color: #fff;
 		border: none;
 		padding: 7px 12px;
@@ -125,13 +174,10 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		font-weight: bold;
 		font-size: 10px;
 		z-index: 1001;
-		transition: background 0.3s ease;
+		transition: background 0.3s ease, opacity 0.3s ease;
 		line-height: 1;
-		user-select: none; /* Evita que se seleccione el texto */
-	}
-
-	.home-btn:hover {
-		background: rgba(0, 0, 0, 0.8);
+		user-select: none;
+		opacity: 0.4;
 	}
 
 	.reveal .progress {
