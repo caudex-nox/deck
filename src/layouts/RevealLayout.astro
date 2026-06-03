@@ -1,0 +1,45 @@
+---
+import 'reveal.js/reveal.css';
+import 'reveal.js/theme/black.css'; // Tema por defecto, se puede cambiar
+---
+
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Desk</title>
+	</head>
+	<body>
+		<slot />
+		
+		<script>
+			import Reveal from 'reveal.js';
+			
+			// Inicializar Reveal.js una vez que el DOM esté listo
+			document.addEventListener('DOMContentLoaded', () => {
+				Reveal.initialize({
+					controls: true,
+					progress: true,
+					center: true,
+					hash: true,
+				});
+			});
+		</script>
+	</body>
+</html>
+
+<style is:global>
+	/* Esto asegura que la presentación ocupe toda la pantalla */
+	html,
+	body {
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+</style>
