@@ -1,6 +1,6 @@
 ---
 import 'reveal.js/reveal.css';
-import 'reveal.js/theme/black.css'; // Tema por defecto, se puede cambiar
+import 'reveal.js/theme/black.css'; // Tema por defecto
 ---
 
 <!doctype html>
@@ -11,21 +11,49 @@ import 'reveal.js/theme/black.css'; // Tema por defecto, se puede cambiar
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Desk</title>
+		<title>Deck</title>
 	</head>
 	<body>
 		<slot />
+
+		<!-- Botón Home -->
+		<button class="home-btn" id="homeBtn" style="display: none;">Inicio</button>
+
+		<!-- Botones navegación -->
+		<div class="nav-overlay">
+			<button id="prevBtn">◀</button>
+			<button id="nextBtn">▶</button>
+		</div>
 		
 		<script>
 			import Reveal from 'reveal.js';
 			
-			// Inicializar Reveal.js una vez que el DOM esté listo
 			document.addEventListener('DOMContentLoaded', () => {
-				Reveal.initialize({
-					controls: true,
+				const deck = new Reveal({
+					controls: false,
 					progress: true,
 					center: true,
 					hash: true,
+					transition: 'slide'
+				});
+
+				const homeBtn = document.getElementById('homeBtn');
+
+				const updateHomeBtnVisibility = () => {
+					if (homeBtn) {
+						homeBtn.style.display = deck.isLastSlide() ? 'block' : 'none';
+					}
+				};
+
+				deck.initialize().then(() => {
+					updateHomeBtnVisibility();
+
+					// Eventos de botones
+					document.getElementById('prevBtn')?.addEventListener('click', () => deck.prev());
+					document.getElementById('nextBtn')?.addEventListener('click', () => deck.next());
+					homeBtn?.addEventListener('click', () => deck.slide(0));
+
+					deck.on('slidechanged', updateHomeBtnVisibility);
 				});
 			});
 		</script>
@@ -41,5 +69,78 @@ import 'reveal.js/theme/black.css'; // Tema por defecto, se puede cambiar
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
+		background: #000;
+	}
+
+	/* Botones superpuestos */
+	.nav-overlay {
+		position: fixed;
+		top: 50%;
+		left: 0;
+		right: 0;
+		display: flex;
+		justify-content: space-between;
+		transform: translateY(-50%);
+		pointer-events: none;
+		padding: 0 20px;
+		z-index: 1000;
+	}
+
+	.nav-overlay button {
+		pointer-events: auto;
+		background: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		border: none;
+		width: 24px;
+		height: 24px;
+		border-radius: 6px;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 10px; 
+		transition: background 0.3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		line-height: 1;
+		padding: 0;
+		user-select: none; /* Evita que se seleccione el texto */
+	}
+
+	.nav-overlay button:hover {
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	/* Botón Home */
+	.home-btn {
+		position: fixed;
+		top: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		background: rgba(0, 0, 0, 0.5);
+		color: #fff;
+		border: none;
+		padding: 7px 12px;
+		border-radius: 6px;
+		cursor: pointer;
+		font-weight: bold;
+		font-size: 10px;
+		z-index: 1001;
+		transition: background 0.3s ease;
+		line-height: 1;
+		user-select: none; /* Evita que se seleccione el texto */
+	}
+
+	.home-btn:hover {
+		background: rgba(0, 0, 0, 0.8);
+	}
+
+	.reveal .progress {
+		height: 6px;
+		background: rgba(255, 255, 255, 0.1);
+	}
+
+	.reveal .progress span {
+		background: rgba(255, 255, 255, 0.6);
+		transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
 	}
 </style>
