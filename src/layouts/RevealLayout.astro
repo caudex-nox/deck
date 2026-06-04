@@ -1,6 +1,5 @@
 ---
 import 'reveal.js/reveal.css';
-import 'reveal.js/theme/black.css'; // Tema por defecto
 import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 ---
 
@@ -11,6 +10,7 @@ import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
 		<meta name="generator" content={Astro.generator} />
 		<title>Deck</title>
 	</head>
@@ -45,9 +45,15 @@ import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 				const deck = new Reveal({
 					controls: false,
 					progress: false,
-					center: true,
+					center: false,
 					hash: false,
-					transition: 'slide'
+					transition: 'slide',
+					transitionSpeed: 'fast',
+					width: '100%',
+					height: '100%',
+					margin: 0,
+					minScale: 1,
+					maxScale: 1
 				});
 
 				const homeBtn = document.getElementById('homeBtn');
@@ -131,7 +137,47 @@ import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 		width: 100%;
 		height: 100%;
 		overflow: hidden;
-		background: #000;
+		background-color: #121212;
+	}
+
+	.reveal {
+		background-color: #121212;
+	}
+
+	.reveal .slides {
+		inset: 0 !important;
+		width: 100% !important;
+		height: 100% !important;
+	}
+
+	.reveal .slides section {
+		padding: 0;
+		backface-visibility: hidden;
+		width: 100% !important;
+		height: 100% !important;
+		min-height: 100% !important;
+	}
+
+	/* Estilos específicos para diapositivas de plantilla/default */
+	.default-slide {
+		display: flex !important;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+		color: #ffffff;
+		font-family: 'Inter', sans-serif;
+	}
+
+	.default-slide ul {
+		list-style-position: inside;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+	}
+
+	.default-slide li {
+		list-style-type: disc;
 	}
 
 	/* Botones superpuestos */

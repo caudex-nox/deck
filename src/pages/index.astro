@@ -5,34 +5,34 @@ import RevealLayout from "../layouts/RevealLayout.astro";
 ---
 
 <RevealLayout>
-    <div class="reveal">
-        <div class="slides">
-            <!-- Ejemplo de slide inicial. Reemplaza esto con los componentes -->
-            <section>
-                <h3>Título de la presentación</h3>
-                <p>
-                    <small
-                        >Las diapositivas funcionan como componentes Astro</small>
-                </p>
-            </section>
+  <div class="reveal">
+    <div class="slides">
+      <!-- Ejemplo de slide inicial. Reemplaza esto con los componentes -->
+      <section class="default-slide">
+        <h2>Título de la presentación</h2>
+        <p>
+          <small>Las diapositivas funcionan como componentes Astro</small>
+        </p>
+      </section>
 
-            <section>
-                <h3>Estructura Recomendada</h3>
-                <ul>
-                    <small>
-                        <li>
-                            <code>src/components/slides/</code> - Para diapositivas
-                        </li>
-                        <li>
-                            <code>src/components/ui/</code> - Para componentes reutilizables
-                        </li>
-                        <li>
-                            <code>src/layouts/RevealLayout.astro</code> - La configuración
-                            base
-                        </li>
-                    </small>
-                </ul>
-            </section>
+      <section class="default-slide">
+        <h2>Estructura Recomendada</h2>
+        <ul>
+          <li>
+            <code>src/components/slides/</code>
+            <small>- Para diapositivas</small>
+          </li>
+          <li>
+            <code>src/components/ui/</code>
+            <small>- Para componentes reutilizables</small>
+          </li>
+          <li>
+            <code>src/layouts/RevealLayout.astro</code>
+            <small>- La configuración</small>
+            base
+          </li>
+        </ul>
+      </section>
 
             <!-- EJEMPLO: -->
             <!-- <Slide01_Intro /> -->
