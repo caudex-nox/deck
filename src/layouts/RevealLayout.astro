@@ -150,10 +150,14 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		border-radius: 6px;
 		cursor: pointer;
 		font-weight: bold;
-		transition: background 0.3s ease, opacity 0.3s ease;
+		transition: background 0.3s ease, opacity 0.3s ease, transform 0.1s ease;
 		user-select: none;
 		line-height: 1;
 		opacity: 0.4;
+	}
+
+	.nav-overlay button:active {
+		transform: scale(0.85);
 	}
 
 	#prevBtn, #nextBtn {
@@ -180,9 +184,13 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		padding: 6px 10px;
 		opacity: 0.2;
 		z-index: 1001;
-		transition: background 0.3s ease, opacity 0.3s ease;
+		transition: background 0.3s ease, opacity 0.3s ease, transform 0.1s ease;
 		user-select: none;
 		line-height: 1;
+	}
+
+	.fullscreen-btn:active {
+		transform: scale(0.95);
 	}
 
 	.fullscreen-btn:hover, .nav-overlay button:hover, .home-btn:hover {
@@ -205,10 +213,14 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		font-weight: bold;
 		font-size: 10px;
 		z-index: 1001;
-		transition: background 0.3s ease, opacity 0.3s ease;
+		transition: background 0.3s ease, opacity 0.3s ease, transform 0.1s ease;
 		line-height: 1;
 		user-select: none;
 		opacity: 0.4;
+	}
+
+	.home-btn:active {
+		transform: translateX(-50%) scale(0.95);
 	}
 
 	/* Paginación por puntos */
@@ -228,8 +240,12 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		height: 6px;
 		border-radius: 50%;
 		background: rgba(255, 255, 255, 0.2);
-		transition: background 0.3s ease, transform 0.3s ease;
+		transition: background 0.3s ease, transform 0.2s ease;
 		pointer-events: auto;
+	}
+
+	.dot:active {
+		transform: scale(0.7);
 	}
 
 	.dot.active {
