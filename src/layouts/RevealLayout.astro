@@ -1,6 +1,7 @@
 ---
 import 'reveal.js/reveal.css';
 import 'reveal.js/theme/black.css'; // Tema por defecto
+import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 ---
 
 <!doctype html>
@@ -17,18 +18,24 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		<slot />
 
 		<!-- Botón Home -->
-		<button class="home-btn" id="homeBtn" style="display: none;">Inicio</button>
+		<button class="home-btn" id="homeBtn" style="display: none;">
+			<House size={16} stroke-width={2.5} />
+		</button>
 
 		<!-- Botón Fullscreen -->
-		<button id="fullscreenBtn" class="fullscreen-btn">Fullscreen</button>
+		<button id="fullscreenBtn" class="fullscreen-btn">Pantalla completa</button>
 
 		<!-- Paginación por puntos -->
 		<div class="pagination-dots" id="paginationDots"></div>
 
 		<!-- Botones navegación -->
 		<div class="nav-overlay">
-			<button id="prevBtn">◀</button>
-			<button id="nextBtn">▶</button>
+			<button id="prevBtn">
+				<ChevronLeft size={16} stroke-width={2.5} />
+			</button>
+			<button id="nextBtn">
+				<ChevronRight size={16} stroke-width={2.5} />
+			</button>
 		</div>
 		
 		<script>
@@ -89,7 +96,7 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 
 				const updateFullscreenBtn = () => {
 					if (fullscreenBtn) {
-						fullscreenBtn.textContent = document.fullscreenElement ? 'Windowed' : 'Fullscreen';
+						fullscreenBtn.textContent = document.fullscreenElement ? 'Minimizar' : 'Pantalla completa';
 					}
 				};
 
