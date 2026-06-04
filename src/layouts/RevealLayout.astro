@@ -22,6 +22,9 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		<!-- Botón Fullscreen -->
 		<button id="fullscreenBtn" class="fullscreen-btn">Fullscreen</button>
 
+		<!-- Paginación por puntos -->
+		<div class="pagination-dots" id="paginationDots"></div>
+
 		<!-- Botones navegación -->
 		<div class="nav-overlay">
 			<button id="prevBtn">◀</button>
@@ -34,7 +37,7 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 			document.addEventListener('DOMContentLoaded', () => {
 				const deck = new Reveal({
 					controls: false,
-					progress: true,
+					progress: false,
 					center: true,
 					hash: true,
 					transition: 'slide'
@@ -42,10 +45,35 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 
 				const homeBtn = document.getElementById('homeBtn');
 				const fullscreenBtn = document.getElementById('fullscreenBtn');
+				const paginationDots = document.getElementById('paginationDots');
 
 				const updateHomeBtnVisibility = () => {
 					if (homeBtn) {
 						homeBtn.style.display = deck.isLastSlide() ? 'block' : 'none';
+					}
+				};
+
+				const updatePagination = () => {
+					if (!paginationDots) return;
+					
+					const slides = deck.getHorizontalSlides();
+					const totalSlides = slides.length;
+					const currentSlide = deck.getIndices().h;
+					
+					paginationDots.innerHTML = '';
+					for (let i = 0; i < totalSlides; i++) {
+						const dot = document.createElement('div');
+						dot.classList.add('dot');
+						dot.style.cursor = 'pointer';
+						if (i === currentSlide) {
+							dot.classList.add('active');
+						}
+						
+						dot.addEventListener('click', () => {
+							deck.slide(i);
+						});
+
+						paginationDots.appendChild(dot);
 					}
 				};
 
@@ -67,6 +95,7 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 
 				deck.initialize().then(() => {
 					updateHomeBtnVisibility();
+					updatePagination();
 
 					// Eventos de botones
 					document.getElementById('prevBtn')?.addEventListener('click', () => deck.prev());
@@ -76,7 +105,10 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 					fullscreenBtn?.addEventListener('click', toggleFullscreen);
 					document.addEventListener('fullscreenchange', updateFullscreenBtn);
 
-					deck.on('slidechanged', updateHomeBtnVisibility);
+					deck.on('slidechanged', () => {
+						updateHomeBtnVisibility();
+						updatePagination();
+					});
 				});
 			});
 		</script>
@@ -136,10 +168,9 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 
 	.fullscreen-btn {
 		position: fixed;
-		bottom: 20px;
-		left: 50%;
-		transform: translateX(-50%);
-		background: rgba(0, 0, 0, 0.05);
+		bottom: 12px;
+		right: 12px;
+		background: rgba(255, 255, 255, 0.05);
 		color: #fff;
 		border: none;
 		border-radius: 6px;
@@ -155,7 +186,7 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 	}
 
 	.fullscreen-btn:hover, .nav-overlay button:hover, .home-btn:hover {
-		background: rgba(0, 0, 0, 0.8);
+		background: rgba(255, 255, 255, 0.2);
 		opacity: 1;
 	}
 
@@ -180,13 +211,35 @@ import 'reveal.js/theme/black.css'; // Tema por defecto
 		opacity: 0.4;
 	}
 
-	.reveal .progress {
-		height: 6px;
-		background: rgba(255, 255, 255, 0.1);
+	/* Paginación por puntos */
+	.pagination-dots {
+		position: fixed;
+		bottom: 20px;
+		left: 50%;
+		transform: translateX(-50%);
+		display: flex;
+		gap: 8px;
+		z-index: 1000;
+		pointer-events: none;
 	}
 
-	.reveal .progress span {
-		background: rgba(255, 255, 255, 0.6);
-		transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+	.dot {
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		background: rgba(255, 255, 255, 0.2);
+		transition: background 0.3s ease, transform 0.3s ease;
+		pointer-events: auto;
+	}
+
+	.dot.active {
+		background: rgba(255, 255, 255, 0.9);
+		box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+		animation: pulse 2s infinite ease-in-out;
+	}
+
+	@keyframes pulse {
+		0%, 100% { opacity: 0.6; transform: scale(1); }
+		50% { opacity: 1; transform: scale(1.1); }
 	}
 </style>
