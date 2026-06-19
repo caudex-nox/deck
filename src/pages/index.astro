@@ -2,13 +2,31 @@
 import RevealLayout from "../layouts/RevealLayout.astro";
 // Acá se importan los componentes de diapositiva (slides)
 // EJEMPLO: import Slide01_Intro from '../components/slides/Slide01_Intro.astro';
+import Slide01 from "../components/slides/Slide01.astro";
+import Slide02 from "../components/slides/Slide02.astro";
+import Slide03 from "../components/slides/Slide03.astro";
+import Slide04 from "../components/slides/Slide04.astro";
+import Slide05 from "../components/slides/Slide05.astro";
+import Slide06 from "../components/slides/Slide06.astro";
+import Slide07 from "../components/slides/Slide07.astro";
+import Slide08 from "../components/slides/Slide08.astro";
+import Slide09 from "../components/slides/Slide09.astro";
+import Slide10 from "../components/slides/Slide10.astro";
+import Slide11 from "../components/slides/Slide11.astro";
+import Slide12 from "../components/slides/Slide12.astro";
+import Slide13 from "../components/slides/Slide13.astro";
+import Slide14 from "../components/slides/Slide14.astro";
+import Slide15 from "../components/slides/Slide15.astro";
+import Slide16 from "../components/slides/Slide16.astro";
+import Slide17 from "../components/slides/Slide17.astro";
 ---
 
 <RevealLayout>
   <div class="reveal">
     <div class="slides">
       <!-- Ejemplo de slide inicial. Reemplaza esto con los componentes -->
-      <section class="default-slide">
+      {
+        /* <section class="default-slide">
         <h2>Título de la presentación</h2>
         <p>
           <small>Las diapositivas funcionan como componentes Astro</small>
@@ -32,10 +50,29 @@ import RevealLayout from "../layouts/RevealLayout.astro";
             base
           </li>
         </ul>
-      </section>
+      </section> */
+      }
 
-            <!-- EJEMPLO: -->
-            <!-- <Slide01_Intro /> -->
-        </div>
+      <Slide01 />
+      <Slide02 />
+      <Slide03 />
+      {/* <Slide04 /> */}
+      <Slide05 />
+      <Slide06 />
+      {/* <Slide07 /> */}
+      <Slide08 />
+      <Slide09 />
+      <Slide10 />
+      <Slide11 />
+      <Slide12 />
+      <Slide13 />
+      <Slide14 />
+      <Slide15 />
+      <Slide16 />
+      <Slide17 />
+
+      <!-- EJEMPLO: -->
+      <!-- <Slide01_Intro /> -->
     </div>
+  </div>
 </RevealLayout>
