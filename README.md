@@ -1,4 +1,6 @@
-# DECK: Presentación interactiva
+<p align="center">
+  <img src="public/deck.svg" width="200" alt="Deck">
+</p>
 
 Este proyecto es una plantilla para crear presentaciones dinámicas utilizando **Astro** y **Reveal.js**. Permite desarrollar diapositivas como componentes individuales de Astro, facilitando la modularidad, el uso de componentes UI reutilizables y la integración con otras tecnologías web.
 
