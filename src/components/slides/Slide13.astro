@@ -1,44 +1,61 @@
 ---
 ---
 <section>
-    <div class="slide-content bg-background text-on-surface font-body-lg antialiased selection:bg-glow-cyan selection:text-background">
-        <div class="h-full w-full flex">
-            <!-- Izquierda: Imagen + Overlay -->
-            <div class="w-1/2 h-full relative overflow-hidden border-r border-border-subtle bg-surface-container-lowest">
-                <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/images/slide_remote_work.webp');"></div>
-                <div class="absolute inset-0 bg-gradient-to-r from-transparent via-background/40 to-background"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40"></div>
-                <div class="relative z-10 flex flex-col justify-center h-full px-stack-lg">
-                    <span class="font-mono-data text-label-caps text-glow-cyan block mb-stack-sm">NUEVO PARADIGMA</span>
-                    <h2 class="font-headline-lg text-headline-lg text-inverse-surface mb-stack-sm leading-tight">Trabajo sin<br/>Fronteras</h2>
-                </div>
-            </div>
-            
-            <!-- Derecha: Tarjetas de Contenido -->
-            <div class="w-1/2 h-full flex flex-col justify-center px-stack-lg bg-surface">
-                <div class="flex items-center justify-between mb-stack-lg border-b border-border-subtle pb-stack-sm">
-                    <span class="font-mono-data text-mono-data text-glow-cyan">WORK_EVOLUTION</span>
-                </div>
-                <div class="flex flex-col gap-stack-lg">
-                    <!-- Equipos Distribuidos -->
-                    <div class="flex items-start gap-stack-md">
-                        <span class="material-symbols-outlined text-[36px] text-glow-cyan">distance</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface mb-1">Equipos Distribuidos</h3>
-                            <p class="font-body-md text-text-muted">Colaboración remota y asincrónica con mercados globales.</p>
-                        </div>
-                    </div>
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-                    <!-- Integración de IA -->
-                    <div class="flex items-start gap-stack-md border-t border-border-subtle pt-stack-lg">
-                        <span class="material-symbols-outlined text-[36px] text-glow-cyan">assistant</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface mb-1">Productividad con IA</h3>
-                            <p class="font-body-md text-text-muted">Uso diario de copilotos de código para acelerar el desarrollo.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      <!-- Gradiente de fondo suave -->
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 80% 50% at 50% 100%, rgba(255,247,205,0.05) 0%, transparent 60%);"></div>
+
+      <!-- Número de slide (superior derecho) -->
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">13 / 15</div>
+
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px; display:grid; grid-template-columns:1fr 1fr; gap:56px; align-items:center;">
+
+        <!-- Izquierda: Texto principal -->
+        <div>
+          <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 16px 0;">Oportunidad de Mercado</p>
+          <h2 style="font-size:44px; font-weight:800; color:#FFF7CD; margin:0 0 24px 0; line-height:1.1; letter-spacing:-0.02em;">La ventana de<br/><span style="color:#FAF0B5;">oportunidad</span></h2>
+          <p style="font-size:15px; color:#a79f8e; line-height:1.65; margin:0 0 28px 0;">El encarecimiento de soluciones extranjeras y la aceleración de la digitalización crean un mercado natural para el software local de calidad.</p>
+
+          <!-- Cita clave -->
+          <div style="padding:20px 22px; border-left:3px solid #FFF7CD; background:rgba(255,247,205,0.05);">
+            <p style="font-size:14px; color:#FFF7CD; font-style:italic; margin:0; line-height:1.6;">"+6 de cada 10 PyMEs proyectan incorporar tecnología para reducir costos y elevar productividad"</p>
+            <p style="font-size:11px; color:#a79f8e; margin:8px 0 0 0;">— Encuestas sector empresarial argentino 2026</p>
+          </div>
         </div>
+
+        <!-- Derecha: KPIs del sector -->
+        <div style="display:flex; flex-direction:column; gap:8px;">
+
+          <div style="padding:22px 24px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25);">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+              <div style="font-size:42px; font-weight:900; color:#FFF7CD; line-height:1;">$10B</div>
+              <div style="font-size:11px; color:#FAF0B5; font-weight:600; letter-spacing:0.1em;">USD</div>
+            </div>
+            <div style="font-size:13px; color:#FFF7CD; font-weight:500; margin-bottom:4px;">Exportaciones de software argentino</div>
+            <div style="font-size:12px; color:#a79f8e;">Economía del conocimiento · Récord 2026</div>
+          </div>
+
+          <div style="padding:22px 24px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15);">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+              <div style="font-size:42px; font-weight:900; color:#FFF7CD; line-height:1;">79%</div>
+              <div style="font-size:11px; color:#FAF0B5; font-weight:600; letter-spacing:0.1em;">IT</div>
+            </div>
+            <div style="font-size:13px; color:#FFF7CD; font-weight:500; margin-bottom:4px;">Empresas IT operan en modalidad remota</div>
+            <div style="font-size:12px; color:#a79f8e;">CESSI · Observatorio OPSSI · 2026</div>
+          </div>
+
+          <div style="padding:22px 24px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1);">
+            <div style="display:flex; justify-content:space-between; align-items:baseline; margin-bottom:8px;">
+              <div style="font-size:42px; font-weight:900; color:#FAF0B5; line-height:1;">40%</div>
+              <div style="font-size:11px; color:#a79f8e; font-weight:600; letter-spacing:0.1em;">PyMEs</div>
+            </div>
+            <div style="font-size:13px; color:#a79f8e; font-weight:500; margin-bottom:4px;">Usan IA en sus procesos</div>
+            <div style="font-size:12px; color:#a79f8e;">Unidiversidad · 2026</div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

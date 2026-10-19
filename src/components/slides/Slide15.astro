@@ -1,50 +1,41 @@
 ---
 ---
 <section>
-    <div class="slide-content bg-background text-on-surface font-body-lg antialiased selection:bg-glow-cyan selection:text-background">
-        <div class="h-full w-full flex">
-            <!-- Izquierda: Contenido y Desafíos -->
-            <div class="w-1/2 h-full flex flex-col justify-center px-stack-lg bg-surface">
-                <div class="flex items-center gap-2 mb-stack-sm text-error">
-                    <span class="material-symbols-outlined text-[24px]">warning</span>
-                    <span class="font-mono-data text-label-caps tracking-[0.15em]">EL OBSTÁCULO PRINCIPAL</span>
-                </div>
-                <h2 class="font-headline-lg text-headline-lg text-inverse-surface mb-stack-lg border-l-2 border-error pl-stack-md">Retención de<br/>Talento</h2>
-                
-                <div class="flex flex-col gap-stack-md">
-                    <div class="flex items-center gap-stack-md bg-surface-container-low border border-border-subtle p-stack-sm w-full max-w-[420px]">
-                        <span class="material-symbols-outlined text-error text-[28px]">currency_exchange</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface text-sm">Competencia Cambiaria</h3>
-                            <p class="font-body-sm text-text-muted">Ofertas directas del exterior en USD.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-stack-md bg-surface-container-low border border-border-subtle p-stack-sm w-full max-w-[420px]">
-                        <span class="material-symbols-outlined text-error text-[28px]">flight_takeoff</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface text-sm">Fuga de Seniors</h3>
-                            <p class="font-body-sm text-text-muted">Pérdida de mentores y líderes técnicos.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-center gap-stack-md bg-surface-container-low border border-border-subtle p-stack-sm w-full max-w-[420px]">
-                        <span class="material-symbols-outlined text-error text-[28px]">corporate_fare</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface text-sm">Vulnerabilidad PyME</h3>
-                            <p class="font-body-sm text-text-muted">Mayor rotación y dificultad para competir.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Derecha: Imagen de Impacto -->
-            <div class="w-1/2 h-full relative overflow-hidden border-l border-border-subtle bg-surface-container-lowest">
-                <div class="absolute inset-0 bg-cover bg-center opacity-60" style="background-image: url('/images/slide_challenge.webp');"></div>
-                <div class="absolute inset-0 bg-gradient-to-l from-transparent via-background/40 to-background"></div>
-                <div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/40"></div>
-                <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="font-mono-data text-label-caps text-error border border-error/40 bg-background/80 px-4 py-2 shadow-[0_0_15px_rgba(255,0,0,0.15)]">COMPETITIVE_ALERT</span>
-                </div>
-            </div>
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+
+      <!-- Fondo: radial sutil en amarillo claro tirando a blanco -->
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 65% 65% at 50% 50%, rgba(255,247,205,0.06) 0%, transparent 65%);"></div>
+      
+      <!-- Bordes luminosos -->
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
+      <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
+
+      <!-- Número de slide (superior derecho) -->
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">15 / 15</div>
+
+      <div style="position:relative; z-index:10; text-align:center; max-width:700px; padding:0 48px;">
+
+        <!-- Logo mark -->
+        <div style="width:64px; height:64px; border:2px solid rgba(255,247,205,0.4); display:flex; align-items:center; justify-content:center; margin:0 auto 28px; background:rgba(255,247,205,0.06);">
+          <span style="font-size:28px; font-weight:900; color:#FFF7CD; letter-spacing:-0.05em;">C</span>
         </div>
+
+        <h1 style="font-size:64px; font-weight:900; color:#FFF7CD; margin:0 0 8px 0; letter-spacing:-0.04em; line-height:1;">CAUDEX</h1>
+        <div style="width:80px; height:3px; background:linear-gradient(to right, #FFF7CD, #FAF0B5); margin:0 auto 24px; border-radius:2px;"></div>
+
+        <p style="font-size:18px; color:#a79f8e; margin:0 0 40px 0; line-height:1.5;">Construimos el software que Argentina necesita.<br/>Sin licencias extranjeras. Sin burocracia.</p>
+
+        <!-- Links / contacto -->
+        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+          <div style="padding:10px 20px; border:1px solid rgba(255,247,205,0.3); background:rgba(255,247,205,0.05);">
+            <span style="font-size:12px; color:#FFF7CD; font-family:'JetBrains Mono',monospace; letter-spacing:0.05em;">github.com/caudex-nox</span>
+          </div>
+          <div style="padding:10px 20px; border:1px solid rgba(255,255,255,0.08); background:rgba(255,255,255,0.02);">
+            <span style="font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace; letter-spacing:0.05em;">Santa Fe, Argentina · 2026</span>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

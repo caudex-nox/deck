@@ -1,18 +1,39 @@
 ---
 ---
 <section>
-    <div class="slide-content bg-background text-on-surface font-body-lg antialiased selection:bg-glow-cyan selection:text-background">
-        <div class="h-full w-full flex items-center justify-center relative overflow-hidden snap-start bg-surface-container-lowest">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-            <!-- Original Content -->
-            <div class="absolute inset-0 opacity-20 bg-cover bg-center blur-[1px]" style="background-image: url('/images/slide01-bg.webp');"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-surface-container-lowest"></div>
-            <div class="relative z-10 text-center max-w-container-max px-gutter">
-                <div class="w-24 h-1 bg-glow-cyan mx-auto mb-stack-lg shadow-[0_0_15px_rgba(0,240,255,0.5)]"></div>
-                <h1 class="font-headline-xl text-headline-xl text-inverse-surface mb-stack-md tracking-tight">Industria del Software en<br/><span class="text-glow-cyan"> Argentina</span></h1>
-                <p class="font-headline-md text-headline-md text-text-muted font-light">RELEVAMIENTOS & PERSPECTIVAS • 2026</p>
-            </div>
+      <!-- Fondo: gradiente radial suave en amarillo claro -->
+      <div style="position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 20% 50%, rgba(255,247,205,0.08) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 80% 80%, rgba(255,247,205,0.04) 0%, transparent 60%);"></div>
+
+      <!-- Línea decorativa vertical izquierda -->
+      <div style="position:absolute; left:0; top:0; width:4px; height:100%; background: linear-gradient(to bottom, transparent, #FFF7CD, transparent);"></div>
+
+      <!-- Número de slide (superior derecho) -->
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">01 / 15</div>
+
+      <!-- Contenido -->
+      <div style="position:relative; z-index:10; display:flex; flex-direction:column; align-items:flex-start; max-width:900px; width:100%; padding:0 80px;">
+
+        <!-- Label superior -->
+        <div style="display:flex; align-items:center; gap:12px; margin-bottom:32px;">
+          <div style="width:32px; height:2px; background:#FFF7CD;"></div>
+          <span style="font-size:11px; letter-spacing:0.25em; color:#FFF7CD; font-weight:600; text-transform:uppercase;">Plan de Negocios · 2026</span>
         </div>
-    </div>
-</section>
 
+        <!-- Título principal -->
+        <h1 style="font-size:72px; font-weight:900; color:#FFF7CD; line-height:1; margin:0 0 8px 0; letter-spacing:-0.03em;">CAUDEX</h1>
+        <div style="width:80px; height:4px; background: linear-gradient(to right, #FFF7CD, #FAF0B5); margin-bottom:24px; border-radius:2px;"></div>
+        <p style="font-size:22px; font-weight:400; color:#a79f8e; margin:0 0 48px 0; line-height:1.4; max-width:520px;">Software a medida para la transformación digital de Argentina</p>
+
+        <!-- Tags de productos -->
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <span style="padding:8px 18px; border:1px solid rgba(255,247,205,0.4); color:#FFF7CD; font-size:13px; font-weight:600; letter-spacing:0.05em; background:rgba(255,247,205,0.06);">KANON</span>
+          <span style="padding:8px 18px; border:1px solid rgba(255,247,205,0.4); color:#FFF7CD; font-size:13px; font-weight:600; letter-spacing:0.05em; background:rgba(255,247,205,0.06);">ORESTES</span>
+          <span style="padding:8px 18px; border:1px solid rgba(255,247,205,0.4); color:#FFF7CD; font-size:13px; font-weight:600; letter-spacing:0.05em; background:rgba(255,247,205,0.06);">DECK</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,7 +1,5 @@
 ---
 import RevealLayout from "../layouts/RevealLayout.astro";
-// Acá se importan los componentes de diapositiva (slides)
-// EJEMPLO: import Slide01_Intro from '../components/slides/Slide01_Intro.astro';
 import Slide01 from "../components/slides/Slide01.astro";
 import Slide02 from "../components/slides/Slide02.astro";
 import Slide03 from "../components/slides/Slide03.astro";
@@ -17,49 +15,18 @@ import Slide12 from "../components/slides/Slide12.astro";
 import Slide13 from "../components/slides/Slide13.astro";
 import Slide14 from "../components/slides/Slide14.astro";
 import Slide15 from "../components/slides/Slide15.astro";
-import Slide16 from "../components/slides/Slide16.astro";
-import Slide17 from "../components/slides/Slide17.astro";
 ---
 
 <RevealLayout>
   <div class="reveal">
     <div class="slides">
-      <!-- Ejemplo de slide inicial. Reemplaza esto con los componentes -->
-      {
-        /* <section class="default-slide">
-        <h2>Título de la presentación</h2>
-        <p>
-          <small>Las diapositivas funcionan como componentes Astro</small>
-        </p>
-      </section>
-
-      <section class="default-slide">
-        <h2>Estructura Recomendada</h2>
-        <ul>
-          <li>
-            <code>src/components/slides/</code>
-            <small>- Para diapositivas</small>
-          </li>
-          <li>
-            <code>src/components/ui/</code>
-            <small>- Para componentes reutilizables</small>
-          </li>
-          <li>
-            <code>src/layouts/RevealLayout.astro</code>
-            <small>- La configuración</small>
-            base
-          </li>
-        </ul>
-      </section> */
-      }
-
       <Slide01 />
       <Slide02 />
       <Slide03 />
-      {/* <Slide04 /> */}
+      <Slide04 />
       <Slide05 />
       <Slide06 />
-      {/* <Slide07 /> */}
+      <Slide07 />
       <Slide08 />
       <Slide09 />
       <Slide10 />
@@ -68,11 +35,6 @@ import Slide17 from "../components/slides/Slide17.astro";
       <Slide13 />
       <Slide14 />
       <Slide15 />
-      <Slide16 />
-      <Slide17 />
-
-      <!-- EJEMPLO: -->
-      <!-- <Slide01_Intro /> -->
     </div>
   </div>
 </RevealLayout>

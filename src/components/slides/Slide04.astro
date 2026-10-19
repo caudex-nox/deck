@@ -1,81 +1,58 @@
 ---
 ---
 <section>
-    <div class="slide-content bg-background text-on-surface font-body-lg antialiased selection:bg-glow-cyan selection:text-background">
-        <div class="h-full w-full flex items-center justify-center relative overflow-hidden snap-start bg-surface">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-surface-container-low via-surface to-surface"></div>
-            <div class="max-w-container-max w-full px-gutter relative z-10 flex flex-col h-full justify-center">
-                <div class="flex items-center justify-between mb-stack-lg border-b border-border-subtle pb-stack-sm">
-                    <h2 class="font-headline-lg text-headline-lg text-inverse-surface">Líderes Nacionales</h2>
-                    <span class="font-mono-data text-mono-data text-glow-cyan">MARKET_OVERVIEW</span>
-                </div>
-                <div class="overflow-x-auto bg-surface-container-lowest border border-border-subtle p-stack-sm">
-                    <table class="w-full text-table-sm">
-                        <thead>
-                            <tr>
-                                <th class="p-stack-sm font-mono-data text-label-caps">Empresa</th>
-                                <th class="p-stack-sm font-mono-data text-label-caps">Tipo</th>
-                                <th class="p-stack-sm font-mono-data text-label-caps">Servicios</th>
-                                <th class="p-stack-sm font-mono-data text-label-caps">Mercado</th>
-                                <th class="p-stack-sm font-mono-data text-label-caps">Empleados</th>
-                                <th class="p-stack-sm font-mono-data text-label-caps">Tecnologías</th>
-                            </tr>
-                        </thead>
-                        <tbody class="font-mono-data">
-                            <tr class="hover:bg-surface-container-low transition-colors">
-                                <td class="p-stack-sm text-inverse-surface">Globant</td>
-                                <td class="p-stack-sm">Servicios IT</td>
-                                <td class="p-stack-sm">Desarrollo a medida, Consultoría</td>
-                                <td class="p-stack-sm">Global</td>
-                                <td class="p-stack-sm">&gt; 30k</td>
-                                <td class="p-stack-sm">IA, Cloud, Ciberseguridad</td>
-                            </tr>
-                            <tr class="hover:bg-surface-container-low transition-colors">
-                                <td class="p-stack-sm text-inverse-surface">Mercado Libre</td>
-                                <td class="p-stack-sm">Producto / Plataforma</td>
-                                <td class="p-stack-sm">E-commerce, Fintech</td>
-                                <td class="p-stack-sm">LATAM</td>
-                                <td class="p-stack-sm">&gt; 80k</td>
-                                <td class="p-stack-sm">Big Data, Cloud, IA</td>
-                            </tr>
-                            <tr class="hover:bg-surface-container-low transition-colors">
-                                <td class="p-stack-sm text-inverse-surface">Accenture</td>
-                                <td class="p-stack-sm">Consultoría Global</td>
-                                <td class="p-stack-sm">Estrategia, Digital, Operaciones</td>
-                                <td class="p-stack-sm">Global</td>
-                                <td class="p-stack-sm">&gt; 15k (Arg)</td>
-                                <td class="p-stack-sm">SAP, Salesforce, Cloud</td>
-                            </tr>
-                            <tr class="hover:bg-surface-container-low transition-colors">
-                                <td class="p-stack-sm text-inverse-surface">Baufest</td>
-                                <td class="p-stack-sm">Servicios IT</td>
-                                <td class="p-stack-sm">Desarrollo, Innovación</td>
-                                <td class="p-stack-sm">Regional / Global</td>
-                                <td class="p-stack-sm">&gt; 900</td>
-                                <td class="p-stack-sm">Java, .NET, Cloud</td>
-                            </tr>
-                            <tr class="hover:bg-surface-container-low transition-colors">
-                                <td class="p-stack-sm text-inverse-surface">Santex</td>
-                                <td class="p-stack-sm">Software Factory</td>
-                                <td class="p-stack-sm">Web, Mobile, IA</td>
-                                <td class="p-stack-sm">Global</td>
-                                <td class="p-stack-sm">&gt; 700</td>
-                                <td class="p-stack-sm">React, Node, IA</td>
-                            </tr>
-                            <tr class="hover:bg-surface-container-low transition-colors border-b-0">
-                                <td class="p-stack-sm text-inverse-surface">Endava</td>
-                                <td class="p-stack-sm">Servicios IT</td>
-                                <td class="p-stack-sm">Ingeniería, Pagos, Media</td>
-                                <td class="p-stack-sm">Global</td>
-                                <td class="p-stack-sm">&gt; 1k (Arg)</td>
-                                <td class="p-stack-sm">Arquitectura, Cloud, Agile</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+      <div style="position:absolute; left:0; top:0; width:50%; height:100%; background:linear-gradient(to right, rgba(255,247,205,0.03) 0%, transparent 100%);"></div>
+
+      <!-- Número de slide (superior derecho) -->
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">04 / 15</div>
+
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+
+        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 16px 0;">Nuestros Productos</p>
+        <h2 style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 36px 0; letter-spacing:-0.02em;">Tres soluciones.<br/><span style="color:#FAF0B5;">Un ecosistema.</span></h2>
+
+        <!-- 3 productos en fila -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+
+          <!-- Kanon -->
+          <div style="padding:28px 24px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.3); position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #FFF7CD, #FAF0B5);"></div>
+            <div style="font-size:13px; font-family:'JetBrains Mono',monospace; color:#FFF7CD; letter-spacing:0.1em; margin-bottom:12px;">kanon.app</div>
+            <h3 style="font-size:24px; font-weight:800; color:#FFF7CD; margin:0 0 10px 0;">Kanon</h3>
+            <p style="font-size:13px; color:#a79f8e; line-height:1.55; margin:0 0 16px 0;">Control de inventario y activos para instituciones educativas</p>
+            <div style="padding:6px 10px; background:rgba(255,247,205,0.08); display:inline-block; border:1px solid rgba(255,247,205,0.15);">
+              <span style="font-size:11px; color:#FFF7CD; font-weight:600;">Colegios · ETP · Stock</span>
             </div>
-        </div>
-    </div>
-</section>
+          </div>
 
+          <!-- Orestes -->
+          <div style="padding:28px 24px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:rgba(255,247,205,0.3);"></div>
+            <div style="font-size:13px; font-family:'JetBrains Mono',monospace; color:rgba(255,247,205,0.7); letter-spacing:0.1em; margin-bottom:12px;">orestes.app</div>
+            <h3 style="font-size:24px; font-weight:800; color:#FFF7CD; margin:0 0 10px 0;">Orestes</h3>
+            <p style="font-size:13px; color:#a79f8e; line-height:1.55; margin:0 0 16px 0;">Plataforma fullstack de gestión de datos para PyMEs</p>
+            <div style="padding:6px 10px; background:rgba(255,255,255,0.04); display:inline-block; border:1px solid rgba(255,255,255,0.08);">
+              <span style="font-size:11px; color:#a79f8e; font-weight:600;">React · Express · PostgreSQL</span>
+            </div>
+          </div>
+
+          <!-- Deck -->
+          <div style="padding:28px 24px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06); position:relative; overflow:hidden;">
+            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:rgba(255,255,255,0.1);"></div>
+            <div style="font-size:13px; font-family:'JetBrains Mono',monospace; color:rgba(255,247,205,0.5); letter-spacing:0.1em; margin-bottom:12px;">deck.app</div>
+            <h3 style="font-size:24px; font-weight:800; color:#FFF7CD; margin:0 0 10px 0;">Deck</h3>
+            <p style="font-size:13px; color:#a79f8e; line-height:1.55; margin:0 0 16px 0;">Presentaciones dinámicas y modulares para comunicación técnica</p>
+            <div style="padding:6px 10px; background:rgba(255,255,255,0.03); display:inline-block;">
+              <span style="font-size:11px; color:#a79f8e; font-weight:600;">Astro · Reveal.js</span>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top:24px; font-size:13px; color:rgba(167,159,142,0.4); font-style:italic;">Todos los productos construidos con arquitecturas modernas y sin licencias extranjeras</p>
+      </div>
+    </div>
+  </div>
+</section>

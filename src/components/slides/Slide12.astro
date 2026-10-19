@@ -1,72 +1,60 @@
 ---
 ---
 <section>
-    <div class="slide-content bg-background text-on-surface font-body-lg antialiased selection:bg-glow-cyan selection:text-background">
-        <div class="h-full w-full flex items-center justify-center relative overflow-hidden snap-start bg-surface">
-            
-            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-            <div class="max-w-container-max w-full px-gutter relative z-10">
-                <div class="flex items-center justify-between mb-stack-lg border-b border-border-subtle pb-stack-sm">
-                    <h2 class="font-headline-lg text-headline-lg text-inverse-surface border-l-2 border-glow-cyan pl-stack-md">Perfiles Demandados</h2>
-                    <span class="font-mono-data text-mono-data text-glow-cyan">DEMANDED_ROLES</span>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md">
-                    <!-- Web & Mobile -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex flex-col justify-between h-28 relative group">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-glow-cyan text-[24px]">devices</span>
-                            <h3 class="font-headline-md text-inverse-surface">Web & Mobile</h3>
-                        </div>
-                        <span class="font-mono-data text-xs text-glow-cyan block">React • Node.js • Kotlin • Swift</span>
-                    </div>
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-                    <!-- Ciencia de Datos & IA -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex flex-col justify-between h-28 relative group">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-glow-cyan text-[24px]">query_stats</span>
-                            <h3 class="font-headline-md text-inverse-surface">Ciencia de Datos & IA</h3>
-                        </div>
-                        <span class="font-mono-data text-xs text-glow-cyan block">Python • SQL • PyTorch • BigQuery</span>
-                    </div>
+      <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,247,205,0.02) 1px, transparent 1px), linear-gradient(to right, rgba(255,247,205,0.02) 1px, transparent 1px); background-size:80px 80px;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 50%, transparent);"></div>
 
-                    <!-- Ciberseguridad -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex flex-col justify-between h-28 relative group">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-glow-cyan text-[24px]">shield</span>
-                            <h3 class="font-headline-md text-inverse-surface">Ciberseguridad</h3>
-                        </div>
-                        <span class="font-mono-data text-xs text-glow-cyan block">SecOps • IAM • Cloud Security • Pentesting</span>
-                    </div>
+      <!-- Número de slide (superior derecho) -->
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">12 / 15</div>
 
-                    <!-- Diseño UX/UI -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex flex-col justify-between h-28 relative group">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-glow-cyan text-[24px]">palette</span>
-                            <h3 class="font-headline-md text-inverse-surface">Diseño UX/UI</h3>
-                        </div>
-                        <span class="font-mono-data text-xs text-glow-cyan block">Figma • Wireframing • User Research</span>
-                    </div>
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
 
-                    <!-- Análisis de Sistemas -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex flex-col justify-between h-28 relative group">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-glow-cyan text-[24px]">schema</span>
-                            <h3 class="font-headline-md text-inverse-surface">Análisis de Sistemas</h3>
-                        </div>
-                        <span class="font-mono-data text-xs text-glow-cyan block">UML • SCRUM • Requerimientos</span>
-                    </div>
+        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 16px 0;">Microentorno · Entorno Inmediato</p>
+        <h2 style="font-size:38px; font-weight:800; color:#FFF7CD; margin:0 0 32px 0; letter-spacing:-0.02em;">Actores del<br/><span style="color:#FAF0B5;">ecosistema</span></h2>
 
-                    <!-- Bases de Datos & Cloud -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex flex-col justify-between h-28 relative group">
-                        <div class="flex items-center gap-2">
-                            <span class="material-symbols-outlined text-glow-cyan text-[24px]">database</span>
-                            <h3 class="font-headline-md text-inverse-surface">Bases de Datos & Cloud</h3>
-                        </div>
-                        <span class="font-mono-data text-xs text-glow-cyan block">PostgreSQL • NoSQL • Docker • AWS</span>
-                    </div>
-                </div>
-            </div>
+        <!-- Grid de actores -->
+        <div style="display:grid; grid-template-columns:repeat(3, 1fr); gap:10px;">
+
+          <div style="padding:20px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25);">
+            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:10px;">CLIENTES</div>
+            <div style="font-size:14px; font-weight:600; color:#FFF7CD; margin-bottom:6px;">Escuelas ETP · PyMEs</div>
+            <div style="font-size:12px; color:#a79f8e; line-height:1.5;">Priorizan soluciones locales en pesos frente al encarecimiento de licencias extranjeras</div>
+          </div>
+
+          <div style="padding:20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15);">
+            <div style="font-size:11px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:10px;">PROVEEDORES</div>
+            <div style="font-size:14px; font-weight:600; color:#FFF7CD; margin-bottom:6px;">Vercel · Render · Supabase</div>
+            <div style="font-size:12px; color:#a79f8e; line-height:1.5;">Open source y planes gratuitos. Bajo poder de negociación sobre nosotros</div>
+          </div>
+
+          <div style="padding:20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15);">
+            <div style="font-size:11px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:10px;">COMPETIDORES</div>
+            <div style="font-size:14px; font-weight:600; color:#FFF7CD; margin-bottom:6px;">Agencias · Freelancers</div>
+            <div style="font-size:12px; color:#a79f8e; line-height:1.5;">Mercado fragmentado. Diferenciamos con ingeniería sólida y metodología formal</div>
+          </div>
+
+          <div style="padding:20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.08);">
+            <div style="font-size:11px; color:rgba(255,247,205,0.6); letter-spacing:0.15em; font-weight:600; margin-bottom:10px;">INTERMEDIARIOS</div>
+            <div style="font-size:14px; font-weight:600; color:#FFF7CD; margin-bottom:6px;">Mercado Pago · Cloud</div>
+            <div style="font-size:12px; color:#a79f8e; line-height:1.5;">Facilitan cobro y despliegue automatizado del software</div>
+          </div>
+
+          <div style="padding:20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.08);">
+            <div style="font-size:11px; color:rgba(255,247,205,0.6); letter-spacing:0.15em; font-weight:600; margin-bottom:10px;">COMUNIDAD</div>
+            <div style="font-size:14px; font-weight:600; color:#FFF7CD; margin-bottom:6px;">CESSI · CAME · Sysarmy</div>
+            <div style="font-size:12px; color:#a79f8e; line-height:1.5;">Cámaras y comunidades que regulan y potencian el sector IT argentino</div>
+          </div>
+
+          <div style="padding:20px; background:rgba(255,247,205,0.04); border:1px solid rgba(255,247,205,0.18);">
+            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:10px;">CAUDEX</div>
+            <div style="font-size:14px; font-weight:600; color:#FFF7CD; margin-bottom:6px;">4 devs · Decisión horizontal</div>
+            <div style="font-size:12px; color:#a79f8e; line-height:1.5;">Ágiles, multidisciplinarios, con adaptación rápida a cambios de proyecto</div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>

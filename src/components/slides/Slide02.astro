@@ -1,40 +1,62 @@
 ---
 ---
 <section>
-    <div class="slide-content bg-background text-on-surface font-body-lg antialiased selection:bg-glow-cyan selection:text-background">
-        <div class="h-full w-full flex items-center justify-center relative overflow-hidden snap-start bg-surface">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-            <div class="max-w-container-max w-full px-gutter grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
-                <div class="md:col-span-6 flex flex-col justify-center">
-                    <h2 class="font-headline-lg text-headline-lg text-inverse-surface mb-stack-lg border-l-2 border-glow-cyan pl-stack-md">Panorama<br/>Nacional</h2>
-                    <p class="font-headline-md text-headline-md text-glow-cyan font-bold tracking-tight mb-stack-md">Liderazgo regional en economía del conocimiento</p>
-                    <p class="font-body-lg text-text-muted">Ecosistema dinámico enfocado en la exportación de servicios y el crecimiento sostenido.</p>
-                </div>
-                <div class="md:col-span-6 flex flex-col justify-center gap-stack-md">
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex items-center gap-stack-md w-full max-w-[420px] md:ml-auto">
-                        <span class="material-symbols-outlined text-[32px] text-glow-cyan">public</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface">Liderazgo Regional</h3>
-                            <p class="font-body-sm text-text-muted">Posición dominante en LATAM.</p>
-                        </div>
-                    </div>
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex items-center gap-stack-md w-full max-w-[420px] md:ml-auto">
-                        <span class="material-symbols-outlined text-[32px] text-glow-cyan">trending_up</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface">Expansión Global</h3>
-                            <p class="font-body-sm text-text-muted">Exportación a mercados competitivos.</p>
-                        </div>
-                    </div>
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-md flex items-center gap-stack-md w-full max-w-[420px] md:ml-auto">
-                        <span class="material-symbols-outlined text-[32px] text-glow-cyan">work</span>
-                        <div>
-                            <h3 class="font-headline-md text-inverse-surface">Generación de Empleo</h3>
-                            <p class="font-body-sm text-text-muted">Miles de puestos calificados creados.</p>
-                        </div>
-                    </div>
-                </div>
+      <!-- Fondo grid sutil -->
+      <div style="position:absolute; inset:0; background-image: linear-gradient(rgba(255,247,205,0.03) 1px, transparent 1px), linear-gradient(to right, rgba(255,247,205,0.03) 1px, transparent 1px); background-size:60px 60px;"></div>
+
+      <!-- Líneas decorativas top -->
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
+
+      <!-- Número de slide (superior derecho) -->
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">02 / 15</div>
+
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+
+        <!-- Header label -->
+        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 24px 0;">¿Quiénes somos?</p>
+
+        <!-- Layout 2 columnas -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;">
+
+          <!-- Columna izquierda -->
+          <div>
+            <h2 style="font-size:44px; font-weight:800; color:#FFF7CD; margin:0 0 16px 0; line-height:1.1; letter-spacing:-0.02em;">Equipo de<br/><span style="color:#FAF0B5;">desarrolladores</span></h2>
+            <p style="font-size:15px; color:#a79f8e; line-height:1.6; margin:0 0 24px 0;">Cuatro desarrolladores con expertise en programación de bajo nivel, frontend y backend full-stack.</p>
+            <div style="display:flex; align-items:center; gap:10px; padding:14px 18px; background:rgba(255,247,205,0.05); border-left:3px solid #FFF7CD;">
+              <span style="font-size:13px; color:#a79f8e; font-weight:500;">Metodología ágil · Decisiones horizontales · Learn by building</span>
             </div>
+          </div>
+
+          <!-- Columna derecha: valores -->
+          <div style="display:flex; flex-direction:column; gap:12px;">
+            <div style="padding:14px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2);">
+              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">APRENDIZAJE EMPÍRICO</div>
+              <div style="font-size:14px; color:#a79f8e;">"Learn by building" — aplicamos tecnología en proyectos reales</div>
+            </div>
+            <div style="padding:14px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2);">
+              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">CALIDAD TÉCNICA</div>
+              <div style="font-size:14px; color:#a79f8e;">Sistemas modulares, escalables y código limpio</div>
+            </div>
+            <div style="padding:14px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15);">
+              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">ADAPTABILIDAD</div>
+              <div style="font-size:14px; color:#a79f8e;">Flexibilidad para elegir las herramientas más adecuadas</div>
+            </div>
+            <div style="padding:14px 16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1);">
+              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">MEJORA CONTINUA</div>
+              <div style="font-size:14px; color:#a79f8e;">Iteramos, aprendemos de errores, crecemos constantemente</div>
+            </div>
+          </div>
         </div>
+
+        <!-- GitHub label -->
+        <div style="margin-top:32px; display:flex; align-items:center; gap:10px;">
+          <div style="width:24px; height:1px; background:#FFF7CD;"></div>
+          <span style="font-size:12px; color:rgba(255,247,205,0.7); font-family:'JetBrains Mono', monospace;">github.com/caudex-nox</span>
+        </div>
+      </div>
     </div>
+  </div>
 </section>

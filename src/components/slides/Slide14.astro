@@ -1,51 +1,48 @@
 ---
 ---
 <section>
-    <div class="slide-content bg-background text-on-surface font-body-lg antialiased selection:bg-glow-cyan selection:text-background">
-        <div class="h-full w-full flex items-center justify-center relative overflow-hidden snap-start bg-surface">
-            
-            <div class="absolute inset-0 bg-grid-pattern opacity-5"></div>
-            <div class="max-w-container-max w-full px-gutter relative z-10">
-                <div class="flex items-center justify-between mb-stack-lg border-b border-border-subtle pb-stack-sm">
-                    <h2 class="font-headline-lg text-headline-lg text-inverse-surface border-l-2 border-glow-cyan pl-stack-md">Valor Estratégico</h2>
-                    <span class="font-mono-data text-mono-data text-glow-cyan">ECONOMIC_IMPACT</span>
-                </div>
-                
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
-                    <!-- Empleo Calificado -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-lg relative overflow-hidden flex flex-col justify-between h-52">
-                        <div class="absolute top-0 left-0 w-full h-[3px] bg-glow-cyan"></div>
-                        <div>
-                            <span class="font-mono-data text-label-caps text-glow-cyan block mb-4">TALENTO</span>
-                            <span class="material-symbols-outlined text-[36px] text-glow-cyan mb-2">badge</span>
-                            <h3 class="font-headline-md text-inverse-surface">Empleo Calificado</h3>
-                        </div>
-                        <p class="font-body-sm text-text-muted">Puestos formales con salarios por encima de la media.</p>
-                    </div>
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-                    <!-- Exportaciones de Alto Valor -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-lg relative overflow-hidden flex flex-col justify-between h-52">
-                        <div class="absolute top-0 left-0 w-full h-[3px] bg-glow-cyan"></div>
-                        <div>
-                            <span class="font-mono-data text-label-caps text-glow-cyan block mb-4">INDUSTRIA</span>
-                            <span class="material-symbols-outlined text-[36px] text-glow-cyan mb-2">rocket_launch</span>
-                            <h3 class="font-headline-md text-inverse-surface">Servicios de Valor</h3>
-                        </div>
-                        <p class="font-body-sm text-text-muted">Digitalización y modernización de sectores tradicionales.</p>
-                    </div>
+      <!-- Líneas decorativas top + bottom -->
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
+      <div style="position:absolute; bottom:0; left:0; right:0; height:1px; background:rgba(255,247,205,0.15);"></div>
 
-                    <!-- Ingreso de Divisas -->
-                    <div class="bg-surface-container-low border border-border-subtle p-stack-lg relative overflow-hidden flex flex-col justify-between h-52">
-                        <div class="absolute top-0 left-0 w-full h-[3px] bg-glow-cyan"></div>
-                        <div>
-                            <span class="font-mono-data text-label-caps text-glow-cyan block mb-4">DIVISAS</span>
-                            <span class="material-symbols-outlined text-[36px] text-glow-cyan mb-2">payments</span>
-                            <h3 class="font-headline-md text-inverse-surface">Ingreso de Divisas</h3>
-                        </div>
-                        <p class="font-body-sm text-text-muted">Exportaciones clave para el balance comercial nacional.</p>
-                    </div>
-                </div>
-            </div>
+      <!-- Número de slide (superior derecho) -->
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">14 / 15</div>
+
+      <div style="position:relative; z-index:10; max-width:900px; width:100%; padding:0 64px; text-align:center;">
+
+        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 28px 0;">Conclusión</p>
+
+        <!-- Texto principal grande -->
+        <h2 style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 12px 0; line-height:1.2; letter-spacing:-0.02em;">Una propuesta <span style="color:#FAF0B5;">viable</span><br/>y diferenciada</h2>
+
+        <p style="font-size:16px; color:#a79f8e; max-width:660px; margin:0 auto 40px; line-height:1.65;">Caudex responde directamente a los desafíos tecnológicos y presupuestarios del contexto argentino con soluciones modernas, escalables y accesibles.</p>
+
+        <!-- 3 pilares en fila -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:36px;">
+          <div style="padding:20px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25);">
+            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:8px;">VIABILIDAD</div>
+            <div style="font-size:14px; color:#FFF7CD; line-height:1.4;">Costos bajos, open source, modelo SaaS sin instalación</div>
+          </div>
+          <div style="padding:20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15);">
+            <div style="font-size:11px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:8px;">DIFERENCIACIÓN</div>
+            <div style="font-size:14px; color:#a79f8e; line-height:1.4;">Software a medida, en pesos, con soporte técnico directo</div>
+          </div>
+          <div style="padding:20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1);">
+            <div style="font-size:11px; color:rgba(255,247,205,0.6); letter-spacing:0.15em; font-weight:600; margin-bottom:8px;">ESCALABILIDAD</div>
+            <div style="font-size:14px; color:#a79f8e; line-height:1.4;">Arquitectura fullstack preparada para crecer con el cliente</div>
+          </div>
         </div>
+
+        <!-- Línea final con productos -->
+        <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+          <div style="height:1px; width:60px; background:rgba(255,247,205,0.25);"></div>
+          <span style="font-size:13px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Kanon · Orestes · Deck</span>
+          <div style="height:1px; width:60px; background:rgba(255,247,205,0.25);"></div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
