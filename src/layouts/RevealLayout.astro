@@ -273,9 +273,18 @@ import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 					deck.on('overviewshown', updateOverviewBtn);
 					deck.on('overviewhidden', updateOverviewBtn);
 
-					deck.on('slidechanged', () => {
+					const notifySlide = (slideEl, eventName) => {
+						if (!slideEl) return;
+						slideEl.dispatchEvent(new CustomEvent(eventName, { bubbles: true }));
+					};
+
+					notifySlide(deck.getCurrentSlide(), 'slide:enter');
+
+					deck.on('slidechanged', (event) => {
 						updateHomeBtnVisibility();
 						updatePagination();
+						notifySlide(event.previousSlide, 'slide:leave');
+						notifySlide(event.currentSlide, 'slide:enter');
 					});
 				});
 			});

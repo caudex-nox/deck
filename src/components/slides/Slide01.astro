@@ -1,6 +1,6 @@
 ---
 ---
-<section>
+<section id="slide-01">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
@@ -8,10 +8,10 @@
       <div style="position:absolute; inset:0; background: radial-gradient(ellipse 70% 60% at 20% 50%, rgba(255,247,205,0.08) 0%, transparent 70%), radial-gradient(ellipse 50% 50% at 80% 80%, rgba(255,247,205,0.04) 0%, transparent 60%);"></div>
 
       <!-- Línea decorativa vertical izquierda -->
-      <div style="position:absolute; left:0; top:0; width:4px; height:100%; background: linear-gradient(to bottom, transparent, #FFF7CD, transparent);"></div>
+      <div class="s01-vertical-line" style="position:absolute; left:0; top:0; width:4px; height:100%; background: linear-gradient(to bottom, transparent, #FFF7CD, transparent); transform-origin: top; opacity: 0;"></div>
 
       <!-- Número de slide (superior derecho) -->
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">01 / 15</div>
+      <div class="s01-number" style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em; opacity: 0;">01 / 15</div>
 
       <!-- Contenido -->
       <div style="position:relative; z-index:10; display:flex; align-items:center; justify-content:space-between; max-width:960px; width:100%; padding:0 64px; gap:48px;">
@@ -19,30 +19,213 @@
         <!-- Columna izquierda: Información y marcas -->
         <div style="display:flex; flex-direction:column; align-items:flex-start; max-width:540px;">
           <!-- Label superior -->
-          <div style="display:flex; align-items:center; gap:12px; margin-bottom:28px;">
+          <div class="s01-anim-item" style="display:flex; align-items:center; gap:12px; margin-bottom:28px; opacity: 0;">
             <div style="width:32px; height:2px; background:#FFF7CD;"></div>
             <span style="font-size:11px; letter-spacing:0.25em; color:#FFF7CD; font-weight:600; text-transform:uppercase;">Plan de Negocios · 2026</span>
           </div>
 
           <!-- Logo Caudex -->
-          <img src="/images/caudex-name.svg" alt="CAUDEX" style="height:48px; width:auto; display:block; margin:0 0 16px 0;" />
-          <div style="width:80px; height:4px; background: linear-gradient(to right, #FFF7CD, #FAF0B5); margin-bottom:24px; border-radius:2px;"></div>
-          <p style="font-size:22px; font-weight:400; color:#a79f8e; margin:0 0 40px 0; line-height:1.4; max-width:520px;">Software a medida para la transformación digital de Argentina</p>
+          <div class="s01-anim-item" style="opacity: 0;">
+            <img src="/images/caudex-name.svg" alt="CAUDEX" style="height:48px; width:auto; display:block; margin:0 0 16px 0;" />
+          </div>
 
-          <!-- Tags de productos -->
+          <!-- Línea dorada con contenedor de shimmer -->
+          <div class="s01-divider-line" style="position:relative; width:80px; height:4px; background:linear-gradient(to right, #FFF7CD, #FAF0B5); margin-bottom:24px; border-radius:2px; transform-origin: left; opacity: 0; overflow:hidden;">
+            <!-- Haz de luz viajero (Shimmer) -->
+            <div class="s01-shimmer" style="position:absolute; top:0; bottom:0; left:-100%; width:50%; background:linear-gradient(90deg, transparent, rgba(255,255,255,0.95), transparent); filter:blur(0.5px);"></div>
+          </div>
+
+          <!-- Subtítulo -->
+          <p class="s01-anim-item" style="font-size:22px; font-weight:400; color:#a79f8e; margin:0 0 40px 0; line-height:1.4; max-width:520px; opacity: 0;">
+            Growing roots for future software
+          </p>
+
+          <!-- Tags de productos interactivos -->
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <span style="padding:8px 18px; border:1px solid rgba(255,247,205,0.4); color:#FFF7CD; font-size:13px; font-weight:600; letter-spacing:0.05em; background:rgba(255,247,205,0.06);">KANON</span>
-            <span style="padding:8px 18px; border:1px solid rgba(255,247,205,0.4); color:#FFF7CD; font-size:13px; font-weight:600; letter-spacing:0.05em; background:rgba(255,247,205,0.06);">ORESTES</span>
-            <span style="padding:8px 18px; border:1px solid rgba(255,247,205,0.4); color:#FFF7CD; font-size:13px; font-weight:600; letter-spacing:0.05em; background:rgba(255,247,205,0.06);">DECK</span>
+            <span class="s01-tag interactive-tag">KANON</span>
+            <span class="s01-tag interactive-tag">ORESTES</span>
+            <span class="s01-tag interactive-tag">DECK</span>
           </div>
         </div>
 
         <!-- Columna derecha: Caudex Tree -->
         <div style="display:flex; align-items:center; justify-content:center; flex-shrink:0;">
-          <img src="/images/caudex-tree.svg" alt="Caudex Tree" style="height:280px; width:auto; object-fit:contain;" />
+          <img
+            id="caudexTreeImg"
+            src="/images/caudex-tree.svg"
+            alt="Caudex Tree"
+            style="height:280px; width:auto; object-fit:contain; opacity: 0;"
+          />
         </div>
 
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .interactive-tag {
+    padding: 8px 18px;
+    border: 1px solid rgba(255, 247, 205, 0.35);
+    color: #FFF7CD;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    background: rgba(255, 247, 205, 0.06);
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0;
+    transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+                background-color 0.22s ease,
+                border-color 0.22s ease,
+                box-shadow 0.22s ease;
+  }
+
+  .interactive-tag:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 247, 205, 0.15);
+    border-color: rgba(255, 247, 205, 0.75);
+    box-shadow: 0 4px 14px rgba(255, 247, 205, 0.16);
+  }
+
+  .interactive-tag:active {
+    transform: translateY(0px) scale(0.97);
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-01");
+  let glowAnimation = null;
+  let shimmerAnimation = null;
+
+  function runSlide01Animations() {
+    if (!slide) return;
+
+    // 1. Línea decorativa vertical izquierda
+    const verticalLine = slide.querySelector(".s01-vertical-line");
+    if (verticalLine) {
+      animate(
+        verticalLine,
+        { scaleY: [0, 1], opacity: [0, 1] },
+        { duration: 0.9, ease: [0.16, 1, 0.3, 1] }
+      );
+    }
+
+    // 2. Número de slide (fade in discreto)
+    const slideNumber = slide.querySelector(".s01-number");
+    if (slideNumber) {
+      animate(slideNumber, { opacity: [0, 0.35] }, { duration: 0.6, delay: 0.2 });
+    }
+
+    // 3. Elementos del bloque izquierdo: entran deslizándose desde la izquierda
+    const leftItems = slide.querySelectorAll(".s01-anim-item");
+    leftItems.forEach((item, index) => {
+      animate(
+        item,
+        { x: [-35, 0], opacity: [0, 1] },
+        {
+          duration: 0.7,
+          delay: 0.1 + index * 0.14,
+          ease: [0.16, 1, 0.3, 1],
+        }
+      );
+    });
+
+    // 4. Línea dorada divisoria: se expande horizontalmente y arranca el destello viajero (shimmer)
+    const dividerLine = slide.querySelector(".s01-divider-line");
+    const shimmerEl = slide.querySelector(".s01-shimmer");
+
+    if (dividerLine) {
+      animate(
+        dividerLine,
+        { scaleX: [0, 1], opacity: [0, 1] },
+        {
+          duration: 0.6,
+          delay: 0.35,
+          ease: [0.16, 1, 0.3, 1],
+        }
+      ).then(() => {
+        // Shimmer cíclico periódico (cada 4.5 segundos)
+        if (shimmerEl) {
+          if (shimmerAnimation) shimmerAnimation.stop();
+          shimmerAnimation = animate(
+            shimmerEl,
+            { left: ["-60%", "140%"] },
+            {
+              duration: 1.2,
+              repeat: Infinity,
+              repeatDelay: 3.3,
+              ease: "easeInOut",
+            }
+          );
+        }
+      });
+    }
+
+    // 5. Tags de productos: entrada escalonada desde la izquierda
+    const tags = slide.querySelectorAll(".s01-tag");
+    tags.forEach((tag, index) => {
+      animate(
+        tag,
+        { x: [-20, 0], opacity: [0, 1] },
+        {
+          duration: 0.5,
+          delay: 0.5 + index * 0.1,
+          ease: [0.16, 1, 0.3, 1],
+        }
+      );
+    });
+
+    // 6. Árbol Caudex: entrada suave con scale & fade, luego brillo continuo
+    const tree = slide.querySelector("#caudexTreeImg");
+    if (tree) {
+      if (glowAnimation) glowAnimation.stop();
+
+      animate(
+        tree,
+        { opacity: [0, 1], scale: [0.93, 1] },
+        { duration: 0.8, delay: 0.2, ease: [0.16, 1, 0.3, 1] }
+      ).then(() => {
+        glowAnimation = animate(
+          tree,
+          {
+            opacity: [0.9, 1, 0.9],
+            filter: [
+              "drop-shadow(0 0 4px rgba(255, 247, 205, 0.08))",
+              "drop-shadow(0 0 20px rgba(255, 247, 205, 0.45)) drop-shadow(0 0 35px rgba(255, 247, 205, 0.2))",
+              "drop-shadow(0 0 4px rgba(255, 247, 205, 0.08))",
+            ],
+          },
+          {
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
+          }
+        );
+      });
+    }
+  }
+
+  function stopSlide01Animations() {
+    if (glowAnimation) {
+      glowAnimation.stop();
+      glowAnimation = null;
+    }
+    if (shimmerAnimation) {
+      shimmerAnimation.stop();
+      shimmerAnimation = null;
+    }
+  }
+
+  // Escuchar eventos de RevealLayout
+  slide?.addEventListener("slide:enter", runSlide01Animations);
+  slide?.addEventListener("slide:leave", stopSlide01Animations);
+
+  // Ejecución directa si ya es la diapositiva actual
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlide01Animations();
+  }
+</script>
