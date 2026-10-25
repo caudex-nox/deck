@@ -1,0 +1,136 @@
+---
+---
+<!-- Organigrama — Capítulo 4 -->
+<section id="slide-org">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+
+      <div style="position:absolute; right:0; top:0; width:4px; height:100%; background:linear-gradient(to bottom, transparent, #FFF7CD, transparent);"></div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">17 / 20</div>
+
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+
+        <p class="sorg-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Recursos Humanos · Estructura</p>
+        <h2 class="sorg-title" style="font-size:36px; font-weight:800; color:#FFF7CD; margin:0 0 28px 0; letter-spacing:-0.02em; opacity:0;">Organigrama <span style="color:#FAF0B5;">funcional</span></h2>
+
+        <!-- Nodo raíz -->
+        <div style="display:flex; flex-direction:column; align-items:center;">
+          <div class="sorg-node sorg-root" style="opacity:0; padding:12px 28px; background:rgba(255,247,205,0.1); border:1px solid rgba(255,247,205,0.45); text-align:center;">
+            <div style="font-size:11px; color:rgba(255,247,205,0.5); letter-spacing:0.15em; margin-bottom:4px;">DIRECCIÓN</div>
+            <div style="font-size:15px; font-weight:700; color:#FFF7CD;">Project Manager / Product Owner</div>
+          </div>
+
+          <!-- Conector -->
+          <div class="sorg-connector" style="width:1px; height:20px; background:rgba(255,247,205,0.25); opacity:0;"></div>
+
+          <!-- 3 ramas -->
+          <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px; width:100%;">
+
+            <!-- Rama 1: Desarrollo -->
+            <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+              <div class="sorg-node sorg-branch" style="opacity:0; padding:10px 16px; background:rgba(74,144,217,0.08); border:1px solid rgba(74,144,217,0.25); width:100%; text-align:center;">
+                <div style="font-size:10px; color:rgba(74,144,217,0.7); letter-spacing:0.12em; margin-bottom:3px;">INGENIERÍA</div>
+                <div style="font-size:13px; font-weight:700; color:#FFF7CD;">Tech Lead / Dev</div>
+              </div>
+              <div class="sorg-connector" style="width:1px; height:12px; background:rgba(255,247,205,0.2); opacity:0;"></div>
+              <div class="sorg-node sorg-sub" style="opacity:0; padding:8px 12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.12); width:100%; text-align:center;">
+                <div style="font-size:11px; color:#a79f8e; line-height:1.4;">Módulos Kanon · Orestes<br/>Infra · CI/CD</div>
+              </div>
+            </div>
+
+            <!-- Rama 2: Producto/UX -->
+            <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+              <div class="sorg-node sorg-branch" style="opacity:0; padding:10px 16px; background:rgba(255,247,205,0.07); border:1px solid rgba(255,247,205,0.2); width:100%; text-align:center;">
+                <div style="font-size:10px; color:rgba(255,247,205,0.5); letter-spacing:0.12em; margin-bottom:3px;">PRODUCTO</div>
+                <div style="font-size:13px; font-weight:700; color:#FFF7CD;">UX/UI & Design</div>
+              </div>
+              <div class="sorg-connector" style="width:1px; height:12px; background:rgba(255,247,205,0.2); opacity:0;"></div>
+              <div class="sorg-node sorg-sub" style="opacity:0; padding:8px 12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.12); width:100%; text-align:center;">
+                <div style="font-size:11px; color:#a79f8e; line-height:1.4;">Diseño de interfaz<br/>Investigación de usuarios</div>
+              </div>
+            </div>
+
+            <!-- Rama 3: Negocio -->
+            <div style="display:flex; flex-direction:column; align-items:center; gap:8px;">
+              <div class="sorg-node sorg-branch" style="opacity:0; padding:10px 16px; background:rgba(255,200,100,0.06); border:1px solid rgba(255,200,100,0.18); width:100%; text-align:center;">
+                <div style="font-size:10px; color:rgba(255,200,100,0.5); letter-spacing:0.12em; margin-bottom:3px;">NEGOCIO</div>
+                <div style="font-size:13px; font-weight:700; color:#FFF7CD;">Strategy & Growth</div>
+              </div>
+              <div class="sorg-connector" style="width:1px; height:12px; background:rgba(255,247,205,0.2); opacity:0;"></div>
+              <div class="sorg-node sorg-sub" style="opacity:0; padding:8px 12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.12); width:100%; text-align:center;">
+                <div style="font-size:11px; color:#a79f8e; line-height:1.4;">Ventas B2B<br/>DevRel · Community</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Nota legal -->
+        <div class="sorg-note" style="margin-top:20px; padding:10px 16px; border-left:2px solid rgba(255,247,205,0.2); opacity:0;">
+          <span style="font-size:12px; color:#a79f8e;">Convenio Colectivo IT (AGC · Unión Informática) · Modalidad remota/híbrida · Jornada 40 hs/sem · Reclutamiento de perfiles locales jóvenes</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sorg-node {
+    border-radius: 3px;
+    transition: border-color 0.2s ease, background 0.2s ease;
+  }
+  .sorg-node:hover {
+    border-color: rgba(255,247,205,0.5) !important;
+    background: rgba(255,247,205,0.1) !important;
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-org");
+
+  function runSlideOrgAnimations() {
+    if (!slide) return;
+
+    const label = slide.querySelector(".sorg-label");
+    if (label) animate(label, { opacity: [0, 1], y: [-6, 0] }, { duration: 0.4 });
+
+    const title = slide.querySelector(".sorg-title");
+    if (title) animate(title, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.5, delay: 0.1 });
+
+    // Nodo raíz
+    const root = slide.querySelector(".sorg-root");
+    if (root) animate(root, { opacity: [0, 1], scale: [0.95, 1] }, { duration: 0.5, delay: 0.2, ease: [0.16, 1, 0.3, 1] });
+
+    // Conectores
+    const connectors = slide.querySelectorAll(".sorg-connector");
+    connectors.forEach((c, i) => {
+      animate(c, { opacity: [0, 1], scaleY: [0, 1] }, { duration: 0.3, delay: 0.35 + i * 0.05 });
+    });
+
+    // Ramas (diagonal alternada: izq desde izq, centro desde abajo, der desde der)
+    const branches = slide.querySelectorAll(".sorg-branch");
+    const offsets = [[-30, 0], [0, 20], [30, 0]];
+    branches.forEach((b, i) => {
+      animate(
+        b,
+        { opacity: [0, 1], x: [offsets[i][0], 0], y: [offsets[i][1], 0] },
+        { duration: 0.55, delay: 0.4 + i * 0.1, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+
+    // Sub-nodos
+    const subs = slide.querySelectorAll(".sorg-sub");
+    subs.forEach((s, i) => {
+      animate(s, { opacity: [0, 1], y: [10, 0] }, { duration: 0.4, delay: 0.7 + i * 0.08 });
+    });
+
+    const note = slide.querySelector(".sorg-note");
+    if (note) animate(note, { opacity: [0, 1] }, { duration: 0.5, delay: 1.0 });
+  }
+
+  slide?.addEventListener("slide:enter", runSlideOrgAnimations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlideOrgAnimations();
+  }
+</script>

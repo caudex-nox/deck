@@ -1,39 +1,72 @@
 ---
 import RevealLayout from "../layouts/RevealLayout.astro";
+
+// Portada
 import Slide01 from "../components/slides/Slide01.astro";
-import Slide02 from "../components/slides/Slide02.astro";
-import Slide03 from "../components/slides/Slide03.astro";
-import Slide04 from "../components/slides/Slide04.astro";
-import Slide05 from "../components/slides/Slide05.astro";
-import Slide06 from "../components/slides/Slide06.astro";
-import Slide07 from "../components/slides/Slide07.astro";
-import Slide08 from "../components/slides/Slide08.astro";
-import Slide09 from "../components/slides/Slide09.astro";
-import Slide10 from "../components/slides/Slide10.astro";
-import Slide11 from "../components/slides/Slide11.astro";
-import Slide12 from "../components/slides/Slide12.astro";
-import Slide13 from "../components/slides/Slide13.astro";
-import Slide14 from "../components/slides/Slide14.astro";
+
+// Sección 1 — Identidad, Origen y Soluciones
+import SlideChap1 from "../components/slides/SlideChap1.astro"; // Separador Cap 1
+import Slide02 from "../components/slides/Slide02.astro";       // Quiénes somos
+import Slide03 from "../components/slides/Slide03.astro";       // Misión & Visión
+import Slide04 from "../components/slides/Slide04.astro";       // Portfolio (logos Orestes, Kanon, Deck)
+
+// Sección 2 — Diagnóstico del Entorno
+import SlideChap2 from "../components/slides/SlideChap2.astro"; // Separador Cap 2
+import Slide06 from "../components/slides/Slide06.astro";       // Macroentorno PEST
+import Slide07 from "../components/slides/Slide07.astro";       // 5 Fuerzas Porter
+import Slide05 from "../components/slides/Slide05.astro";       // Segmentos / Mercado Objetivo
+
+// Sección 3 — Estrategia Comercial y Previsión de Demanda
+import SlideChap3 from "../components/slides/SlideChap3.astro"; // Separador Cap 3
+import Slide08 from "../components/slides/Slide08.astro";       // 4P + Abell
+import SlideLevitt from "../components/slides/SlideLevitt.astro"; // Niveles de Producto Levitt
+import Slide09 from "../components/slides/Slide09.astro";       // Previsión de ventas Kanon
+import SlideRedes from "../components/slides/SlideRedes.astro"; // Presencia digital (redes y portfolio)
+
+// Sección 4 — Organización, Recursos Humanos y Viabilidad
+import SlideChap4 from "../components/slides/SlideChap4.astro"; // Separador Cap 4
+import Slide10 from "../components/slides/Slide10.astro";       // Estructura de puestos y roles
+import SlideOrganigrama from "../components/slides/SlideOrganigrama.astro"; // Organigrama funcional
+import Slide11 from "../components/slides/Slide11.astro";       // Propuesta de valor
+import Slide14 from "../components/slides/Slide14.astro";       // Conclusiones (Viabilidad, Diferenciación, Escalabilidad)
+
+// Cierre
 import Slide15 from "../components/slides/Slide15.astro";
 ---
 
 <RevealLayout>
   <div class="reveal">
     <div class="slides">
+      <!-- Portada -->
       <Slide01 />
+
+      <!-- §1: Identidad, Origen y Soluciones -->
+      <SlideChap1 />
       <Slide02 />
       <Slide03 />
       <Slide04 />
-      <Slide05 />
+
+      <!-- §2: Diagnóstico del Entorno -->
+      <SlideChap2 />
       <Slide06 />
       <Slide07 />
+      <Slide05 />
+
+      <!-- §3: Estrategia Comercial y Previsión de Demanda -->
+      <SlideChap3 />
       <Slide08 />
+      <SlideLevitt />
       <Slide09 />
+      <SlideRedes />
+
+      <!-- §4: Organización, Recursos Humanos y Viabilidad -->
+      <SlideChap4 />
       <Slide10 />
+      <SlideOrganigrama />
       <Slide11 />
-      <Slide12 />
-      <Slide13 />
       <Slide14 />
+
+      <!-- Cierre -->
       <Slide15 />
     </div>
   </div>

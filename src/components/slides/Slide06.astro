@@ -1,56 +1,48 @@
 ---
 ---
-<section>
+<!-- Slide 06 — PEST Macroentorno — con animaciones de fill en barras -->
+<section id="slide-06">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-      <!-- Línea top -->
       <div style="position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(to right, transparent, #FFF7CD 40%, transparent);"></div>
-
-      <!-- Número de slide (superior derecho) -->
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">06 / 15</div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">07 / 20</div>
 
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+        <p class="s06-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 12px 0; opacity:0;">Análisis PEST · Macroentorno</p>
+        <h2 class="s06-title" style="font-size:38px; font-weight:800; color:#FFF7CD; margin:0 0 28px 0; letter-spacing:-0.02em; opacity:0;">Contexto que <span style="color:#FAF0B5;">nos impulsa</span></h2>
 
-        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 16px 0;">Análisis PEST · Macroentorno</p>
-        <h2 style="font-size:38px; font-weight:800; color:#FFF7CD; margin:0 0 32px 0; letter-spacing:-0.02em;">Contexto que <span style="color:#FAF0B5;">nos impulsa</span></h2>
-
-        <!-- 4 variables en grid 2x2 -->
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
 
-          <!-- Tecnológica -->
-          <div style="padding:24px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.3); display:flex; gap:20px; align-items:flex-start;">
-            <div style="min-width:48px; height:48px; background:#FFF7CD; display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:900; color:#121212;">T</div>
+          <div class="s06-card" style="padding:22px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.3); display:flex; gap:18px; align-items:flex-start; opacity:0;">
+            <div style="min-width:44px; height:44px; background:#FFF7CD; display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:900; color:#121212; flex-shrink:0;">T</div>
             <div>
-              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:6px;">Tecnológica <span style="font-size:11px; color:#FFF7CD; margin-left:8px; font-weight:600;">IMPACTO MUY ALTO</span></div>
-              <p style="font-size:13px; color:#a79f8e; margin:0; line-height:1.5;">IA, frameworks modernos y economía del conocimiento aceleran la demanda de software de calidad.</p>
+              <div style="font-size:14px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Tecnológica <span style="font-size:10px; color:#FFF7CD; margin-left:6px; font-weight:600; background:rgba(255,247,205,0.15); padding:2px 6px;">IMPACTO MUY ALTO</span></div>
+              <p style="font-size:12px; color:#a79f8e; margin:0; line-height:1.5;">IA, frameworks modernos y economía del conocimiento aceleran la demanda de software de calidad.</p>
             </div>
           </div>
 
-          <!-- Económica -->
-          <div style="padding:24px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2); display:flex; gap:20px; align-items:flex-start;">
-            <div style="min-width:48px; height:48px; background:rgba(255,247,205,0.15); border:1px solid rgba(255,247,205,0.3); display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:900; color:#FFF7CD;">E</div>
+          <div class="s06-card" style="padding:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2); display:flex; gap:18px; align-items:flex-start; opacity:0;">
+            <div style="min-width:44px; height:44px; background:rgba(255,247,205,0.15); border:1px solid rgba(255,247,205,0.3); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:900; color:#FFF7CD; flex-shrink:0;">E</div>
             <div>
-              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:6px;">Económica <span style="font-size:11px; color:#FAF0B5; margin-left:8px; font-weight:600;">IMPACTO ALTO</span></div>
-              <p style="font-size:13px; color:#a79f8e; margin:0; line-height:1.5;">Volatilidad cambiaria encarece licencias extranjeras → oportunidad para desarrollo local en pesos.</p>
+              <div style="font-size:14px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Económica <span style="font-size:10px; color:#FAF0B5; margin-left:6px; font-weight:600;">IMPACTO ALTO</span></div>
+              <p style="font-size:12px; color:#a79f8e; margin:0; line-height:1.5;">Volatilidad cambiaria encarece licencias extranjeras → oportunidad para software local en pesos.</p>
             </div>
           </div>
 
-          <!-- Cultural -->
-          <div style="padding:24px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2); display:flex; gap:20px; align-items:flex-start;">
-            <div style="min-width:48px; height:48px; background:rgba(255,247,205,0.15); border:1px solid rgba(255,247,205,0.3); display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:900; color:#FFF7CD;">C</div>
+          <div class="s06-card" style="padding:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2); display:flex; gap:18px; align-items:flex-start; opacity:0;">
+            <div style="min-width:44px; height:44px; background:rgba(255,247,205,0.15); border:1px solid rgba(255,247,205,0.3); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:900; color:#FFF7CD; flex-shrink:0;">C</div>
             <div>
-              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:6px;">Cultural <span style="font-size:11px; color:#FAF0B5; margin-left:8px; font-weight:600;">IMPACTO ALTO</span></div>
-              <p style="font-size:13px; color:#a79f8e; margin:0; line-height:1.5;">79% del sector IT opera en modalidad remota. Digitalización masiva en consumo y educación.</p>
+              <div style="font-size:14px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Cultural <span style="font-size:10px; color:#FAF0B5; margin-left:6px; font-weight:600;">IMPACTO ALTO</span></div>
+              <p style="font-size:12px; color:#a79f8e; margin:0; line-height:1.5;">79% del sector IT opera en modalidad remota. Digitalización masiva en consumo y educación.</p>
             </div>
           </div>
 
-          <!-- Legal -->
-          <div style="padding:24px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); display:flex; gap:20px; align-items:flex-start;">
-            <div style="min-width:48px; height:48px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,247,205,0.15); display:flex; align-items:center; justify-content:center; font-size:20px; font-weight:900; color:#a79f8e;">L</div>
+          <div class="s06-card" style="padding:22px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); display:flex; gap:18px; align-items:flex-start; opacity:0;">
+            <div style="min-width:44px; height:44px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,247,205,0.15); display:flex; align-items:center; justify-content:center; font-size:18px; font-weight:900; color:#a79f8e; flex-shrink:0;">L</div>
             <div>
-              <div style="font-size:15px; font-weight:700; color:#a79f8e; margin-bottom:6px;">Legal <span style="font-size:11px; color:#a79f8e; margin-left:8px; font-weight:600;">IMPACTO MEDIO</span></div>
-              <p style="font-size:13px; color:#a79f8e; margin:0; line-height:1.5;">Ley 25.326 de datos personales. Homologación hacia estándares RGPD europeos en curso.</p>
+              <div style="font-size:14px; font-weight:700; color:#a79f8e; margin-bottom:4px;">Legal <span style="font-size:10px; color:#a79f8e; margin-left:6px; font-weight:600;">IMPACTO MEDIO</span></div>
+              <p style="font-size:12px; color:#a79f8e; margin:0; line-height:1.5;">Ley 25.326 de datos personales. Homologación en curso hacia estándares RGPD europeos.</p>
             </div>
           </div>
         </div>
@@ -58,3 +50,34 @@
     </div>
   </div>
 </section>
+
+<script>
+  import { animate } from "motion";
+  const slide = document.getElementById("slide-06");
+
+  function runSlide06Animations() {
+    if (!slide) return;
+
+    const label = slide.querySelector(".s06-label");
+    if (label) animate(label, { opacity: [0, 1], x: [-20, 0] }, { duration: 0.4 });
+
+    const title = slide.querySelector(".s06-title");
+    if (title) animate(title, { opacity: [0, 1], x: [-20, 0] }, { duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+
+    // Cards: izq-der alternado (par entra desde izquierda, impar desde derecha)
+    const cards = slide.querySelectorAll(".s06-card");
+    cards.forEach((card, i) => {
+      const xDir = i % 2 === 0 ? -30 : 30;
+      animate(
+        card,
+        { opacity: [0, 1], x: [xDir, 0] },
+        { duration: 0.6, delay: 0.2 + i * 0.12, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+  }
+
+  slide?.addEventListener("slide:enter", runSlide06Animations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlide06Animations();
+  }
+</script>

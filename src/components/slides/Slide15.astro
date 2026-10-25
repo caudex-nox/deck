@@ -1,29 +1,34 @@
 ---
 ---
-<section>
+<!-- Slide 15 — Cierre / Conclusión -->
+<section id="slide-15">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-      <!-- Fondo: radial sutil en amarillo claro tirando a blanco -->
+      <!-- Radial sutil centrado -->
       <div style="position:absolute; inset:0; background:radial-gradient(ellipse 65% 65% at 50% 50%, rgba(255,247,205,0.06) 0%, transparent 65%);"></div>
-      
-      <!-- Bordes luminosos -->
-      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
-      <div style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
 
-      <!-- Número de slide (superior derecho) -->
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">15 / 15</div>
+      <!-- Bordes top y bottom -->
+      <div id="s15-top-line" style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent); opacity:0; transform-origin:center;"></div>
+      <div id="s15-bot-line" style="position:absolute; bottom:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent); opacity:0; transform-origin:center;"></div>
+
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">20 / 20</div>
 
       <div style="position:relative; z-index:10; text-align:center; max-width:700px; padding:0 48px;">
 
-        <!-- Logo Caudex completo (árbol + tipografía) -->
-        <img src="/images/caudex.svg" alt="CAUDEX" style="height:150px; width:auto; margin:0 auto 20px; display:block;" />
-        <div style="width:80px; height:3px; background:linear-gradient(to right, #FFF7CD, #FAF0B5); margin:0 auto 24px; border-radius:2px;"></div>
+        <!-- Logo Caudex -->
+        <div id="s15-logo" style="opacity:0;">
+          <img src="/images/caudex.svg" alt="CAUDEX" style="height:140px; width:auto; margin:0 auto 18px; display:block;" />
+        </div>
+        <div id="s15-divider" style="width:80px; height:3px; background:linear-gradient(to right, #FFF7CD, #FAF0B5); margin:0 auto 22px; border-radius:2px; opacity:0; transform-origin:center;"></div>
 
-        <p style="font-size:18px; color:#a79f8e; margin:0 0 40px 0; line-height:1.5;">Construimos el software que Argentina necesita.<br/>Sin licencias extranjeras. Sin burocracia.</p>
+        <p id="s15-text" style="font-size:17px; color:#a79f8e; margin:0 0 36px 0; line-height:1.55; opacity:0;">
+          Construimos el software que Argentina necesita.<br/>
+          Sin licencias extranjeras. Sin burocracia.
+        </p>
 
         <!-- Links / contacto -->
-        <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
+        <div id="s15-links" style="display:flex; justify-content:center; gap:18px; flex-wrap:wrap; opacity:0;">
           <div style="padding:10px 20px; border:1px solid rgba(255,247,205,0.3); background:rgba(255,247,205,0.05);">
             <span style="font-size:12px; color:#FFF7CD; font-family:'JetBrains Mono',monospace; letter-spacing:0.05em;">github.com/caudex-nox</span>
           </div>
@@ -35,3 +40,39 @@
     </div>
   </div>
 </section>
+
+<script>
+  import { animate } from "motion";
+  const slide = document.getElementById("slide-15");
+
+  function runSlide15Animations() {
+    if (!slide) return;
+
+    // Líneas top/bottom se despliegan
+    const topLine = slide.querySelector("#s15-top-line");
+    const botLine = slide.querySelector("#s15-bot-line");
+    if (topLine) animate(topLine, { scaleX: [0, 1], opacity: [0, 1] }, { duration: 0.8, ease: [0.16, 1, 0.3, 1] });
+    if (botLine) animate(botLine, { scaleX: [0, 1], opacity: [0, 1] }, { duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+
+    // Logo aparece desde arriba con escala
+    const logo = slide.querySelector("#s15-logo");
+    if (logo) animate(logo, { opacity: [0, 1], scale: [0.85, 1], y: [-20, 0] }, { duration: 0.8, delay: 0.3, ease: [0.16, 1, 0.3, 1] });
+
+    // Línea divisoria se expande
+    const divider = slide.querySelector("#s15-divider");
+    if (divider) animate(divider, { scaleX: [0, 1], opacity: [0, 1] }, { duration: 0.5, delay: 0.65 });
+
+    // Texto fade suave
+    const text = slide.querySelector("#s15-text");
+    if (text) animate(text, { opacity: [0, 1], y: [10, 0] }, { duration: 0.6, delay: 0.75 });
+
+    // Links aparecen escalonados
+    const links = slide.querySelector("#s15-links");
+    if (links) animate(links, { opacity: [0, 1], y: [8, 0] }, { duration: 0.5, delay: 0.95 });
+  }
+
+  slide?.addEventListener("slide:enter", runSlide15Animations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlide15Animations();
+  }
+</script>

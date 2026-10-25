@@ -1,0 +1,112 @@
+---
+---
+<!-- Slide Presencia Digital — Redes Sociales & Portfolio (Cap 3) -->
+<section id="slide-redes">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+
+      <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(255,247,205,0.02) 1px, transparent 1px), linear-gradient(to right, rgba(255,247,205,0.02) 1px, transparent 1px); background-size:80px 80px;"></div>
+      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 50%, transparent);"></div>
+
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">14 / 20</div>
+
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+
+        <p class="sr-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Plan Comercial · Promoción</p>
+        <h2 class="sr-title" style="font-size:36px; font-weight:800; color:#FFF7CD; margin:0 0 28px 0; letter-spacing:-0.02em; opacity:0;">Presencia <span style="color:#FAF0B5;">digital activa</span></h2>
+
+        <!-- 4 capturas en grid -->
+        <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;">
+
+          <div class="sr-card" style="opacity:0;">
+            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.12em; font-weight:600; margin-bottom:8px; text-transform:uppercase;">GitHub</div>
+            <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
+              <img src="/images/github.png" alt="GitHub Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
+            </div>
+            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">github.com/caudex-nox</div>
+          </div>
+
+          <div class="sr-card" style="opacity:0;">
+            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.12em; font-weight:600; margin-bottom:8px; text-transform:uppercase;">Instagram</div>
+            <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
+              <img src="/images/instagram.png" alt="Instagram Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
+            </div>
+            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">@caudex.dev</div>
+          </div>
+
+          <div class="sr-card" style="opacity:0;">
+            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.12em; font-weight:600; margin-bottom:8px; text-transform:uppercase;">LinkedIn</div>
+            <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
+              <img src="/images/linkedin-profile.png" alt="LinkedIn Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
+            </div>
+            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Caudex · LinkedIn</div>
+          </div>
+
+          <div class="sr-card" style="opacity:0;">
+            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.12em; font-weight:600; margin-bottom:8px; text-transform:uppercase;">Portfolio</div>
+            <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
+              <img src="/images/portfolio.png" alt="Portfolio Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
+            </div>
+            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">caudex.dev</div>
+          </div>
+        </div>
+
+        <!-- Nota de estrategia -->
+        <div class="sr-note" style="margin-top:22px; display:flex; align-items:center; gap:16px; opacity:0;">
+          <div style="width:24px; height:1px; background:rgba(255,247,205,0.3);"></div>
+          <span style="font-size:13px; color:#a79f8e; font-style:italic;">Venta directa · Demo en vivo · 30 días piloto bonificado</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .sr-card {
+    transition: transform 0.22s ease;
+  }
+  .sr-card:hover {
+    transform: translateY(-3px);
+  }
+  .sr-card img {
+    transition: opacity 0.2s ease, filter 0.2s ease;
+  }
+  .sr-card:hover img {
+    opacity: 1 !important;
+    filter: grayscale(0%) !important;
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-redes");
+
+  function runSlideRedesAnimations() {
+    if (!slide) return;
+
+    const label = slide.querySelector(".sr-label");
+    if (label) animate(label, { opacity: [0, 1], y: [-6, 0] }, { duration: 0.4 });
+
+    const title = slide.querySelector(".sr-title");
+    if (title) animate(title, { opacity: [0, 1], y: [-10, 0] }, { duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+
+    // Tarjetas entran con clip-path desde arriba (stagger)
+    const cards = slide.querySelectorAll(".sr-card");
+    cards.forEach((card, i) => {
+      animate(
+        card,
+        { opacity: [0, 1], y: [24, 0] },
+        { duration: 0.55, delay: 0.2 + i * 0.12, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+
+    const note = slide.querySelector(".sr-note");
+    if (note) animate(note, { opacity: [0, 1] }, { duration: 0.5, delay: 0.75 });
+  }
+
+  slide?.addEventListener("slide:enter", runSlideRedesAnimations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlideRedesAnimations();
+  }
+</script>

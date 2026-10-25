@@ -1,43 +1,59 @@
 ---
+import { CheckCircle2, Sparkles, TrendingUp } from '@lucide/astro';
 ---
-<section>
+<!-- Slide 14 — Conclusiones: Viabilidad, Diferenciación y Escalabilidad -->
+<section id="slide-14">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-      <!-- Líneas decorativas top + bottom -->
-      <div style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
-      <div style="position:absolute; bottom:0; left:0; right:0; height:1px; background:rgba(255,247,205,0.15);"></div>
+      <!-- Líneas decorativas top y bottom -->
+      <div class="s14-top-line" style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent); opacity:0;"></div>
+      <div class="s14-bot-line" style="position:absolute; bottom:0; left:0; right:0; height:1px; background:rgba(255,247,205,0.15); opacity:0;"></div>
 
-      <!-- Número de slide (superior derecho) -->
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">14 / 15</div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">19 / 20</div>
 
-      <div style="position:relative; z-index:10; max-width:900px; width:100%; padding:0 64px; text-align:center;">
+      <div style="position:relative; z-index:10; max-width:920px; width:100%; padding:0 64px; text-align:center;">
 
-        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 28px 0;">Conclusión</p>
+        <p class="s14-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 16px 0; opacity:0;">Conclusión</p>
 
-        <!-- Texto principal grande -->
-        <h2 style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 12px 0; line-height:1.2; letter-spacing:-0.02em;">Una propuesta <span style="color:#FAF0B5;">viable</span><br/>y diferenciada</h2>
+        <h2 class="s14-title" style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 14px 0; line-height:1.2; letter-spacing:-0.02em; opacity:0;">
+          Una propuesta <span style="color:#FAF0B5;">viable</span> y diferenciada
+        </h2>
 
-        <p style="font-size:16px; color:#a79f8e; max-width:660px; margin:0 auto 40px; line-height:1.65;">Caudex responde directamente a los desafíos tecnológicos y presupuestarios del contexto argentino con soluciones modernas, escalables y accesibles.</p>
+        <p class="s14-desc" style="font-size:15px; color:#a79f8e; max-width:640px; margin:0 auto 36px; line-height:1.6; opacity:0;">
+          Caudex responde directamente a los desafíos tecnológicos y presupuestarios del contexto argentino con soluciones modernas, escalables y accesibles.
+        </p>
 
         <!-- 3 pilares en fila -->
-        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; margin-bottom:36px;">
-          <div style="padding:20px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25);">
-            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:8px;">VIABILIDAD</div>
-            <div style="font-size:14px; color:#FFF7CD; line-height:1.4;">Costos bajos, open source, modelo SaaS sin instalación</div>
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:32px;">
+
+          <div class="s14-card" style="padding:22px 20px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25); text-align:left; border-radius:2px; opacity:0;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+              <span style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:700;">VIABILIDAD</span>
+              <div style="color:#FFF7CD;"><CheckCircle2 size={18} stroke-width={2} /></div>
+            </div>
+            <div style="font-size:13px; color:#FFF7CD; line-height:1.45;">Costos optimizados, open source y modelo SaaS en la nube sin instalación física.</div>
           </div>
-          <div style="padding:20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15);">
-            <div style="font-size:11px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:8px;">DIFERENCIACIÓN</div>
-            <div style="font-size:14px; color:#a79f8e; line-height:1.4;">Software a medida, en pesos, con soporte técnico directo</div>
+
+          <div class="s14-card" style="padding:22px 20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.18); text-align:left; border-radius:2px; opacity:0;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+              <span style="font-size:11px; color:#FAF0B5; letter-spacing:0.15em; font-weight:700;">DIFERENCIACIÓN</span>
+              <div style="color:#FAF0B5;"><Sparkles size={18} stroke-width={2} /></div>
+            </div>
+            <div style="font-size:13px; color:#a79f8e; line-height:1.45;">Software a medida, en pesos, con acompañamiento y soporte técnico directo.</div>
           </div>
-          <div style="padding:20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1);">
-            <div style="font-size:11px; color:rgba(255,247,205,0.6); letter-spacing:0.15em; font-weight:600; margin-bottom:8px;">ESCALABILIDAD</div>
-            <div style="font-size:14px; color:#a79f8e; line-height:1.4;">Arquitectura fullstack preparada para crecer con el cliente</div>
+
+          <div class="s14-card" style="padding:22px 20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.12); text-align:left; border-radius:2px; opacity:0;">
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:12px;">
+              <span style="font-size:11px; color:rgba(255,247,205,0.7); letter-spacing:0.15em; font-weight:700;">ESCALABILIDAD</span>
+              <div style="color:rgba(255,247,205,0.7);"><TrendingUp size={18} stroke-width={2} /></div>
+            </div>
+            <div style="font-size:13px; color:#a79f8e; line-height:1.45;">Arquitectura full-stack moderna preparada para crecer junto con cada cliente.</div>
           </div>
         </div>
 
         <!-- Línea final con productos -->
-        <div style="display:flex; align-items:center; justify-content:center; gap:16px;">
+        <div class="s14-footer" style="display:flex; align-items:center; justify-content:center; gap:16px; opacity:0;">
           <div style="height:1px; width:60px; background:rgba(255,247,205,0.25);"></div>
           <span style="font-size:13px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Kanon · Orestes · Deck</span>
           <div style="height:1px; width:60px; background:rgba(255,247,205,0.25);"></div>
@@ -46,3 +62,54 @@
     </div>
   </div>
 </section>
+
+<style>
+  .s14-card {
+    transition: transform 0.22s ease, border-color 0.22s ease;
+  }
+  .s14-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,247,205,0.45);
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-14");
+
+  function runSlide14Animations() {
+    if (!slide) return;
+
+    const top = slide.querySelector(".s14-top-line");
+    const bot = slide.querySelector(".s14-bot-line");
+    if (top) animate(top, { opacity: [0, 1] }, { duration: 0.6 });
+    if (bot) animate(bot, { opacity: [0, 1] }, { duration: 0.6, delay: 0.1 });
+
+    const label = slide.querySelector(".s14-label");
+    if (label) animate(label, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.4 });
+
+    const title = slide.querySelector(".s14-title");
+    if (title) animate(title, { opacity: [0, 1], y: [-12, 0] }, { duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+
+    const desc = slide.querySelector(".s14-desc");
+    if (desc) animate(desc, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.5, delay: 0.2 });
+
+    const cards = slide.querySelectorAll(".s14-card");
+    cards.forEach((c, i) => {
+      animate(
+        c,
+        { opacity: [0, 1], y: [20, 0] },
+        { duration: 0.55, delay: 0.3 + i * 0.12, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+
+    const footer = slide.querySelector(".s14-footer");
+    if (footer) animate(footer, { opacity: [0, 1] }, { duration: 0.5, delay: 0.8 });
+  }
+
+  slide?.addEventListener("slide:enter", runSlide14Animations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlide14Animations();
+  }
+</script>

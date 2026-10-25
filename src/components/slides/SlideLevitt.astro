@@ -1,0 +1,131 @@
+---
+---
+<!-- Slide Levitt — Modelo de Niveles de Producto (Capítulo 3) -->
+<section id="slide-levitt">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 70% 60% at 30% 50%, rgba(255,247,205,0.04) 0%, transparent 70%);"></div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">12 / 20</div>
+
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+
+        <p class="slev-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 12px 0; opacity:0;">Propuesta de Valor · Modelo Levitt</p>
+        <h2 class="slev-title" style="font-size:36px; font-weight:800; color:#FFF7CD; margin:0 0 28px 0; letter-spacing:-0.02em; opacity:0;">Niveles del <span style="color:#FAF0B5;">producto</span></h2>
+
+        <!-- Layout 2 columnas: Visual concéntrico + Tarjetas descriptivas -->
+        <div style="display:grid; grid-template-columns:300px 1fr; gap:40px; align-items:center;">
+
+          <!-- Columna izquierda: Anillos concéntricos de Levitt -->
+          <div style="position:relative; width:280px; height:280px; margin:0 auto; display:flex; align-items:center; justify-content:center;">
+
+            <!-- Nivel 4 (Potencial - Exterior) -->
+            <div class="slev-ring slev-ring-4" style="position:absolute; width:270px; height:270px; border-radius:50%; border:1px dashed rgba(255,247,205,0.25); background:rgba(255,247,205,0.02); opacity:0; display:flex; align-items:flex-start; justify-content:center; padding-top:6px;">
+              <span style="font-size:9px; color:rgba(255,247,205,0.4); letter-spacing:0.15em; font-weight:600;">POTENCIAL</span>
+            </div>
+
+            <!-- Nivel 3 (Aumentado) -->
+            <div class="slev-ring slev-ring-3" style="position:absolute; width:200px; height:200px; border-radius:50%; border:1px solid rgba(255,247,205,0.35); background:rgba(255,247,205,0.03); opacity:0; display:flex; align-items:flex-start; justify-content:center; padding-top:6px;">
+              <span style="font-size:9px; color:rgba(255,247,205,0.6); letter-spacing:0.15em; font-weight:600;">AUMENTADO</span>
+            </div>
+
+            <!-- Nivel 2 (Esperado) -->
+            <div class="slev-ring slev-ring-2" style="position:absolute; width:135px; height:135px; border-radius:50%; border:1px solid rgba(255,247,205,0.5); background:rgba(255,247,205,0.05); opacity:0; display:flex; align-items:flex-start; justify-content:center; padding-top:6px;">
+              <span style="font-size:9px; color:#FAF0B5; letter-spacing:0.12em; font-weight:600;">ESPERADO</span>
+            </div>
+
+            <!-- Nivel 1 (Genérico / Núcleo) -->
+            <div class="slev-ring slev-ring-1" style="position:absolute; width:72px; height:72px; border-radius:50%; border:1px solid #FFF7CD; background:rgba(255,247,205,0.15); box-shadow:0 0 16px rgba(255,247,205,0.2); opacity:0; display:flex; align-items:center; justify-content:center; text-align:center;">
+              <span style="font-size:9px; color:#FFF7CD; font-weight:700; letter-spacing:0.05em; line-height:1.1;">CORE<br/>GENÉRICO</span>
+            </div>
+          </div>
+
+          <!-- Columna derecha: 4 Capas descritas -->
+          <div style="display:flex; flex-direction:column; gap:10px;">
+
+            <div class="slev-card" data-ring="1" style="padding:12px 16px; background:rgba(255,247,205,0.07); border:1px solid rgba(255,247,205,0.3); border-left:3px solid #FFF7CD; border-radius:2px; opacity:0;">
+              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:700; margin-bottom:2px;">1. PRODUCTO GENÉRICO</div>
+              <div style="font-size:13px; color:#FFF7CD; line-height:1.4;">Software para almacenar, administrar y visualizar inventarios y datos.</div>
+            </div>
+
+            <div class="slev-card" data-ring="2" style="padding:12px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2); border-left:3px solid #FAF0B5; border-radius:2px; opacity:0;">
+              <div style="font-size:11px; color:#FAF0B5; letter-spacing:0.15em; font-weight:700; margin-bottom:2px;">2. PRODUCTO ESPERADO</div>
+              <div style="font-size:13px; color:#a79f8e; line-height:1.4;">UI intuitiva, código limpio sin bugs, base PostgreSQL y uptime 24/7.</div>
+            </div>
+
+            <div class="slev-card" data-ring="3" style="padding:12px 16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.15); border-left:3px solid rgba(255,247,205,0.5); border-radius:2px; opacity:0;">
+              <div style="font-size:11px; color:rgba(255,247,205,0.7); letter-spacing:0.15em; font-weight:700; margin-bottom:2px;">3. PRODUCTO AUMENTADO</div>
+              <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Sin licencias en dólares (cobro en pesos), modularidad y soporte técnico directo.</div>
+            </div>
+
+            <div class="slev-card" data-ring="4" style="padding:12px 16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); border-left:3px solid rgba(255,247,205,0.3); border-radius:2px; opacity:0;">
+              <div style="font-size:11px; color:rgba(167,159,142,0.6); letter-spacing:0.15em; font-weight:700; margin-bottom:2px;">4. PRODUCTO POTENCIAL</div>
+              <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Automatización inteligente, analítica predictiva de datos e integraciones con IA.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .slev-card {
+    transition: transform 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
+    cursor: default;
+  }
+  .slev-card:hover {
+    transform: translateX(4px);
+    border-color: rgba(255,247,205,0.5) !important;
+    background: rgba(255,247,205,0.09) !important;
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-levitt");
+
+  function runSlideLevittAnimations() {
+    if (!slide) return;
+
+    const label = slide.querySelector(".slev-label");
+    if (label) animate(label, { opacity: [0, 1], y: [-6, 0] }, { duration: 0.4 });
+
+    const title = slide.querySelector(".slev-title");
+    if (title) animate(title, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+
+    // Anillos concéntricos se despliegan de adentro hacia afuera (1 -> 2 -> 3 -> 4)
+    const rings = [
+      slide.querySelector(".slev-ring-1"),
+      slide.querySelector(".slev-ring-2"),
+      slide.querySelector(".slev-ring-3"),
+      slide.querySelector(".slev-ring-4")
+    ];
+
+    rings.forEach((ring, i) => {
+      if (ring) {
+        animate(
+          ring,
+          { scale: [0.6, 1], opacity: [0, 1] },
+          { duration: 0.6, delay: 0.2 + i * 0.12, ease: [0.16, 1, 0.3, 1] }
+        );
+      }
+    });
+
+    // Tarjetas descriptivas de la derecha entran en cascada
+    const cards = slide.querySelectorAll(".slev-card");
+    cards.forEach((card, i) => {
+      animate(
+        card,
+        { opacity: [0, 1], x: [30, 0] },
+        { duration: 0.5, delay: 0.3 + i * 0.12, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+  }
+
+  slide?.addEventListener("slide:enter", runSlideLevittAnimations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlideLevittAnimations();
+  }
+</script>

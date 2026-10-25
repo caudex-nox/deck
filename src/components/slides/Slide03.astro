@@ -1,44 +1,117 @@
 ---
+import { Target, Lightbulb, Globe, Users } from '@lucide/astro';
 ---
-<section>
+<section id="slide-03">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-      <!-- Círculos de luz suaves -->
-      <div style="position:absolute; top:-100px; right:-100px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.06) 0%, transparent 70%);"></div>
-      <div style="position:absolute; bottom:-150px; left:-50px; width:400px; height:400px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.04) 0%, transparent 70%);"></div>
+      <!-- Círculos de luz -->
+      <div style="position:absolute; top:-80px; right:-80px; width:450px; height:450px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.06) 0%, transparent 70%);"></div>
+      <div style="position:absolute; bottom:-120px; left:-40px; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.04) 0%, transparent 70%);"></div>
 
-      <!-- Número de slide (superior derecho) -->
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">03 / 15</div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">04 / 20</div>
 
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
 
+        <p class="s03-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 28px 0; opacity:0;">Identidad</p>
+
         <!-- Misión / Visión lado a lado -->
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:32px;">
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-bottom:24px;">
 
           <!-- Misión -->
-          <div style="padding:40px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.25); border-right:none;">
-            <div style="width:40px; height:3px; background:#FFF7CD; margin-bottom:20px;"></div>
-            <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; margin-bottom:16px;">Misión</div>
-            <p style="font-size:18px; color:#FFF7CD; line-height:1.55; margin:0; font-weight:500;">Diseñar y desarrollar soluciones de software innovadoras que resuelvan problemáticas reales, transformando necesidades concretas en herramientas de alto valor.</p>
+          <div id="s03-mision" style="padding:36px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.25); border-right:none; opacity:0;">
+            <div style="width:40px; height:3px; background:#FFF7CD; margin-bottom:18px;"></div>
+            <div style="font-size:22px; color:#FFF7CD; letter-spacing:0.15em; text-transform:uppercase; font-weight:700; margin-bottom:14px;">Misión</div>
+            <p style="font-size:14px; color:#FFF7CD; line-height:1.55; margin:0 0 20px 0; font-weight:400;">Software innovador que resuelve problemáticas reales. Herramientas de alto valor para organizaciones que necesitan digitalizarse.</p>
+            <!-- Iconos misión -->
+            <div style="display:flex; gap:10px;">
+              <div class="s03-icon-chip" title="Soluciones a medida"><Target size={16} stroke-width={1.8} /></div>
+              <div class="s03-icon-chip" title="Tecnología avanzada"><Lightbulb size={16} stroke-width={1.8} /></div>
+            </div>
           </div>
 
           <!-- Visión -->
-          <div style="padding:40px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.15);">
-            <div style="width:40px; height:3px; background:rgba(255,247,205,0.4); margin-bottom:20px;"></div>
-            <div style="font-size:11px; color:#FAF0B5; letter-spacing:0.2em; text-transform:uppercase; font-weight:600; margin-bottom:16px;">Visión</div>
-            <p style="font-size:18px; color:#a79f8e; line-height:1.55; margin:0; font-weight:400;">Consolidarnos como empresa referente en software argentino, aliados estratégicos en la transformación digital de PyMEs y organizaciones locales.</p>
+          <div id="s03-vision" style="padding:36px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.15); opacity:0;">
+            <div style="width:40px; height:3px; background:rgba(255,247,205,0.4); margin-bottom:18px;"></div>
+            <div style="font-size:22px; color:#FAF0B5; letter-spacing:0.15em; text-transform:uppercase; font-weight:700; margin-bottom:14px;">Visión</div>
+            <p style="font-size:14px; color:#a79f8e; line-height:1.55; margin:0 0 20px 0; font-weight:400;">Empresa referente en software argentino. Aliados estratégicos en la transformación digital de PyMEs, con productos locales frente a licencias extranjeras.</p>
+            <!-- Iconos visión -->
+            <div style="display:flex; gap:10px;">
+              <div class="s03-icon-chip" title="Alcance nacional"><Globe size={16} stroke-width={1.8} /></div>
+              <div class="s03-icon-chip" title="Aliados estratégicos"><Users size={16} stroke-width={1.8} /></div>
+            </div>
           </div>
         </div>
 
         <!-- Stack tecnológico -->
-        <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+        <div id="s03-stack" style="display:flex; align-items:center; gap:10px; flex-wrap:wrap; opacity:0;">
           <span style="font-size:11px; color:rgba(167,159,142,0.4); letter-spacing:0.15em; text-transform:uppercase; margin-right:4px;">Stack:</span>
           {["React", "Node.js", "Astro", "PostgreSQL", "Prisma", "TypeScript", "C/C++"].map(tech => (
-            <span style="padding:5px 12px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); font-size:12px; color:#a79f8e; font-family:'JetBrains Mono', monospace;">{tech}</span>
+            <span style="padding:4px 10px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); font-size:11px; color:#a79f8e; font-family:'JetBrains Mono', monospace;">{tech}</span>
           ))}
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .s03-icon-chip {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 4px;
+    background: rgba(255, 247, 205, 0.07);
+    border: 1px solid rgba(255, 247, 205, 0.22);
+    color: #FFF7CD;
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+  }
+  .s03-icon-chip:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 247, 205, 0.16);
+    box-shadow: 0 4px 12px rgba(255, 247, 205, 0.18);
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-03");
+
+  function runSlide03Animations() {
+    if (!slide) return;
+
+    // Label
+    const label = slide.querySelector(".s03-label");
+    if (label) animate(label, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.4, ease: "easeOut" });
+
+    // Misión — entra desde la izquierda
+    const mision = slide.querySelector("#s03-mision");
+    if (mision) animate(mision, { opacity: [0, 1], x: [-40, 0] }, { duration: 0.65, delay: 0.15, ease: [0.16, 1, 0.3, 1] });
+
+    // Visión — entra desde la derecha
+    const vision = slide.querySelector("#s03-vision");
+    if (vision) animate(vision, { opacity: [0, 1], x: [40, 0] }, { duration: 0.65, delay: 0.3, ease: [0.16, 1, 0.3, 1] });
+
+    // Stack — fade desde abajo
+    const stack = slide.querySelector("#s03-stack");
+    if (stack) animate(stack, { opacity: [0, 1], y: [12, 0] }, { duration: 0.5, delay: 0.6, ease: "easeOut" });
+
+    // Iconos — bounce-in escalonado
+    const chips = slide.querySelectorAll(".s03-icon-chip");
+    chips.forEach((chip, i) => {
+      animate(
+        chip,
+        { scale: [0, 1.15, 1], opacity: [0, 1] },
+        { duration: 0.4, delay: 0.7 + i * 0.07, ease: [0.34, 1.56, 0.64, 1] }
+      );
+    });
+  }
+
+  slide?.addEventListener("slide:enter", runSlide03Animations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlide03Animations();
+  }
+</script>

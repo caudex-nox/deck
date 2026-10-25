@@ -1,0 +1,76 @@
+---
+---
+<!-- Separador Capítulo 4 — Recursos Humanos y Viabilidad -->
+<section id="slide-chap4">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+
+      <div id="chap4-bg-num" style="position:absolute; right:-40px; top:50%; transform:translateY(-50%); font-size:380px; font-weight:900; color:rgba(255,247,205,0); line-height:1; user-select:none; letter-spacing:-0.05em;">4</div>
+
+      <div id="chap4-line" style="position:absolute; left:0; top:0; width:4px; height:100%; background:linear-gradient(to bottom, transparent, #FFF7CD, transparent); opacity:0;"></div>
+
+      <div id="chap4-label" style="position:absolute; top:28px; left:64px; font-size:11px; color:rgba(255,247,205,0.25); font-weight:600; letter-spacing:0.25em; text-transform:uppercase; opacity:0;">Sección 04</div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">15 / 20</div>
+
+      <div style="position:relative; z-index:10; padding:0 64px; max-width:700px; width:100%;">
+        <div id="chap4-tag" style="display:inline-block; padding:6px 14px; border:1px solid rgba(255,247,205,0.3); background:rgba(255,247,205,0.05); margin-bottom:24px; opacity:0;">
+          <span style="font-size:11px; color:#FFF7CD; font-weight:600; letter-spacing:0.2em;">CAPÍTULO 4</span>
+        </div>
+        <h1 id="chap4-title" style="font-size:56px; font-weight:900; color:#FFF7CD; line-height:1.05; letter-spacing:-0.03em; margin:0 0 20px 0; opacity:0;">
+          Organización<br/>&amp; <span style="color:#FAF0B5;">Viabilidad</span>
+        </h1>
+        <p id="chap4-sub" style="font-size:16px; color:#a79f8e; line-height:1.6; margin:0; max-width:480px; opacity:0;">
+          Estructura de equipo, roles, cultura y marco laboral.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-chap4");
+  let pulseAnim = null;
+
+  function runChap4Animations() {
+    if (!slide) return;
+
+    const line = slide.querySelector("#chap4-line");
+    if (line) animate(line, { scaleY: [0, 1], opacity: [0, 1] }, { duration: 0.9, ease: [0.16, 1, 0.3, 1] });
+
+    const label = slide.querySelector("#chap4-label");
+    if (label) animate(label, { opacity: [0, 0.25] }, { duration: 0.4, delay: 0.2 });
+
+    const tag = slide.querySelector("#chap4-tag");
+    if (tag) animate(tag, { opacity: [0, 1], y: [10, 0] }, { duration: 0.4, delay: 0.25 });
+
+    const title = slide.querySelector("#chap4-title");
+    if (title) animate(title, { opacity: [0, 1], y: [30, 0] }, { duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] });
+
+    const sub = slide.querySelector("#chap4-sub");
+    if (sub) animate(sub, { opacity: [0, 1], y: [15, 0] }, { duration: 0.6, delay: 0.5 });
+
+    const bgNum = slide.querySelector("#chap4-bg-num");
+    if (bgNum) {
+      animate(bgNum, { color: ["rgba(255,247,205,0)", "rgba(255,247,205,0.025)"] }, { duration: 1, delay: 0.3 })
+        .then(() => {
+          pulseAnim = animate(
+            bgNum,
+            { color: ["rgba(255,247,205,0.015)", "rgba(255,247,205,0.04)", "rgba(255,247,205,0.015)"] },
+            { duration: 3.5, repeat: Infinity, ease: "easeInOut" }
+          );
+        });
+    }
+  }
+
+  function stopChap4Animations() {
+    if (pulseAnim) { pulseAnim.stop(); pulseAnim = null; }
+  }
+
+  slide?.addEventListener("slide:enter", runChap4Animations);
+  slide?.addEventListener("slide:leave", stopChap4Animations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runChap4Animations();
+  }
+</script>

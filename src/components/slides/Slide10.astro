@@ -1,69 +1,98 @@
 ---
+import { Briefcase, Code, Shield, Users } from '@lucide/astro';
 ---
-<section>
+<!-- Slide 10 — Recursos Humanos / Equipo — con animaciones en diagonal -->
+<section id="slide-10">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-      <!-- Línea decorativa derecha -->
       <div style="position:absolute; right:0; top:0; width:4px; height:100%; background: linear-gradient(to bottom, transparent, #FFF7CD, transparent);"></div>
-
-      <!-- Número de slide (superior derecho) -->
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">10 / 15</div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">16 / 20</div>
 
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
 
-        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 16px 0;">Recursos Humanos</p>
-        <h2 style="font-size:40px; font-weight:800; color:#FFF7CD; margin:0 0 32px 0; letter-spacing:-0.02em;">El equipo que<br/><span style="color:#FAF0B5;">ejecuta el plan</span></h2>
+        <p class="s10-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 12px 0; opacity:0;">Recursos Humanos</p>
+        <h2 class="s10-title" style="font-size:40px; font-weight:800; color:#FFF7CD; margin:0 0 26px 0; letter-spacing:-0.02em; opacity:0;">El equipo que<br/><span style="color:#FAF0B5;">ejecuta el plan</span></h2>
 
-        <!-- 4 puestos en grid 2x2 -->
+        <!-- 4 roles en grid 2x2 -->
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
 
-          <!-- PMO -->
-          <div style="padding:20px 22px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25); display:flex; flex-direction:column; gap:8px;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600;">ROL 01</div>
-              <div style="font-size:11px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">40h/sem</div>
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+            <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Briefcase size={18} stroke-width={1.8} /></div>
+            <div>
+              <div style="font-size:10px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 01 · 40 h/sem</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Project Manager (PMO)</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">Ciclo de vida Kanon/Orestes. Nexo cliente-equipo.</div>
             </div>
-            <div style="font-size:16px; font-weight:700; color:#FFF7CD;">Project Manager (PMO)</div>
-            <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Gestión del ciclo de vida de Kanon y Orestes. Nexo entre cliente y equipo técnico.</div>
           </div>
 
-          <!-- Dev FullStack -->
-          <div style="padding:20px 22px; background:rgba(255,247,205,0.04); border:1px solid rgba(255,247,205,0.2); display:flex; flex-direction:column; gap:8px;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600;">ROL 02</div>
-              <div style="font-size:11px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">40h/sem</div>
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,247,205,0.04); border:1px solid rgba(255,247,205,0.2); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+            <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Code size={18} stroke-width={1.8} /></div>
+            <div>
+              <div style="font-size:10px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 02 · 40 h/sem</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Desarrollador Full-Stack</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">React · Express · PostgreSQL. Arquitectura escalable.</div>
             </div>
-            <div style="font-size:16px; font-weight:700; color:#FFF7CD;">Desarrollador Full-Stack</div>
-            <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Frontend + Backend con React, Express, PostgreSQL. Arquitectura escalable.</div>
           </div>
 
-          <!-- Dev Low Level -->
-          <div style="padding:20px 22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); display:flex; flex-direction:column; gap:8px;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div style="font-size:11px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600;">ROL 03</div>
-              <div style="font-size:11px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">40h/sem</div>
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+            <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Shield size={18} stroke-width={1.8} /></div>
+            <div>
+              <div style="font-size:10px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 03 · 40 h/sem</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">DevOps / Bajo Nivel</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">C/C++, infra cloud, CI/CD y ciberseguridad.</div>
             </div>
-            <div style="font-size:16px; font-weight:700; color:#FFF7CD;">Desarrollador Bajo Nivel</div>
-            <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Optimización de rendimiento en C/C++. Arquitectura de sistemas eficientes.</div>
           </div>
 
-          <!-- Diseño / UX -->
-          <div style="padding:20px 22px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); display:flex; flex-direction:column; gap:8px;">
-            <div style="display:flex; justify-content:space-between; align-items:center;">
-              <div style="font-size:11px; color:rgba(255,247,205,0.7); letter-spacing:0.15em; font-weight:600;">ROL 04</div>
-              <div style="font-size:11px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">40h/sem</div>
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+            <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Users size={18} stroke-width={1.8} /></div>
+            <div>
+              <div style="font-size:10px; color:rgba(255,247,205,0.7); letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 04 · 40 h/sem</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Ventas B2B / Customer Success</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">UI/UX, gestión comercial y soporte al cliente.</div>
             </div>
-            <div style="font-size:16px; font-weight:700; color:#FFF7CD;">Diseño UI/UX & Comercial</div>
-            <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Interfaces intuitivas, experiencia de usuario y gestión comercial / ventas.</div>
           </div>
         </div>
 
         <!-- Convenio -->
-        <div style="margin-top:18px; padding:12px 18px; border-left:3px solid rgba(255,247,205,0.3); background:rgba(255,255,255,0.02);">
-          <p style="font-size:13px; color:#a79f8e; margin:0;">Marco legal: Convenio Colectivo CESSI · Modalidad remota/híbrida · Jornada de 40hs semanales</p>
+        <div class="s10-legal" style="margin-top:16px; padding:10px 16px; border-left:3px solid rgba(255,247,205,0.3); background:rgba(255,255,255,0.02); opacity:0;">
+          <p style="font-size:12px; color:#a79f8e; margin:0;">Marco legal: Convenio AGC · Unión Informática · Modalidad remota/híbrida · Jornada 40 hs semanales · Capacitación peer-to-peer</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  import { animate } from "motion";
+  const slide = document.getElementById("slide-10");
+
+  function runSlide10Animations() {
+    if (!slide) return;
+
+    const label = slide.querySelector(".s10-label");
+    if (label) animate(label, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.4 });
+
+    const title = slide.querySelector(".s10-title");
+    if (title) animate(title, { opacity: [0, 1], y: [-10, 0] }, { duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+
+    // Tarjetas en diagonal alternada: par entra top-left→, impar top-right←
+    const roles = slide.querySelectorAll(".s10-role");
+    const diagonals = [[-20, -10], [20, -10], [-20, 10], [20, 10]];
+    roles.forEach((role, i) => {
+      animate(
+        role,
+        { opacity: [0, 1], x: [diagonals[i][0], 0], y: [diagonals[i][1], 0] },
+        { duration: 0.55, delay: 0.2 + i * 0.11, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+
+    const legal = slide.querySelector(".s10-legal");
+    if (legal) animate(legal, { opacity: [0, 1] }, { duration: 0.5, delay: 0.75 });
+  }
+
+  slide?.addEventListener("slide:enter", runSlide10Animations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlide10Animations();
+  }
+</script>

@@ -1,6 +1,7 @@
 ---
+import { Cpu, Terminal, Code, Server } from '@lucide/astro';
 ---
-<section>
+<section id="slide-02">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
@@ -8,51 +9,75 @@
       <div style="position:absolute; inset:0; background-image: linear-gradient(rgba(255,247,205,0.03) 1px, transparent 1px), linear-gradient(to right, rgba(255,247,205,0.03) 1px, transparent 1px); background-size:60px 60px;"></div>
 
       <!-- Líneas decorativas top -->
-      <div style="position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent);"></div>
+      <div class="s02-top-line" style="position:absolute; top:0; left:0; right:0; height:3px; background: linear-gradient(to right, transparent, #FFF7CD 40%, #FAF0B5 60%, transparent); transform-origin: center; opacity: 0;"></div>
 
       <!-- Número de slide (superior derecho) -->
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">02 / 15</div>
+      <div class="s02-number" style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em; opacity: 0;">03 / 20</div>
 
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
 
         <!-- Header label -->
-        <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 24px 0;">¿Quiénes somos?</p>
+        <p class="s02-header-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 24px 0; opacity: 0;">¿Quiénes somos?</p>
 
         <!-- Layout 2 columnas -->
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:48px; align-items:start;">
 
           <!-- Columna izquierda -->
-          <div>
-            <h2 style="font-size:44px; font-weight:800; color:#FFF7CD; margin:0 0 16px 0; line-height:1.1; letter-spacing:-0.02em;">Equipo de<br/><span style="color:#FAF0B5;">desarrolladores</span></h2>
-            <p style="font-size:15px; color:#a79f8e; line-height:1.6; margin:0 0 24px 0;">Cuatro desarrolladores con expertise en programación de bajo nivel, frontend y backend full-stack.</p>
-            <div style="display:flex; align-items:center; gap:10px; padding:14px 18px; background:rgba(255,247,205,0.05); border-left:3px solid #FFF7CD;">
+          <div class="s02-left-col">
+            <h2 class="s02-anim-left" style="font-size:44px; font-weight:800; color:#FFF7CD; margin:0 0 16px 0; line-height:1.1; letter-spacing:-0.02em; opacity: 0;">Equipo de<br/><span style="color:#FAF0B5;">desarrolladores</span></h2>
+            
+            <!-- Frase resumida -->
+            <p class="s02-anim-left" style="font-size:15px; color:#a79f8e; line-height:1.5; margin:0 0 20px 0; opacity: 0;">
+              Cuatro desarrolladores especializados en bajo nivel y desarrollo full-stack.
+            </p>
+
+            <!-- 4 Iconos SVG de programación y desarrollo con onda de luz -->
+            <div class="dev-icons-group" style="display:flex; justify-content:center; gap:16px; margin:28px 0;">
+              <div title="Sistemas y Bajo Nivel" class="dev-icon-card" data-icon-index="0">
+                <Cpu size={20} stroke-width={1.8} />
+              </div>
+              <div title="Terminal & Shell" class="dev-icon-card" data-icon-index="1">
+                <Terminal size={20} stroke-width={1.8} />
+              </div>
+              <div title="Frontend & Software" class="dev-icon-card" data-icon-index="2">
+                <Code size={20} stroke-width={1.8} />
+              </div>
+              <div title="Backend & Infraestructura" class="dev-icon-card" data-icon-index="3">
+                <Server size={20} stroke-width={1.8} />
+              </div>
+            </div>
+
+            <div class="s02-anim-left" style="display:flex; align-items:center; gap:10px; padding:14px 18px; background:rgba(255,247,205,0.05); border-left:3px solid #FFF7CD; opacity: 0;">
               <span style="font-size:13px; color:#a79f8e; font-weight:500;">Metodología ágil · Decisiones horizontales · Learn by building</span>
             </div>
           </div>
 
           <!-- Columna derecha: valores -->
-          <div style="display:flex; flex-direction:column; gap:12px;">
-            <div style="padding:14px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2);">
-              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">APRENDIZAJE EMPÍRICO</div>
-              <div style="font-size:14px; color:#a79f8e;">"Learn by building" — aplicamos tecnología en proyectos reales</div>
+          <div class="s02-right-col" style="display:flex; flex-direction:column; gap:12px;">
+            <div class="value-card s02-anim-right" style="padding:16px 18px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2); border-radius:3px; opacity: 0;">
+              <div style="font-size:14px; color:#FFF7CD; letter-spacing:0.12em; margin-bottom:4px; font-weight:700;">APRENDIZAJE EMPÍRICO</div>
+              <div style="font-size:13px; color:#a79f8e; line-height:1.4;">"Learn by building": tecnología validada en proyectos reales.</div>
             </div>
-            <div style="padding:14px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2);">
-              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">CALIDAD TÉCNICA</div>
-              <div style="font-size:14px; color:#a79f8e;">Sistemas modulares, escalables y código limpio</div>
+
+            <div class="value-card s02-anim-right" style="padding:16px 18px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.2); border-radius:3px; opacity: 0;">
+              <div style="font-size:14px; color:#FFF7CD; letter-spacing:0.12em; margin-bottom:4px; font-weight:700;">CALIDAD TÉCNICA</div>
+              <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Arquitectura modular, escalable y código limpio.</div>
             </div>
-            <div style="padding:14px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15);">
-              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">ADAPTABILIDAD</div>
-              <div style="font-size:14px; color:#a79f8e;">Flexibilidad para elegir las herramientas más adecuadas</div>
+
+            <div class="value-card s02-anim-right" style="padding:16px 18px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.18); border-radius:3px; opacity: 0;">
+              <div style="font-size:14px; color:#FFF7CD; letter-spacing:0.12em; margin-bottom:4px; font-weight:700;">ADAPTABILIDAD</div>
+              <div style="font-size:13px; color:#a79f8e; line-height:1.4;">La herramienta precisa para cada desafío técnico.</div>
             </div>
-            <div style="padding:14px 16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1);">
-              <div style="font-size:11px; color:#FFF7CD; letter-spacing:0.15em; margin-bottom:4px; font-weight:600;">MEJORA CONTINUA</div>
-              <div style="font-size:14px; color:#a79f8e;">Iteramos, aprendemos de errores, crecemos constantemente</div>
+
+            <div class="value-card s02-anim-right" style="padding:16px 18px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.14); border-radius:3px; opacity: 0;">
+              <div style="font-size:14px; color:#FFF7CD; letter-spacing:0.12em; margin-bottom:4px; font-weight:700;">MEJORA CONTINUA</div>
+              <div style="font-size:13px; color:#a79f8e; line-height:1.4;">Iteración rápida, aprendizaje y evolución constante.</div>
             </div>
           </div>
         </div>
 
         <!-- GitHub label -->
-        <div style="margin-top:32px; display:flex; align-items:center; gap:10px;">
+        <div class="s02-github-label" style="margin-top:32px; display:flex; align-items:center; gap:10px; opacity: 0;">
           <div style="width:24px; height:1px; background:#FFF7CD;"></div>
           <span style="font-size:12px; color:rgba(255,247,205,0.7); font-family:'JetBrains Mono', monospace;">github.com/caudex-nox</span>
         </div>
@@ -60,3 +85,180 @@
     </div>
   </div>
 </section>
+
+<style>
+  .dev-icon-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 4px;
+    background: rgba(255, 247, 205, 0.05);
+    border: 1px solid rgba(255, 247, 205, 0.22);
+    color: #FFF7CD;
+    opacity: 0;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.22s ease, border-color 0.22s ease, background 0.22s ease, box-shadow 0.22s ease;
+  }
+
+  .dev-icon-card:hover {
+    transform: translateY(-2px) scale(1.05);
+    background: rgba(255, 247, 205, 0.18) !important;
+    border-color: rgba(255, 247, 205, 0.8) !important;
+    box-shadow: 0 4px 16px rgba(255, 247, 205, 0.25) !important;
+  }
+
+  .dev-icon-card:active {
+    transform: translateY(0px) scale(0.98);
+  }
+
+  .value-card {
+    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
+  }
+
+  .value-card:hover {
+    border-color: rgba(255, 247, 205, 0.45);
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateX(4px);
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-02");
+  let waveTimer = null;
+  let isWaveRunning = false;
+
+  function runSlide02Animations() {
+    if (!slide) return;
+
+    // 1. Línea superior decorativa
+    const topLine = slide.querySelector(".s02-top-line");
+    if (topLine) {
+      animate(
+        topLine,
+        { scaleX: [0, 1], opacity: [0, 1] },
+        { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
+      );
+    }
+
+    // 2. Número de slide y header
+    const slideNumber = slide.querySelector(".s02-number");
+    if (slideNumber) animate(slideNumber, { opacity: [0, 0.35] }, { duration: 0.5, delay: 0.1 });
+
+    const headerLabel = slide.querySelector(".s02-header-label");
+    if (headerLabel) animate(headerLabel, { opacity: [0, 1], y: [-10, 0] }, { duration: 0.5, delay: 0.15 });
+
+    // 3. Columna izquierda: textos
+    const leftItems = slide.querySelectorAll(".s02-anim-left");
+    leftItems.forEach((item, index) => {
+      animate(
+        item,
+        { x: [-30, 0], opacity: [0, 1] },
+        { duration: 0.6, delay: 0.2 + index * 0.12, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+
+    // 4. Columna derecha: tarjetas de valores en cascada
+    const rightCards = slide.querySelectorAll(".s02-anim-right");
+    rightCards.forEach((card, index) => {
+      animate(
+        card,
+        { x: [25, 0], opacity: [0, 1] },
+        { duration: 0.55, delay: 0.3 + index * 0.1, ease: [0.16, 1, 0.3, 1] }
+      );
+    });
+
+    // 5. GitHub label
+    const githubLabel = slide.querySelector(".s02-github-label");
+    if (githubLabel) animate(githubLabel, { opacity: [0, 1] }, { duration: 0.6, delay: 0.7 });
+
+    // 6. Entrada inicial de los 4 iconos (stagger con rebote suave)
+    const iconCards = slide.querySelectorAll(".dev-icon-card");
+    const introAnimations = Array.from(iconCards).map((card, i) =>
+      animate(
+        card,
+        { opacity: [0, 0.85], y: [16, 0], scale: [0.9, 1] },
+        { duration: 0.45, delay: 0.4 + i * 0.08, ease: [0.16, 1, 0.3, 1] }
+      ).finished
+    );
+
+    // 7. Arrancar la onda viajera de luz entre los 4 iconos tras la entrada
+    Promise.all(introAnimations).then(() => {
+      startBeaconWave();
+    });
+  }
+
+  // Función que reproduce la onda de luz secuencial (Beacon Chaser Wave)
+  function playSingleWave() {
+    if (!slide) return;
+    const iconCards = Array.from(slide.querySelectorAll(".dev-icon-card"));
+    if (iconCards.length === 0) return;
+
+    // Cada icono se ilumina intensamente, se eleva suavemente y luego vuelve a su tono base
+    iconCards.forEach((card, i) => {
+      setTimeout(() => {
+        // Si ya salimos del slide, no animar
+        if (!slide.classList.contains("present") && !slide.closest("section.present")) return;
+
+        animate(
+          card,
+          {
+            scale: [1, 1.12, 1],
+            borderColor: [
+              "rgba(255, 247, 205, 0.22)",
+              "rgba(255, 247, 205, 0.95)",
+              "rgba(255, 247, 205, 0.22)",
+            ],
+            backgroundColor: [
+              "rgba(255, 247, 205, 0.05)",
+              "rgba(255, 247, 205, 0.24)",
+              "rgba(255, 247, 205, 0.05)",
+            ],
+            boxShadow: [
+              "0 0 0px transparent",
+              "0 0 18px rgba(255, 247, 205, 0.45), inset 0 0 8px rgba(255, 247, 205, 0.25)",
+              "0 0 0px transparent",
+            ],
+            opacity: [0.85, 1, 0.85],
+          },
+          {
+            duration: 0.55,
+            ease: "easeInOut",
+          }
+        );
+      }, i * 220); // 220ms entre cada icono (ritmo de pulso dinámico)
+    });
+  }
+
+  function startBeaconWave() {
+    stopBeaconWave();
+    isWaveRunning = true;
+    // Primera pasada tras un breve respiro
+    waveTimer = setTimeout(function loop() {
+      if (!isWaveRunning) return;
+      playSingleWave();
+      // Repetir cada 3.2 segundos (tiempo de pasada de 4 iconos + pausa de reposo)
+      waveTimer = setTimeout(loop, 3200);
+    }, 600);
+  }
+
+  function stopBeaconWave() {
+    isWaveRunning = false;
+    if (waveTimer) {
+      clearTimeout(waveTimer);
+      waveTimer = null;
+    }
+  }
+
+  // Escuchar eventos de RevealLayout
+  slide?.addEventListener("slide:enter", runSlide02Animations);
+  slide?.addEventListener("slide:leave", stopBeaconWave);
+
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) {
+    runSlide02Animations();
+  }
+</script>
