@@ -207,7 +207,11 @@ import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 
 				const updateHomeBtnVisibility = () => {
 					if (homeBtn) {
-						homeBtn.style.display = deck.isLastSlide() ? 'block' : 'none';
+						const { h, v } = deck.getIndices();
+						const lastHorizontalIndex = deck.getHorizontalSlides().length - 1;
+						const isLastSlide = h === lastHorizontalIndex && (v === undefined || v === 0);
+
+						homeBtn.style.display = isLastSlide ? 'block' : 'none';
 					}
 				};
 
