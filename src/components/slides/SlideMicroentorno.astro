@@ -1,0 +1,102 @@
+---
+import { Building2, Handshake, Network, Users } from '@lucide/astro';
+---
+<!-- Microentorno — actores inmediatos de Caudex -->
+<section id="slide-microentorno">
+  <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
+    <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
+      <div style="position:absolute; inset:0; background:radial-gradient(ellipse 65% 70% at 70% 45%, rgba(255,247,205,0.055) 0%, transparent 68%);"></div>
+      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">09 / 21</div>
+
+      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+        <p class="smic-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 12px 0; opacity:0;">Diagnóstico · Microentorno</p>
+        <h2 class="smic-title" style="font-size:44px; font-weight:800; color:#FFF7CD; margin:0 0 30px 0; letter-spacing:-0.02em; opacity:0;">El entorno <span style="color:#FAF0B5;">inmediato</span></h2>
+
+        <div class="smic-grid" style="display:grid; grid-template-columns:1fr 1fr; gap:14px;">
+          <div class="smic-card" style="padding:22px; background:rgba(255,247,205,0.07); border:1px solid rgba(255,247,205,0.3); border-radius:4px; opacity:0;">
+            <div class="smic-icon"><Users size={22} stroke-width={1.8} /></div>
+            <div class="smic-copy"><div style="font-size:16px; font-weight:800; color:#FFF7CD; margin:0 0 5px;">Competidores</div><div style="font-size:14px; color:#a79f8e; line-height:1.4;">Agencias, software factories y freelancers.</div></div>
+          </div>
+          <div class="smic-card" style="padding:22px; background:rgba(255,255,255,0.035); border:1px solid rgba(255,247,205,0.2); border-radius:4px; opacity:0;">
+            <div class="smic-icon"><Handshake size={22} stroke-width={1.8} /></div>
+            <div class="smic-copy"><div style="font-size:16px; font-weight:800; color:#FFF7CD; margin:0 0 5px;">Intermediarios</div><div style="font-size:14px; color:#a79f8e; line-height:1.4;">Mercado Pago, cloud y pilotos institucionales.</div></div>
+          </div>
+          <div class="smic-card" style="padding:22px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.16); border-radius:4px; opacity:0;">
+            <div class="smic-icon"><Network size={22} stroke-width={1.8} /></div>
+            <div class="smic-copy"><div style="font-size:16px; font-weight:800; color:#FFF7CD; margin:0 0 5px;">Terceros</div><div style="font-size:14px; color:#a79f8e; line-height:1.4;">Sysarmy, CESSI, CAME y comunidad IT.</div></div>
+          </div>
+          <div class="smic-card" style="padding:22px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.12); border-radius:4px; opacity:0;">
+            <div class="smic-icon"><Building2 size={22} stroke-width={1.8} /></div>
+            <div class="smic-copy"><div style="font-size:16px; font-weight:800; color:#FFF7CD; margin:0 0 5px;">Instituciones</div><div style="font-size:14px; color:#a79f8e; line-height:1.4;">Regulación, datos y condiciones del sector.</div></div>
+          </div>
+        </div>
+
+        <div class="smic-footer" style="display:flex; align-items:center; justify-content:center; gap:12px; margin-top:24px; opacity:0;">
+          <div style="width:34px; height:1px; background:rgba(255,247,205,0.3);"></div>
+          <span style="font-size:13px; color:#a79f8e; font-style:italic;">Actores que condicionan y potencian la operación</span>
+          <div style="width:34px; height:1px; background:rgba(255,247,205,0.3);"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .smic-card {
+    display: grid;
+    grid-template-columns: 46px 1fr;
+    align-items: start;
+    column-gap: 16px;
+    transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  }
+  .smic-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255,247,205,0.6);
+    background: rgba(255,247,205,0.09);
+  }
+  .smic-icon {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:46px;
+    height:46px;
+    color:#FFF7CD;
+    border:1px solid rgba(255,247,205,0.28);
+    border-radius:4px;
+    background:rgba(255,247,205,0.06);
+  }
+  .smic-copy {
+    padding-top: 2px;
+  }
+</style>
+
+<script>
+  import { animate } from "motion";
+
+  const slide = document.getElementById("slide-microentorno");
+  function runMicroAnimations() {
+    if (!slide) return;
+
+    const label = slide.querySelector(".smic-label");
+    if (label) animate(label, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.4 });
+
+    const title = slide.querySelector(".smic-title");
+    if (title) animate(title, { opacity: [0, 1], x: [-18, 0] }, { duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+
+    const cards = slide.querySelectorAll(".smic-card");
+    cards.forEach((card, i) => {
+      animate(card, { opacity: [0, 1], y: [18, 0], scale: [0.96, 1] }, { duration: 0.5, delay: 0.2 + i * 0.12, ease: [0.16, 1, 0.3, 1] });
+    });
+
+    const icons = slide.querySelectorAll(".smic-icon");
+    icons.forEach((icon, i) => {
+      animate(icon, { scale: [1, 1.12, 1], rotate: [0, i % 2 ? 5 : -5, 0], boxShadow: ["0 0 0 rgba(255,247,205,0)", "0 0 14px rgba(255,247,205,0.42)", "0 0 0 rgba(255,247,205,0)"] }, { duration: 1.1, delay: 1.2 + i * 0.8, repeat: Infinity, repeatDelay: 4.8, ease: "easeInOut" });
+    });
+
+    const footer = slide.querySelector(".smic-footer");
+    if (footer) animate(footer, { opacity: [0, 1] }, { duration: 0.5, delay: 0.85 });
+  }
+
+  slide?.addEventListener("slide:enter", runMicroAnimations);
+  if (slide?.closest("section.present") || slide?.classList.contains("present")) runMicroAnimations();
+</script>
