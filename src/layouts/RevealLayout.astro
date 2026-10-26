@@ -266,6 +266,13 @@ import { ChevronLeft, ChevronRight, House } from '@lucide/astro';
 					document.getElementById('nextBtn')?.addEventListener('click', () => deck.next());
 					homeBtn?.addEventListener('click', () => deck.slide(0));
 
+					document.addEventListener('wheel', (event) => {
+						if (event.ctrlKey || event.deltaY === 0) return;
+
+						event.preventDefault();
+						event.deltaY < 0 ? deck.next() : deck.prev();
+					}, { passive: false });
+
 					fullscreenBtn?.addEventListener('click', toggleFullscreen);
 					document.addEventListener('fullscreenchange', updateFullscreenBtn);
 
