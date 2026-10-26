@@ -10,23 +10,13 @@
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px; display:grid; grid-template-columns:0.95fr 1.05fr; gap:36px; align-items:start;">
 
         <!-- Izquierda: Modelo Abell -->
-        <div id="s08-abell" style="padding:26px; background:rgba(255,247,205,0.04); border:1px solid rgba(255,247,205,0.2); opacity:0;">
+        <div id="s08-abell" style="padding:22px 20px 18px; background:rgba(255,247,205,0.04); border:1px solid rgba(255,247,205,0.2); opacity:0;">
           <p style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0;">Modelo Abell</p>
-          <h2 style="font-size:36px; font-weight:800; color:#FFF7CD; margin:0 0 20px 0; line-height:1.1; letter-spacing:-0.02em;">Cómo nos<br/><span style="color:#FAF0B5;">posicionamos</span></h2>
+          <h2 style="font-size:30px; font-weight:800; color:#FFF7CD; margin:0 0 8px 0; line-height:1.1; letter-spacing:-0.02em;">Cómo nos <span style="color:#FAF0B5;">posicionamos</span></h2>
 
-          <div style="display:flex; flex-direction:column; gap:10px;">
-            <div class="s08-abell-row" style="padding:12px 14px; border-left:3px solid #FFF7CD; background:rgba(255,247,205,0.06); opacity:0;">
-              <div style="font-size:10px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:4px;">¿A QUIÉN?</div>
-              <div style="font-size:15px; color:#a79f8e; line-height:1.4;">Educación · PyMEs</div>
-            </div>
-            <div class="s08-abell-row" style="padding:12px 14px; border-left:3px solid rgba(255,247,205,0.5); background:rgba(255,255,255,0.03); opacity:0;">
-              <div style="font-size:10px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:4px;">¿QUÉ?</div>
-              <div style="font-size:15px; color:#a79f8e; line-height:1.4;">Datos · trazabilidad · gestión</div>
-            </div>
-            <div class="s08-abell-row" style="padding:12px 14px; border-left:3px solid rgba(255,247,205,0.25); background:rgba(255,255,255,0.02); opacity:0;">
-              <div style="font-size:10px; color:rgba(255,247,205,0.7); letter-spacing:0.15em; font-weight:600; margin-bottom:4px;">¿CÓMO?</div>
-              <div style="font-size:15px; color:#a79f8e; line-height:1.4;">Full-stack · ágil · local</div>
-            </div>
+          <img class="s08-abell-diagram" src="/images/abell.svg" alt="Diagrama de Abell: funciones, grupos de compradores y tecnologías" />
+          <div class="s08-abell-legend">
+            <span><b>Qué</b> resuelve</span><span><b>A quién</b> sirve</span><span><b>Cómo</b> lo hace</span>
           </div>
         </div>
 
@@ -65,6 +55,36 @@
   </div>
 </section>
 
+<style>
+  .s08-abell-diagram {
+    display: block;
+    width: 100%;
+    height: 224px;
+    margin: 2px 0 0;
+    overflow: visible;
+  }
+  .s08-abell-diagram {
+    display: block;
+    width: 100%;
+    height: 224px;
+    object-fit: contain;
+    object-position: center;
+    margin: 2px 0 0;
+  }
+  .s08-abell-legend {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    margin-top: -2px;
+    color: #a79f8e;
+    font-size: 10px;
+  }
+  .s08-abell-legend b {
+    color: #FFF7CD;
+    font-weight: 700;
+  }
+</style>
+
 <script>
   import { animate } from "motion";
   const slide = document.getElementById("slide-08");
@@ -75,11 +95,6 @@
     // Bloque Abell entra desde la izquierda
     const abell = slide.querySelector("#s08-abell");
     if (abell) animate(abell, { opacity: [0, 1], x: [-30, 0] }, { duration: 0.65, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
-
-    const abellRows = slide.querySelectorAll(".s08-abell-row");
-    abellRows.forEach((r, i) => {
-      animate(r, { opacity: [0, 1], x: [-15, 0] }, { duration: 0.45, delay: 0.4 + i * 0.12 });
-    });
 
     const label4p = slide.querySelector(".s08-4p-label");
     if (label4p) animate(label4p, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.4, delay: 0.15 });
