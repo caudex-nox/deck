@@ -20,12 +20,9 @@
         <div id="chap1-tag" style="display:inline-block; padding:6px 14px; border:1px solid rgba(255,247,205,0.3); background:rgba(255,247,205,0.05); margin-bottom:24px; opacity:0;">
           <span style="font-size:11px; color:#FFF7CD; font-weight:600; letter-spacing:0.2em;">CAPÍTULO 1</span>
         </div>
-        <h1 id="chap1-title" style="font-size:56px; font-weight:900; color:#FFF7CD; line-height:1.05; letter-spacing:-0.03em; margin:0 0 20px 0; opacity:0;">
+        <h1 id="chap1-title" style="font-size:56px; font-weight:900; color:#FFF7CD; line-height:1.05; letter-spacing:-0.03em; margin:0; opacity:0;">
           Identidad,<br/><span style="color:#FAF0B5;">Origen</span> &amp; Soluciones
         </h1>
-        <p id="chap1-sub" style="font-size:16px; color:#a79f8e; line-height:1.6; margin:0; max-width:480px; opacity:0;">
-          Quiénes somos, de dónde venimos y los productos que construimos.
-        </p>
       </div>
     </div>
   </div>
@@ -51,9 +48,6 @@
 
     const title = slide.querySelector("#chap1-title");
     if (title) animate(title, { opacity: [0, 1], y: [30, 0] }, { duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] });
-
-    const sub = slide.querySelector("#chap1-sub");
-    if (sub) animate(sub, { opacity: [0, 1], y: [15, 0] }, { duration: 0.6, delay: 0.5, ease: "easeOut" });
 
     // Número de fondo: aparece con fade y luego pulsa
     const bgNum = slide.querySelector("#chap1-bg-num");

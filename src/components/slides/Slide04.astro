@@ -12,50 +12,47 @@
         <p class="s04-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Nuestros Productos</p>
         <h2 class="s04-title" style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 32px 0; letter-spacing:-0.02em; opacity:0;">Tres soluciones.<br/><span style="color:#FAF0B5;">Un ecosistema.</span></h2>
 
-        <!-- 3 productos: Orestes | Kanon | Deck -->
+        <!-- 3 productos: Kanon | Orestes | Deck con fondos oscuros neutros que destacan los logos -->
         <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
 
-          <!-- Orestes — fondo neutro/blanco suave (logo blanco) -->
-          <div class="s04-card" style="padding:28px 24px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.12); position:relative; overflow:hidden; opacity:0;">
-            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:rgba(255,255,255,0.25);"></div>
-            <!-- Logo Orestes (blanco, sobre fondo oscuro neutro) -->
-            <div style="display:flex; align-items:center; justify-content:center; height:52px; margin-bottom:16px;">
-              <img src="/images/orestes.svg" alt="Orestes" style="height:36px; width:auto; object-fit:contain; filter:brightness(1);" />
+          <!-- Kanon (Logo celeste/azul sobre fondo oscuro puro) -->
+          <div class="s04-card" style="padding:28px 24px; background:#161618; border:1px solid rgba(255,247,205,0.18); position:relative; overflow:hidden; border-radius:3px; opacity:0;">
+            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #FFF7CD, #FAF0B5);"></div>
+            <div style="display:flex; align-items:center; justify-content:center; height:56px; margin-bottom:16px; background:rgba(255,255,255,0.02); border-radius:4px; padding:6px;">
+              <img src="/images/kanon.png" alt="Kanon" style="height:42px; width:auto; object-fit:contain;" />
             </div>
-            <p style="font-size:13px; color:#a79f8e; line-height:1.5; margin:0 0 14px 0;">Plataforma fullstack de gestión de datos para PyMEs.</p>
-            <div style="padding:5px 10px; background:rgba(255,255,255,0.05); display:inline-block; border:1px solid rgba(255,255,255,0.1);">
-              <span style="font-size:11px; color:#a79f8e; font-weight:600;">React · Express · PostgreSQL</span>
-            </div>
-          </div>
-
-          <!-- Kanon — fondo azul oscuro (logo azul/celeste) -->
-          <div class="s04-card" style="padding:28px 24px; background:rgba(14,28,60,0.85); border:1px solid rgba(80,140,220,0.35); position:relative; overflow:hidden; opacity:0;">
-            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #4a90d9, #7ab8f5);"></div>
-            <!-- Logo Kanon (png con tonos azul/celeste) -->
-            <div style="display:flex; align-items:center; justify-content:center; height:52px; margin-bottom:16px;">
-              <img src="/images/kanon.png" alt="Kanon" style="height:40px; width:auto; object-fit:contain;" />
-            </div>
-            <p style="font-size:13px; color:#8ab4e8; line-height:1.5; margin:0 0 14px 0;">Sistema integral de inventario y stock para instituciones educativas.</p>
-            <div style="padding:5px 10px; background:rgba(74,144,217,0.12); display:inline-block; border:1px solid rgba(74,144,217,0.3);">
-              <span style="font-size:11px; color:#7ab8f5; font-weight:600;">Colegios · ETP · Stock</span>
+            <p style="font-size:13px; color:#a79f8e; line-height:1.45; margin:0 0 16px 0;">Control de stock y activos para instituciones educativas.</p>
+            <div style="padding:5px 10px; background:rgba(255,247,205,0.06); display:inline-block; border:1px solid rgba(255,247,205,0.2); border-radius:2px;">
+              <span style="font-size:11px; color:#FFF7CD; font-weight:600;">Colegios · ETP · Stock</span>
             </div>
           </div>
 
-          <!-- Deck — fondo azul marino con toque dorado (logo azul+dorado) -->
-          <div class="s04-card" style="padding:28px 24px; background:rgba(10,20,45,0.85); border:1px solid rgba(60,100,200,0.3); position:relative; overflow:hidden; opacity:0;">
-            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #3b5fc0, #FFF7CD);"></div>
-            <!-- Logo Deck (svg azul con amarillo) -->
-            <div style="display:flex; align-items:center; justify-content:center; height:52px; margin-bottom:16px;">
-              <img src="/images/deck.svg" alt="Deck" style="height:36px; width:auto; object-fit:contain;" />
+          <!-- Orestes (Logo blanco sobre fondo grafito oscuro) -->
+          <div class="s04-card" style="padding:28px 24px; background:#18181a; border:1px solid rgba(255,247,205,0.25); position:relative; overflow:hidden; border-radius:3px; opacity:0;">
+            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #FAF0B5, #FFF7CD);"></div>
+            <div style="display:flex; align-items:center; justify-content:center; height:56px; margin-bottom:16px; background:rgba(255,255,255,0.02); border-radius:4px; padding:6px;">
+              <img src="/images/orestes.svg" alt="Orestes" style="height:38px; width:auto; object-fit:contain;" />
             </div>
-            <p style="font-size:13px; color:#8a9ec0; line-height:1.5; margin:0 0 14px 0;">Presentaciones dinámicas y modulares para comunicación técnica.</p>
-            <div style="padding:5px 10px; background:rgba(59,95,192,0.1); display:inline-block; border:1px solid rgba(59,95,192,0.25);">
-              <span style="font-size:11px; color:#8aa8e8; font-weight:600;">Astro · Reveal.js</span>
+            <p style="font-size:13px; color:#a79f8e; line-height:1.45; margin:0 0 16px 0;">Gestión de datos y procesos operativos para PyMEs.</p>
+            <div style="padding:5px 10px; background:rgba(255,247,205,0.06); display:inline-block; border:1px solid rgba(255,247,205,0.2); border-radius:2px;">
+              <span style="font-size:11px; color:#FFF7CD; font-weight:600;">React · PostgreSQL</span>
+            </div>
+          </div>
+
+          <!-- Deck (Logo azul+dorado sobre fondo carbón pulido) -->
+          <div class="s04-card" style="padding:28px 24px; background:#151517; border:1px solid rgba(255,247,205,0.18); position:relative; overflow:hidden; border-radius:3px; opacity:0;">
+            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #FFF7CD, #FAF0B5);"></div>
+            <div style="display:flex; align-items:center; justify-content:center; height:56px; margin-bottom:16px; background:rgba(255,255,255,0.02); border-radius:4px; padding:6px;">
+              <img src="/images/deck.svg" alt="Deck" style="height:38px; width:auto; object-fit:contain;" />
+            </div>
+            <p style="font-size:13px; color:#a79f8e; line-height:1.45; margin:0 0 16px 0;">Presentaciones técnicas dinámicas y modulares.</p>
+            <div style="padding:5px 10px; background:rgba(255,247,205,0.06); display:inline-block; border:1px solid rgba(255,247,205,0.2); border-radius:2px;">
+              <span style="font-size:11px; color:#FFF7CD; font-weight:600;">Astro · Reveal.js</span>
             </div>
           </div>
         </div>
 
-        <p class="s04-footer" style="margin-top:20px; font-size:13px; color:rgba(167,159,142,0.4); font-style:italic; opacity:0;">Todos los productos construidos con arquitecturas modernas y sin licencias extranjeras</p>
+        <p class="s04-footer" style="margin-top:24px; font-size:12px; color:rgba(167,159,142,0.45); font-style:italic; opacity:0; text-align:center;">Software local, modular y sin licencias en moneda extranjera</p>
       </div>
     </div>
   </div>
@@ -63,11 +60,12 @@
 
 <style>
   .s04-card {
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
   .s04-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    border-color: rgba(255,247,205,0.55) !important;
+    box-shadow: 0 10px 28px rgba(0,0,0,0.5);
   }
 </style>
 
@@ -90,13 +88,13 @@
     cards.forEach((card, i) => {
       animate(
         card,
-        { opacity: [0, 1], scale: [0.9, 1], y: [20, 0] },
-        { duration: 0.6, delay: 0.2 + i * 0.15, ease: [0.16, 1, 0.3, 1] }
+        { opacity: [0, 1], scale: [0.92, 1], y: [18, 0] },
+        { duration: 0.6, delay: 0.2 + i * 0.14, ease: [0.16, 1, 0.3, 1] }
       );
     });
 
     const footer = slide.querySelector(".s04-footer");
-    if (footer) animate(footer, { opacity: [0, 0.4] }, { duration: 0.5, delay: 0.75 });
+    if (footer) animate(footer, { opacity: [0, 0.6] }, { duration: 0.5, delay: 0.75 });
   }
 
   slide?.addEventListener("slide:enter", runSlide04Animations);

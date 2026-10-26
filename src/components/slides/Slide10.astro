@@ -1,7 +1,7 @@
 ---
 import { Briefcase, Code, Shield, Users } from '@lucide/astro';
 ---
-<!-- Slide 10 — Recursos Humanos / Equipo — con animaciones en diagonal -->
+<!-- Slide 10 — Recursos Humanos / Equipo — textos concisos y animaciones fluidas -->
 <section id="slide-10">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
@@ -17,51 +17,62 @@ import { Briefcase, Code, Shield, Users } from '@lucide/astro';
         <!-- 4 roles en grid 2x2 -->
         <div style="display:grid; grid-template-columns:1fr 1fr; gap:12px;">
 
-          <div class="s10-role" style="padding:18px 20px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25); display:flex; gap:14px; align-items:flex-start; border-radius:3px; opacity:0;">
             <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Briefcase size={18} stroke-width={1.8} /></div>
             <div>
               <div style="font-size:10px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 01 · 40 h/sem</div>
-              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Project Manager (PMO)</div>
-              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">Ciclo de vida Kanon/Orestes. Nexo cliente-equipo.</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:3px;">Project Manager (PMO)</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">Gestión y entrega de proyectos. Nexo directo con el cliente.</div>
             </div>
           </div>
 
-          <div class="s10-role" style="padding:18px 20px; background:rgba(255,247,205,0.04); border:1px solid rgba(255,247,205,0.2); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,247,205,0.04); border:1px solid rgba(255,247,205,0.2); display:flex; gap:14px; align-items:flex-start; border-radius:3px; opacity:0;">
             <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Code size={18} stroke-width={1.8} /></div>
             <div>
               <div style="font-size:10px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 02 · 40 h/sem</div>
-              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Desarrollador Full-Stack</div>
-              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">React · Express · PostgreSQL. Arquitectura escalable.</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:3px;">Desarrollador Full-Stack</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">Desarrollo frontend React y arquitectura backend PostgreSQL.</div>
             </div>
           </div>
 
-          <div class="s10-role" style="padding:18px 20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); display:flex; gap:14px; align-items:flex-start; border-radius:3px; opacity:0;">
             <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Shield size={18} stroke-width={1.8} /></div>
             <div>
               <div style="font-size:10px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 03 · 40 h/sem</div>
-              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">DevOps / Bajo Nivel</div>
-              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">C/C++, infra cloud, CI/CD y ciberseguridad.</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:3px;">DevOps & Ciberseguridad</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">Infraestructura cloud, integración continua y bajo nivel en C/C++.</div>
             </div>
           </div>
 
-          <div class="s10-role" style="padding:18px 20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); display:flex; gap:14px; align-items:flex-start; opacity:0;">
+          <div class="s10-role" style="padding:18px 20px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); display:flex; gap:14px; align-items:flex-start; border-radius:3px; opacity:0;">
             <div style="color:#FFF7CD; flex-shrink:0; margin-top:2px;"><Users size={18} stroke-width={1.8} /></div>
             <div>
               <div style="font-size:10px; color:rgba(255,247,205,0.7); letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">ROL 04 · 40 h/sem</div>
-              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:4px;">Ventas B2B / Customer Success</div>
-              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">UI/UX, gestión comercial y soporte al cliente.</div>
+              <div style="font-size:15px; font-weight:700; color:#FFF7CD; margin-bottom:3px;">Ventas B2B & Customer Success</div>
+              <div style="font-size:12px; color:#a79f8e; line-height:1.4;">Diseño UI/UX, soporte postventa y adopción de usuarios.</div>
             </div>
           </div>
         </div>
 
         <!-- Convenio -->
-        <div class="s10-legal" style="margin-top:16px; padding:10px 16px; border-left:3px solid rgba(255,247,205,0.3); background:rgba(255,255,255,0.02); opacity:0;">
-          <p style="font-size:12px; color:#a79f8e; margin:0;">Marco legal: Convenio AGC · Unión Informática · Modalidad remota/híbrida · Jornada 40 hs semanales · Capacitación peer-to-peer</p>
+        <div class="s10-legal" style="margin-top:16px; padding:10px 16px; border-left:3px solid rgba(255,247,205,0.3); background:rgba(255,255,255,0.02); border-radius:2px; opacity:0;">
+          <p style="font-size:12px; color:#a79f8e; margin:0;">Marco laboral: Convenio Colectivo IT · Modalidad remota/híbrida · Capacitación continua peer-to-peer</p>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .s10-role {
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  .s10-role:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255,247,205,0.5);
+    background: rgba(255,247,205,0.09);
+  }
+</style>
 
 <script>
   import { animate } from "motion";
@@ -76,14 +87,13 @@ import { Briefcase, Code, Shield, Users } from '@lucide/astro';
     const title = slide.querySelector(".s10-title");
     if (title) animate(title, { opacity: [0, 1], y: [-10, 0] }, { duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
 
-    // Tarjetas en diagonal alternada: par entra top-left→, impar top-right←
     const roles = slide.querySelectorAll(".s10-role");
     const diagonals = [[-20, -10], [20, -10], [-20, 10], [20, 10]];
     roles.forEach((role, i) => {
       animate(
         role,
         { opacity: [0, 1], x: [diagonals[i][0], 0], y: [diagonals[i][1], 0] },
-        { duration: 0.55, delay: 0.2 + i * 0.11, ease: [0.16, 1, 0.3, 1] }
+        { duration: 0.55, delay: 0.2 + i * 0.1, ease: [0.16, 1, 0.3, 1] }
       );
     });
 

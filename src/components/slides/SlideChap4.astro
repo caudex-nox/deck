@@ -16,12 +16,9 @@
         <div id="chap4-tag" style="display:inline-block; padding:6px 14px; border:1px solid rgba(255,247,205,0.3); background:rgba(255,247,205,0.05); margin-bottom:24px; opacity:0;">
           <span style="font-size:11px; color:#FFF7CD; font-weight:600; letter-spacing:0.2em;">CAPÍTULO 4</span>
         </div>
-        <h1 id="chap4-title" style="font-size:56px; font-weight:900; color:#FFF7CD; line-height:1.05; letter-spacing:-0.03em; margin:0 0 20px 0; opacity:0;">
+        <h1 id="chap4-title" style="font-size:56px; font-weight:900; color:#FFF7CD; line-height:1.05; letter-spacing:-0.03em; margin:0; opacity:0;">
           Organización<br/>&amp; <span style="color:#FAF0B5;">Viabilidad</span>
         </h1>
-        <p id="chap4-sub" style="font-size:16px; color:#a79f8e; line-height:1.6; margin:0; max-width:480px; opacity:0;">
-          Estructura de equipo, roles, cultura y marco laboral.
-        </p>
       </div>
     </div>
   </div>
@@ -47,9 +44,6 @@
 
     const title = slide.querySelector("#chap4-title");
     if (title) animate(title, { opacity: [0, 1], y: [30, 0] }, { duration: 0.7, delay: 0.35, ease: [0.16, 1, 0.3, 1] });
-
-    const sub = slide.querySelector("#chap4-sub");
-    if (sub) animate(sub, { opacity: [0, 1], y: [15, 0] }, { duration: 0.6, delay: 0.5 });
 
     const bgNum = slide.querySelector("#chap4-bg-num");
     if (bgNum) {

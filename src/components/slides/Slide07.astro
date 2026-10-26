@@ -1,6 +1,6 @@
 ---
 ---
-<!-- Slide 07 — 5 Fuerzas de Porter — barras con fill animado -->
+<!-- Slide 07 — 5 Fuerzas de Porter — barras con fill animado, contadores y efectos lumínicos -->
 <section id="slide-07">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
@@ -12,58 +12,105 @@
         <p class="s07-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 10px 0; opacity:0;">5 Fuerzas Competitivas · Porter</p>
         <h2 class="s07-title" style="font-size:36px; font-weight:800; color:#FFF7CD; margin:0 0 24px 0; letter-spacing:-0.02em; opacity:0;">El ecosistema <span style="color:#FAF0B5;">competitivo</span></h2>
 
+        <!-- Filas de las 5 fuerzas -->
         <div style="display:flex; flex-direction:column; gap:10px;">
 
-          <div class="s07-row" style="display:grid; grid-template-columns:200px 1fr 110px; gap:16px; align-items:center; padding:13px 18px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.25); opacity:0;">
-            <div style="font-size:14px; font-weight:600; color:#FFF7CD;">Rivalidad existente</div>
-            <div style="height:4px; background:rgba(255,255,255,0.07); border-radius:2px; overflow:hidden;">
-              <div class="s07-bar" data-width="65" style="height:100%; width:0%; background:linear-gradient(to right, #FFF7CD, #FAF0B5); border-radius:2px;"></div>
+          <!-- 1. Rivalidad -->
+          <div class="s07-row" style="display:grid; grid-template-columns:190px 1fr 140px; gap:16px; align-items:center; padding:12px 18px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.25); border-radius:3px; opacity:0;">
+            <div style="font-size:13px; font-weight:600; color:#FFF7CD;">Rivalidad existente</div>
+            <div style="position:relative; height:6px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden;">
+              <div class="s07-bar" data-width="65" style="height:100%; width:0%; background:linear-gradient(to right, #FAF0B5, #FFF7CD); border-radius:3px; box-shadow:0 0 10px rgba(255,247,205,0.3);"></div>
             </div>
-            <div style="font-size:12px; color:#FAF0B5; font-weight:700; text-align:right;">Media-Alta</div>
+            <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px;">
+              <span class="s07-percent" data-target="65" style="font-size:13px; font-weight:800; color:#FFF7CD; font-family:'JetBrains Mono',monospace;">0%</span>
+              <span style="font-size:10px; color:#FAF0B5; font-weight:700; background:rgba(255,247,205,0.1); padding:2px 6px; border-radius:2px;">Media-Alta</span>
+            </div>
           </div>
 
-          <div class="s07-row" style="display:grid; grid-template-columns:200px 1fr 110px; gap:16px; align-items:center; padding:13px 18px; background:rgba(255,247,205,0.07); border:1px solid rgba(255,247,205,0.3); opacity:0;">
-            <div style="font-size:14px; font-weight:600; color:#FFF7CD;">Nuevos entrantes</div>
-            <div style="height:4px; background:rgba(255,255,255,0.07); border-radius:2px; overflow:hidden;">
-              <div class="s07-bar" data-width="80" style="height:100%; width:0%; background:linear-gradient(to right, #FFF7CD, #FAF0B5); border-radius:2px;"></div>
+          <!-- 2. Nuevos entrantes -->
+          <div class="s07-row s07-highlight" style="display:grid; grid-template-columns:190px 1fr 140px; gap:16px; align-items:center; padding:12px 18px; background:rgba(255,247,205,0.07); border:1px solid rgba(255,247,205,0.32); border-radius:3px; opacity:0;">
+            <div style="font-size:13px; font-weight:600; color:#FFF7CD;">Nuevos entrantes</div>
+            <div style="position:relative; height:6px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden;">
+              <div class="s07-bar" data-width="80" style="height:100%; width:0%; background:linear-gradient(to right, #FAF0B5, #FFF7CD); border-radius:3px; box-shadow:0 0 12px rgba(255,247,205,0.45);"></div>
             </div>
-            <div style="font-size:12px; color:#FFF7CD; font-weight:700; text-align:right;">Alta</div>
+            <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px;">
+              <span class="s07-percent" data-target="80" style="font-size:13px; font-weight:800; color:#FFF7CD; font-family:'JetBrains Mono',monospace;">0%</span>
+              <span style="font-size:10px; color:#121212; background:#FFF7CD; font-weight:800; padding:2px 6px; border-radius:2px;">Alta</span>
+            </div>
           </div>
 
-          <div class="s07-row" style="display:grid; grid-template-columns:200px 1fr 110px; gap:16px; align-items:center; padding:13px 18px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.1); opacity:0;">
-            <div style="font-size:14px; font-weight:600; color:#FFF7CD;">Poder clientes</div>
-            <div style="height:4px; background:rgba(255,255,255,0.07); border-radius:2px; overflow:hidden;">
-              <div class="s07-bar" data-width="60" style="height:100%; width:0%; background:linear-gradient(to right, #FFF7CD, #FAF0B5); border-radius:2px;"></div>
+          <!-- 3. Poder clientes -->
+          <div class="s07-row" style="display:grid; grid-template-columns:190px 1fr 140px; gap:16px; align-items:center; padding:12px 18px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); border-radius:3px; opacity:0;">
+            <div style="font-size:13px; font-weight:600; color:#FFF7CD;">Poder clientes</div>
+            <div style="position:relative; height:6px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden;">
+              <div class="s07-bar" data-width="60" style="height:100%; width:0%; background:linear-gradient(to right, #FAF0B5, #FFF7CD); border-radius:3px;"></div>
             </div>
-            <div style="font-size:12px; color:#FAF0B5; font-weight:700; text-align:right;">Medio-Alto</div>
+            <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px;">
+              <span class="s07-percent" data-target="60" style="font-size:13px; font-weight:800; color:#FFF7CD; font-family:'JetBrains Mono',monospace;">0%</span>
+              <span style="font-size:10px; color:#FAF0B5; font-weight:700; background:rgba(255,247,205,0.1); padding:2px 6px; border-radius:2px;">Medio-Alto</span>
+            </div>
           </div>
 
-          <div class="s07-row" style="display:grid; grid-template-columns:200px 1fr 110px; gap:16px; align-items:center; padding:13px 18px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.05); opacity:0;">
-            <div style="font-size:14px; font-weight:600; color:#a79f8e;">Poder proveedores</div>
-            <div style="height:4px; background:rgba(255,255,255,0.06); border-radius:2px; overflow:hidden;">
-              <div class="s07-bar" data-width="20" style="height:100%; width:0%; background:rgba(255,247,205,0.4); border-radius:2px;"></div>
+          <!-- 4. Poder proveedores -->
+          <div class="s07-row" style="display:grid; grid-template-columns:190px 1fr 140px; gap:16px; align-items:center; padding:12px 18px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.07); border-radius:3px; opacity:0;">
+            <div style="font-size:13px; font-weight:600; color:#a79f8e;">Poder proveedores</div>
+            <div style="position:relative; height:6px; background:rgba(255,255,255,0.06); border-radius:3px; overflow:hidden;">
+              <div class="s07-bar" data-width="20" style="height:100%; width:0%; background:rgba(255,247,205,0.45); border-radius:3px;"></div>
             </div>
-            <div style="font-size:12px; color:#a79f8e; font-weight:700; text-align:right;">Bajo</div>
+            <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px;">
+              <span class="s07-percent" data-target="20" style="font-size:13px; font-weight:800; color:#a79f8e; font-family:'JetBrains Mono',monospace;">0%</span>
+              <span style="font-size:10px; color:#a79f8e; font-weight:700; background:rgba(255,255,255,0.05); padding:2px 6px; border-radius:2px;">Bajo</span>
+            </div>
           </div>
 
-          <div class="s07-row" style="display:grid; grid-template-columns:200px 1fr 110px; gap:16px; align-items:center; padding:13px 18px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.25); opacity:0;">
-            <div style="font-size:14px; font-weight:600; color:#FFF7CD;">Productos sustitutos</div>
-            <div style="height:4px; background:rgba(255,255,255,0.07); border-radius:2px; overflow:hidden;">
-              <div class="s07-bar" data-width="82" style="height:100%; width:0%; background:linear-gradient(to right, #FFF7CD, #FAF0B5); border-radius:2px;"></div>
+          <!-- 5. Sustitutos -->
+          <div class="s07-row s07-highlight" style="display:grid; grid-template-columns:190px 1fr 140px; gap:16px; align-items:center; padding:12px 18px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.28); border-radius:3px; opacity:0;">
+            <div style="font-size:13px; font-weight:600; color:#FFF7CD;">Productos sustitutos</div>
+            <div style="position:relative; height:6px; background:rgba(255,255,255,0.07); border-radius:3px; overflow:hidden;">
+              <div class="s07-bar" data-width="82" style="height:100%; width:0%; background:linear-gradient(to right, #FAF0B5, #FFF7CD); border-radius:3px; box-shadow:0 0 12px rgba(255,247,205,0.45);"></div>
             </div>
-            <div style="font-size:12px; color:#FFF7CD; font-weight:700; text-align:right;">Alta</div>
+            <div style="display:flex; align-items:center; justify-content:flex-end; gap:8px;">
+              <span class="s07-percent" data-target="82" style="font-size:13px; font-weight:800; color:#FFF7CD; font-family:'JetBrains Mono',monospace;">0%</span>
+              <span style="font-size:10px; color:#121212; background:#FFF7CD; font-weight:800; padding:2px 6px; border-radius:2px;">Alta</span>
+            </div>
           </div>
         </div>
 
-        <p class="s07-note" style="margin-top:16px; font-size:12px; color:#a79f8e; font-style:italic; opacity:0;">No-code, IA y Excel como competidores indirectos en etapas tempranas de digitalización</p>
+        <p class="s07-note" style="margin-top:16px; font-size:12px; color:#a79f8e; font-style:italic; opacity:0; text-align:center;">
+          Diferenciación técnica y metodológica frente a soluciones no-code, IA y hojas de cálculo
+        </p>
       </div>
     </div>
   </div>
 </section>
 
+<style>
+  .s07-row {
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  .s07-row:hover {
+    transform: translateX(4px);
+    border-color: rgba(255,247,205,0.55) !important;
+    background: rgba(255,247,205,0.09) !important;
+  }
+</style>
+
 <script>
   import { animate } from "motion";
   const slide = document.getElementById("slide-07");
+
+  function countPercent(el, target, duration = 800) {
+    const startTime = performance.now();
+    function step(currentTime) {
+      const elapsed = currentTime - startTime;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      const val = Math.round(target * eased);
+      el.textContent = `${val}%`;
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
 
   function runSlide07Animations() {
     if (!slide) return;
@@ -76,16 +123,28 @@
 
     const rows = slide.querySelectorAll(".s07-row");
     rows.forEach((row, i) => {
-      // Fila entra desde la derecha
-      animate(row, { opacity: [0, 1], x: [40, 0] }, { duration: 0.5, delay: 0.2 + i * 0.1, ease: [0.16, 1, 0.3, 1] })
-        .then(() => {
-          // Barra anima su width tras la entrada de la fila
-          const bar = row.querySelector(".s07-bar");
-          const targetWidth = bar?.getAttribute("data-width") || "0";
-          if (bar) {
-            animate(bar, { width: ["0%", `${targetWidth}%`] }, { duration: 0.7, ease: [0.16, 1, 0.3, 1] });
-          }
-        });
+      // Entrada escalonada de la fila
+      animate(
+        row,
+        { opacity: [0, 1], x: [35, 0] },
+        { duration: 0.5, delay: 0.2 + i * 0.1, ease: [0.16, 1, 0.3, 1] }
+      ).then(() => {
+        // Llenado de barra con resplandor
+        const bar = row.querySelector(".s07-bar");
+        const targetWidth = bar?.getAttribute("data-width") || "0";
+        if (bar) {
+          animate(
+            bar,
+            { width: ["0%", `${targetWidth}%`] },
+            { duration: 0.85, ease: [0.16, 1, 0.3, 1] }
+          );
+        }
+
+        // Contador de porcentaje numérico
+        const numEl = row.querySelector(".s07-percent");
+        const targetNum = parseInt(numEl?.getAttribute("data-target") || "0");
+        if (numEl) countPercent(numEl, targetNum, 850);
+      });
     });
 
     const note = slide.querySelector(".s07-note");
