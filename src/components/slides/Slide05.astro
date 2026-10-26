@@ -32,7 +32,7 @@
                 <div style="font-size:10px; color:#FFF7CD; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">SEGMENTO A</div>
                 <div style="font-size:16px; font-weight:700; color:#FFF7CD;">Instituciones Educativas</div>
               </div>
-              <span style="padding:3px 9px; background:#FFF7CD; font-size:10px; color:#121212; font-weight:800; border-radius:2px;">KANON</span>
+              <span class="s05-product-badge s05-kanon-badge" style="padding:3px 9px; background:#FFF7CD; font-size:10px; color:#121212; font-weight:800; border-radius:2px;">KANON</span>
             </div>
             <p style="font-size:12px; color:#a79f8e; margin:0; line-height:1.45;">Secundarias técnicas y centros ETP con necesidad de control de stock y activos.</p>
           </div>
@@ -43,7 +43,7 @@
                 <div style="font-size:10px; color:#FAF0B5; letter-spacing:0.15em; font-weight:600; margin-bottom:3px;">SEGMENTO B</div>
                 <div style="font-size:16px; font-weight:700; color:#FFF7CD;">PyMEs y Profesionales</div>
               </div>
-              <span style="padding:3px 9px; background:rgba(255,247,205,0.12); border:1px solid rgba(255,247,205,0.3); font-size:10px; color:#FFF7CD; font-weight:700; border-radius:2px;">ORESTES</span>
+              <span class="s05-product-badge s05-orestes-badge" style="padding:3px 9px; background:rgba(255,247,205,0.12); border:1px solid rgba(255,247,205,0.3); font-size:10px; color:#FFF7CD; font-weight:700; border-radius:2px;">ORESTES</span>
             </div>
             <p style="font-size:12px; color:#a79f8e; margin:0; line-height:1.45;">Micro y pequeñas empresas que requieren gestión operativa sin licencias en USD.</p>
           </div>
@@ -65,6 +65,45 @@
     transform: translateX(3px);
     border-color: rgba(255,247,205,0.45);
     background: rgba(255,247,205,0.08);
+  }
+  @property --s05-angle {
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+  }
+  .s05-seg {
+    position: relative;
+    overflow: hidden;
+  }
+  .s05-seg::after {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    padding: 2px;
+    border-radius: 4px;
+    background: conic-gradient(from var(--s05-angle), transparent 0deg 255deg, rgba(255,247,205,0.35) 300deg, #FFF7CD 340deg, transparent 360deg);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+    animation: s05-border-race 5.8s linear infinite;
+    opacity: 1;
+    filter: drop-shadow(0 0 5px rgba(255,247,205,0.85));
+  }
+  .s05-seg:nth-child(2)::after {
+    animation-delay: -2.7s;
+  }
+  .s05-seg:nth-child(3)::after {
+    animation-delay: -4.1s;
+    opacity: 0.9;
+  }
+  .s05-product-badge {
+    display: inline-block;
+    transform-origin: center bottom;
+    will-change: transform;
+  }
+  @keyframes s05-border-race {
+    to { --s05-angle: 360deg; }
   }
 </style>
 
@@ -110,6 +149,44 @@
     segs.forEach((s, i) => {
       animate(s, { opacity: [0, 1], x: [30, 0] }, { duration: 0.55, delay: 0.25 + i * 0.12, ease: [0.16, 1, 0.3, 1] });
     });
+
+    // Refuerzo visible del recorrido: el borde completo respira cuando la luz pasa.
+    segs.forEach((seg, i) => {
+      animate(
+        seg,
+        {
+          borderColor: [
+            "rgba(255,247,205,0.25)",
+            "rgba(255,247,205,0.9)",
+            "rgba(255,247,205,0.25)"
+          ],
+          boxShadow: [
+            "0 0 0 rgba(255,247,205,0)",
+            "0 0 18px rgba(255,247,205,0.22)",
+            "0 0 0 rgba(255,247,205,0)"
+          ]
+        },
+        { duration: 2.2, delay: 1.8 + i * 0.7, repeat: Infinity, repeatDelay: 3.6, ease: "easeInOut" }
+      );
+    });
+
+    // Los dos productos se desprenden brevemente, en momentos distintos.
+    const kanon = slide.querySelector(".s05-kanon-badge");
+    const orestes = slide.querySelector(".s05-orestes-badge");
+    if (kanon) {
+      animate(
+        kanon,
+        { y: [0, 10, 4, 0], rotate: [0, 5, -2, 0], opacity: [1, 0.85, 1] },
+        { duration: 1.05, delay: 4.2, repeat: Infinity, repeatDelay: 8.5, ease: [0.22, 1, 0.36, 1] }
+      );
+    }
+    if (orestes) {
+      animate(
+        orestes,
+        { y: [0, -8, 3, 0], rotate: [0, -4, 2, 0], opacity: [1, 0.82, 1] },
+        { duration: 0.95, delay: 8.1, repeat: Infinity, repeatDelay: 9.5, ease: [0.22, 1, 0.36, 1] }
+      );
+    }
   }
 
   slide?.addEventListener("slide:enter", runSlide05Animations);

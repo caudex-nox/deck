@@ -106,6 +106,17 @@ import { CheckCircle2, Sparkles, TrendingUp } from '@lucide/astro';
 
     const footer = slide.querySelector(".s14-footer");
     if (footer) animate(footer, { opacity: [0, 1] }, { duration: 0.5, delay: 0.8 });
+
+    cards.forEach((card, i) => {
+      animate(
+        card,
+        {
+          borderColor: ["rgba(255,247,205,0.18)", "rgba(255,247,205,0.7)", "rgba(255,247,205,0.18)"],
+          boxShadow: ["0 0 0 rgba(255,247,205,0)", "0 0 18px rgba(255,247,205,0.22)", "0 0 0 rgba(255,247,205,0)"]
+        },
+        { duration: 2.3, delay: 1.5 + i * 0.85, repeat: Infinity, repeatDelay: 5, ease: "easeInOut" }
+      );
+    });
   }
 
   slide?.addEventListener("slide:enter", runSlide14Animations);

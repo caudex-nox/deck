@@ -63,19 +63,26 @@
 
 <style>
   .sr-card {
+    position: relative;
     transition: transform 0.22s ease;
   }
   .sr-card:hover {
     transform: translateY(-3px);
+    z-index: 20;
   }
   .sr-card img {
     transition: transform 0.35s ease, opacity 0.2s ease, filter 0.2s ease;
     transform-origin: center;
+    position: relative;
+    z-index: 2;
   }
   .sr-card:hover img {
-    transform: scale(1.16);
+    transform: scale(1.65);
     opacity: 1 !important;
     filter: grayscale(0%) !important;
+  }
+  .sr-card > div:nth-child(2) {
+    overflow: visible !important;
   }
 </style>
 

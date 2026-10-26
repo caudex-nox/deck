@@ -98,6 +98,16 @@
     pCards.forEach((card, i) => {
       animate(card, { borderColor: ["rgba(255,247,205,0.15)", "rgba(255,247,205,0.38)", "rgba(255,247,205,0.15)"] }, { duration: 3.2, delay: 1.1 + i * 0.25, repeat: Infinity, ease: "easeInOut" });
     });
+
+    // Pequeños roces entre las tarjetas: se acercan y vuelven a su sitio.
+    pCards.forEach((card, i) => {
+      const direction = i % 2 === 0 ? 1 : -1;
+      animate(
+        card,
+        { x: [0, direction * 4, direction * -2, 0], rotate: [0, direction * 0.25, direction * -0.12, 0] },
+        { duration: 1.1, delay: 4.5 + i * 1.15, repeat: Infinity, repeatDelay: 8.5, ease: [0.22, 1, 0.36, 1] }
+      );
+    });
   }
 
   slide?.addEventListener("slide:enter", runSlide08Animations);

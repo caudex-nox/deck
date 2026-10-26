@@ -17,7 +17,7 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
 
         <p class="s11-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Propuesta de Valor</p>
-        <h2 class="s11-title" style="font-size:48px; font-weight:800; color:#FFF7CD; margin:0 0 24px 0; line-height:1.1; letter-spacing:-0.02em; max-width:520px; opacity:0;">¿Por qué elegir<br/><span style="color:#FAF0B5;">Caudex?</span></h2>
+        <h2 class="s11-title" style="font-size:48px; font-weight:800; color:#FFF7CD; margin:0 0 24px 0; line-height:1.1; letter-spacing:-0.02em; max-width:520px; opacity:0;">¿Por qué elegir<br/><span style="color:#FAF0B5;">Caudex<span class="s11-question">?</span></span></h2>
 
         <div style="display:flex; flex-direction:column; gap:11px; max-width:540px;">
 
@@ -67,6 +67,10 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
     border-color: rgba(255,247,205,0.5);
     background: rgba(255,247,205,0.1);
   }
+  .s11-question {
+    display: inline-block;
+    transform-origin: center bottom;
+  }
 </style>
 
 <script>
@@ -94,6 +98,15 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
     items.forEach((item, i) => {
       animate(item, { borderColor: ["rgba(255,247,205,0.25)", "rgba(255,247,205,0.48)", "rgba(255,247,205,0.25)"] }, { duration: 3.5, delay: 1.2 + i * 0.25, repeat: Infinity, ease: "easeInOut" });
     });
+
+    const question = slide.querySelector(".s11-question");
+    if (question) {
+      animate(
+        question,
+        { y: [0, 18, 30, 8, 0], x: [0, 2, 5, -2, 0], rotate: [0, 10, 22, -5, 0], scale: [1, 1.08, 0.92, 1.04, 1] },
+        { duration: 1.45, delay: 4.8, repeat: Infinity, repeatDelay: 10.5, ease: [0.22, 1, 0.36, 1] }
+      );
+    }
   }
 
   slide?.addEventListener("slide:enter", runSlide11Animations);

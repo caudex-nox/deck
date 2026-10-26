@@ -63,6 +63,7 @@
 <script>
   import { animate } from "motion";
   const slide = document.getElementById("slide-09");
+  let yearPulseRunning = false;
 
   function countUp(el, target, duration = 800) {
     const start = 0;
@@ -99,9 +100,34 @@
 
     const stats = slide.querySelector(".s09-stats");
     if (stats) animate(stats, { opacity: [0, 1], y: [10, 0] }, { duration: 0.5, delay: 0.85 });
+
+    yearPulseRunning = true;
+    runYearPulse();
+  }
+
+  async function runYearPulse() {
+    const years = Array.from(slide?.querySelectorAll(".s09-year") || []);
+    while (yearPulseRunning && years.length) {
+      for (const year of years) {
+        if (!yearPulseRunning) return;
+        await animate(
+          year,
+          {
+            borderColor: ["rgba(255,247,205,0.2)", "rgba(255,247,205,0.9)", "rgba(255,247,205,0.2)"],
+            boxShadow: ["0 0 0 rgba(255,247,205,0)", "0 0 24px rgba(255,247,205,0.28)", "0 0 0 rgba(255,247,205,0)"]
+          },
+          { duration: 1.15, ease: [0.22, 1, 0.36, 1] }
+        ).finished;
+        await new Promise(resolve => setTimeout(resolve, 260));
+      }
+      await new Promise(resolve => setTimeout(resolve, 2600));
+    }
   }
 
   slide?.addEventListener("slide:enter", runSlide09Animations);
+  slide?.addEventListener("slide:leave", () => {
+    yearPulseRunning = false;
+  });
   if (slide?.closest("section.present") || slide?.classList.contains("present")) {
     runSlide09Animations();
   }
