@@ -13,7 +13,7 @@
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
 
         <p class="sr-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Plan Comercial · Promoción</p>
-        <h2 class="sr-title" style="font-size:36px; font-weight:800; color:#FFF7CD; margin:0 0 28px 0; letter-spacing:-0.02em; opacity:0;">Presencia <span style="color:#FAF0B5;">digital activa</span></h2>
+        <h2 class="sr-title" style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 28px 0; letter-spacing:-0.02em; opacity:0;">Presencia <span style="color:#FAF0B5;">digital activa</span></h2>
 
         <!-- 4 capturas en grid -->
         <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;">
@@ -23,7 +23,7 @@
             <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
               <img src="/images/github.png" alt="GitHub Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
             </div>
-            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">github.com/caudex-nox</div>
+            <div style="margin-top:8px; font-size:13px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Código abierto</div>
           </div>
 
           <div class="sr-card" style="opacity:0;">
@@ -31,7 +31,7 @@
             <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
               <img src="/images/instagram.png" alt="Instagram Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
             </div>
-            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">@caudex.dev</div>
+            <div style="margin-top:8px; font-size:13px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Comunidad</div>
           </div>
 
           <div class="sr-card" style="opacity:0;">
@@ -39,7 +39,7 @@
             <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
               <img src="/images/linkedin-profile.png" alt="LinkedIn Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
             </div>
-            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Caudex · LinkedIn</div>
+            <div style="margin-top:8px; font-size:13px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Red profesional</div>
           </div>
 
           <div class="sr-card" style="opacity:0;">
@@ -47,14 +47,14 @@
             <div style="border:1px solid rgba(255,247,205,0.2); overflow:hidden; border-radius:3px;">
               <img src="/images/portfolio.png" alt="Portfolio Caudex" style="width:100%; height:100px; object-fit:cover; object-position:top; display:block; opacity:0.85; filter:grayscale(20%);" />
             </div>
-            <div style="margin-top:8px; font-size:12px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">caudex.dev</div>
+            <div style="margin-top:8px; font-size:13px; color:#a79f8e; font-family:'JetBrains Mono',monospace;">Portfolio</div>
           </div>
         </div>
 
         <!-- Nota de estrategia -->
         <div class="sr-note" style="margin-top:22px; display:flex; align-items:center; gap:16px; opacity:0;">
           <div style="width:24px; height:1px; background:rgba(255,247,205,0.3);"></div>
-          <span style="font-size:13px; color:#a79f8e; font-style:italic;">Venta directa · Demo en vivo · 30 días piloto bonificado</span>
+          <span style="font-size:14px; color:#a79f8e; font-style:italic;">Venta directa · demo · piloto 30 días</span>
         </div>
       </div>
     </div>
@@ -69,9 +69,11 @@
     transform: translateY(-3px);
   }
   .sr-card img {
-    transition: opacity 0.2s ease, filter 0.2s ease;
+    transition: transform 0.35s ease, opacity 0.2s ease, filter 0.2s ease;
+    transform-origin: center;
   }
   .sr-card:hover img {
+    transform: scale(1.16);
     opacity: 1 !important;
     filter: grayscale(0%) !important;
   }
@@ -99,6 +101,10 @@
         { opacity: [0, 1], y: [24, 0] },
         { duration: 0.55, delay: 0.2 + i * 0.12, ease: [0.16, 1, 0.3, 1] }
       );
+    });
+
+    cards.forEach((card, i) => {
+      animate(card, { y: [0, -3, 0] }, { duration: 3.6, delay: 1.1 + i * 0.2, repeat: Infinity, ease: "easeInOut" });
     });
 
     const note = slide.querySelector(".sr-note");

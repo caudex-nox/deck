@@ -1,58 +1,64 @@
 ---
 ---
+<!-- Slide 04 — Portfolio con 3 tonos oscuros progresivos, textos mínimos y animación continua de levitación -->
 <section id="slide-04">
   <div class="slide-content" style="background:#121212; width:100%; height:100%; overflow:hidden; font-family:'Inter',sans-serif;">
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
-      <div style="position:absolute; left:0; top:0; width:50%; height:100%; background:linear-gradient(to right, rgba(255,247,205,0.02) 0%, transparent 100%);"></div>
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">05 / 20</div>
+      <div style="position:absolute; left:0; top:0; width:50%; height:100%; background:linear-gradient(to right, rgba(255,247,205,0.03) 0%, transparent 100%);"></div>
+      <div style="position:absolute; top:28px; right:48px; font-size:12px; color:rgba(167,159,142,0.4); font-weight:600; letter-spacing:0.15em;">05 / 20</div>
 
-      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+      <div style="position:relative; z-index:10; max-width:1020px; width:100%; padding:0 64px;">
 
-        <p class="s04-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Nuestros Productos</p>
-        <h2 class="s04-title" style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 32px 0; letter-spacing:-0.02em; opacity:0;">Tres soluciones.<br/><span style="color:#FAF0B5;">Un ecosistema.</span></h2>
+        <p class="s04-label" style="font-size:12px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:700; margin:0 0 16px 0; opacity:0;">Nuestros Productos</p>
+        <h2 class="s04-title" style="font-size:46px; font-weight:800; color:#FFF7CD; margin:0 0 36px 0; letter-spacing:-0.02em; opacity:0; line-height:1.1;">Tres soluciones.<br/><span style="color:#FAF0B5;">Un ecosistema.</span></h2>
 
-        <!-- 3 productos: Kanon | Orestes | Deck con fondos oscuros neutros que destacan los logos -->
-        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:16px;">
+        <!-- 3 productos con 3 tonos oscuros incrementándose progresivamente -->
+        <div style="display:grid; grid-template-columns:1fr 1fr 1fr; gap:20px;">
 
-          <!-- Kanon (Logo celeste/azul sobre fondo oscuro puro) -->
-          <div class="s04-card" style="padding:28px 24px; background:#161618; border:1px solid rgba(255,247,205,0.18); position:relative; overflow:hidden; border-radius:3px; opacity:0;">
-            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #FFF7CD, #FAF0B5);"></div>
-            <div style="display:flex; align-items:center; justify-content:center; height:56px; margin-bottom:16px; background:rgba(255,255,255,0.02); border-radius:4px; padding:6px;">
-              <img src="/images/kanon.png" alt="Kanon" style="height:42px; width:auto; object-fit:contain;" />
+          <!-- 1. Kanon (Tono oscuro 1: #141416) -->
+          <div class="s04-card" style="padding:34px 26px; background:#141416; border:1px solid rgba(255,247,205,0.18); position:relative; overflow:hidden; border-radius:4px; opacity:0;">
+            <div class="s04-topline" style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, #FFF7CD, #FAF0B5);"></div>
+            <div class="s04-logo-wrap" style="display:flex; align-items:center; justify-content:center; height:68px; margin-bottom:20px;">
+              <img src="/images/kanon.png" alt="Kanon" style="height:52px; width:auto; object-fit:contain;" />
             </div>
-            <p style="font-size:13px; color:#a79f8e; line-height:1.45; margin:0 0 16px 0;">Control de stock y activos para instituciones educativas.</p>
-            <div style="padding:5px 10px; background:rgba(255,247,205,0.06); display:inline-block; border:1px solid rgba(255,247,205,0.2); border-radius:2px;">
-              <span style="font-size:11px; color:#FFF7CD; font-weight:600;">Colegios · ETP · Stock</span>
-            </div>
-          </div>
-
-          <!-- Orestes (Logo blanco sobre fondo grafito oscuro) -->
-          <div class="s04-card" style="padding:28px 24px; background:#18181a; border:1px solid rgba(255,247,205,0.25); position:relative; overflow:hidden; border-radius:3px; opacity:0;">
-            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #FAF0B5, #FFF7CD);"></div>
-            <div style="display:flex; align-items:center; justify-content:center; height:56px; margin-bottom:16px; background:rgba(255,255,255,0.02); border-radius:4px; padding:6px;">
-              <img src="/images/orestes.svg" alt="Orestes" style="height:38px; width:auto; object-fit:contain;" />
-            </div>
-            <p style="font-size:13px; color:#a79f8e; line-height:1.45; margin:0 0 16px 0;">Gestión de datos y procesos operativos para PyMEs.</p>
-            <div style="padding:5px 10px; background:rgba(255,247,205,0.06); display:inline-block; border:1px solid rgba(255,247,205,0.2); border-radius:2px;">
-              <span style="font-size:11px; color:#FFF7CD; font-weight:600;">React · PostgreSQL</span>
+            <div style="font-size:16px; font-weight:700; color:#FFF7CD; margin-bottom:8px;">Kanon</div>
+            <p style="font-size:14px; color:#a79f8e; line-height:1.4; margin:0 0 18px 0;">Control de stock y activos para instituciones.</p>
+            <div style="padding:6px 12px; background:rgba(255,247,205,0.07); display:inline-block; border:1px solid rgba(255,247,205,0.25); border-radius:3px;">
+              <span style="font-size:11px; color:#FFF7CD; font-weight:700; letter-spacing:0.05em;">Colegios · ETP · Stock</span>
             </div>
           </div>
 
-          <!-- Deck (Logo azul+dorado sobre fondo carbón pulido) -->
-          <div class="s04-card" style="padding:28px 24px; background:#151517; border:1px solid rgba(255,247,205,0.18); position:relative; overflow:hidden; border-radius:3px; opacity:0;">
-            <div style="position:absolute; top:0; left:0; right:0; height:2px; background:linear-gradient(to right, #FFF7CD, #FAF0B5);"></div>
-            <div style="display:flex; align-items:center; justify-content:center; height:56px; margin-bottom:16px; background:rgba(255,255,255,0.02); border-radius:4px; padding:6px;">
-              <img src="/images/deck.svg" alt="Deck" style="height:38px; width:auto; object-fit:contain;" />
+          <!-- 2. Orestes (Tono oscuro 2: #1e1e22) -->
+          <div class="s04-card" style="padding:34px 26px; background:#1e1e22; border:1px solid rgba(255,247,205,0.22); position:relative; overflow:hidden; border-radius:4px; opacity:0;">
+            <div class="s04-topline" style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, #FAF0B5, #FFF7CD);"></div>
+            <div class="s04-logo-wrap" style="display:flex; align-items:center; justify-content:center; height:68px; margin-bottom:20px;">
+              <img src="/images/orestes.svg" alt="Orestes" style="height:46px; width:auto; object-fit:contain;" />
             </div>
-            <p style="font-size:13px; color:#a79f8e; line-height:1.45; margin:0 0 16px 0;">Presentaciones técnicas dinámicas y modulares.</p>
-            <div style="padding:5px 10px; background:rgba(255,247,205,0.06); display:inline-block; border:1px solid rgba(255,247,205,0.2); border-radius:2px;">
-              <span style="font-size:11px; color:#FFF7CD; font-weight:600;">Astro · Reveal.js</span>
+            <div style="font-size:16px; font-weight:700; color:#FFF7CD; margin-bottom:8px;">Orestes</div>
+            <p style="font-size:14px; color:#a79f8e; line-height:1.4; margin:0 0 18px 0;">Gestión operativa de datos para PyMEs.</p>
+            <div style="padding:6px 12px; background:rgba(255,247,205,0.07); display:inline-block; border:1px solid rgba(255,247,205,0.25); border-radius:3px;">
+              <span style="font-size:11px; color:#FFF7CD; font-weight:700; letter-spacing:0.05em;">React · PostgreSQL</span>
+            </div>
+          </div>
+
+          <!-- 3. Deck (Tono oscuro 3: #28282e) -->
+          <div class="s04-card" style="padding:34px 26px; background:#28282e; border:1px solid rgba(255,247,205,0.25); position:relative; overflow:hidden; border-radius:4px; opacity:0;">
+            <div class="s04-topline" style="position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(to right, #FFF7CD, #FAF0B5);"></div>
+            <div class="s04-logo-wrap" style="display:flex; align-items:center; justify-content:center; height:68px; margin-bottom:20px;">
+              <img src="/images/deck.svg" alt="Deck" style="height:48px; width:auto; object-fit:contain;" />
+            </div>
+            <div style="font-size:16px; font-weight:700; color:#FFF7CD; margin-bottom:8px;">Deck</div>
+            <p style="font-size:14px; color:#a79f8e; line-height:1.4; margin:0 0 18px 0;">Presentaciones técnicas modulares en la web.</p>
+            <div style="padding:6px 12px; background:rgba(255,247,205,0.07); display:inline-block; border:1px solid rgba(255,247,205,0.25); border-radius:3px;">
+              <span style="font-size:11px; color:#FFF7CD; font-weight:700; letter-spacing:0.05em;">Astro · Reveal.js</span>
             </div>
           </div>
         </div>
 
-        <p class="s04-footer" style="margin-top:24px; font-size:12px; color:rgba(167,159,142,0.45); font-style:italic; opacity:0; text-align:center;">Software local, modular y sin licencias en moneda extranjera</p>
+        <p class="s04-footer" style="margin-top:28px; font-size:13px; color:rgba(167,159,142,0.5); font-style:italic; opacity:0; text-align:center;">
+          Arquitecturas modernas sin costos en moneda extranjera
+        </p>
       </div>
     </div>
   </div>
@@ -63,9 +69,9 @@
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
   }
   .s04-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(255,247,205,0.55) !important;
-    box-shadow: 0 10px 28px rgba(0,0,0,0.5);
+    transform: translateY(-5px);
+    border-color: rgba(255,247,205,0.6) !important;
+    box-shadow: 0 12px 32px rgba(0,0,0,0.5);
   }
 </style>
 
@@ -73,31 +79,60 @@
   import { animate } from "motion";
 
   const slide = document.getElementById("slide-04");
+  let floatAnims = [];
 
   function runSlide04Animations() {
     if (!slide) return;
+
+    floatAnims.forEach(a => a.stop());
+    floatAnims = [];
 
     const label = slide.querySelector(".s04-label");
     if (label) animate(label, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.4 });
 
     const title = slide.querySelector(".s04-title");
-    if (title) animate(title, { opacity: [0, 1], y: [-10, 0] }, { duration: 0.5, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
+    if (title) animate(title, { opacity: [0, 1], y: [-12, 0] }, { duration: 0.55, delay: 0.1, ease: [0.16, 1, 0.3, 1] });
 
-    // Tarjetas entran con zoom sutil escalonado
+    // Tarjetas entran con zoom y elevación
     const cards = slide.querySelectorAll(".s04-card");
     cards.forEach((card, i) => {
       animate(
         card,
-        { opacity: [0, 1], scale: [0.92, 1], y: [18, 0] },
+        { opacity: [0, 1], scale: [0.92, 1], y: [22, 0] },
         { duration: 0.6, delay: 0.2 + i * 0.14, ease: [0.16, 1, 0.3, 1] }
       );
     });
 
+    // Animación continua de levitación/flotación en los logos (idle floating)
+    const logoWraps = slide.querySelectorAll(".s04-logo-wrap");
+    logoWraps.forEach((wrap, i) => {
+      setTimeout(() => {
+        if (!slide.classList.contains("present") && !slide.closest("section.present")) return;
+        const fl = animate(
+          wrap,
+          { y: [0, -5, 0] },
+          {
+            duration: 3.2,
+            repeat: Infinity,
+            delay: i * 0.4,
+            ease: "easeInOut"
+          }
+        );
+        floatAnims.push(fl);
+      }, 700);
+    });
+
     const footer = slide.querySelector(".s04-footer");
-    if (footer) animate(footer, { opacity: [0, 0.6] }, { duration: 0.5, delay: 0.75 });
+    if (footer) animate(footer, { opacity: [0, 0.7] }, { duration: 0.5, delay: 0.75 });
+  }
+
+  function stopSlide04Animations() {
+    floatAnims.forEach(a => a.stop());
+    floatAnims = [];
   }
 
   slide?.addEventListener("slide:enter", runSlide04Animations);
+  slide?.addEventListener("slide:leave", stopSlide04Animations);
   if (slide?.closest("section.present") || slide?.classList.contains("present")) {
     runSlide04Animations();
   }

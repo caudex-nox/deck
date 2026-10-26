@@ -6,52 +6,52 @@ import { Target, Lightbulb, Globe, Users } from '@lucide/astro';
     <div style="position:relative; width:100%; height:100%; display:flex; align-items:center; justify-content:center;">
 
       <!-- Círculos de luz -->
-      <div style="position:absolute; top:-80px; right:-80px; width:450px; height:450px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.06) 0%, transparent 70%);"></div>
-      <div style="position:absolute; bottom:-120px; left:-40px; width:380px; height:380px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.04) 0%, transparent 70%);"></div>
+      <div style="position:absolute; top:-60px; right:-60px; width:500px; height:500px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.06) 0%, transparent 70%);"></div>
+      <div style="position:absolute; bottom:-100px; left:-30px; width:450px; height:450px; border-radius:50%; background:radial-gradient(circle, rgba(255,247,205,0.04) 0%, transparent 70%);"></div>
 
-      <div style="position:absolute; top:28px; right:48px; font-size:11px; color:rgba(167,159,142,0.3); font-weight:600; letter-spacing:0.15em;">04 / 20</div>
+      <div style="position:absolute; top:28px; right:48px; font-size:12px; color:rgba(167,159,142,0.4); font-weight:600; letter-spacing:0.15em;">04 / 20</div>
 
-      <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
+      <div style="position:relative; z-index:10; max-width:1020px; width:100%; padding:0 64px;">
 
-        <p class="s03-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 24px 0; opacity:0; text-align:center;">Identidad</p>
+        <p class="s03-label" style="font-size:12px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:700; margin:0 0 28px 0; opacity:0; text-align:center;">Identidad</p>
 
-        <!-- Misión / Visión lado a lado con texto breve y centrado -->
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:28px;">
+        <!-- Misión / Visión en tamaño grande -->
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:36px;">
 
           <!-- Misión -->
-          <div id="s03-mision" style="padding:32px 28px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.25); text-align:center; border-radius:3px; opacity:0;">
-            <div style="width:36px; height:3px; background:#FFF7CD; margin:0 auto 16px;"></div>
-            <div style="font-size:22px; color:#FFF7CD; letter-spacing:0.15em; text-transform:uppercase; font-weight:700; margin-bottom:12px;">Misión</div>
-            <p style="font-size:14px; color:#FFF7CD; line-height:1.5; margin:0 0 20px 0; font-weight:400;">
-              Desarrollar soluciones de software innovadoras que resuelvan necesidades reales con alto valor técnico.
+          <div id="s03-mision" class="s03-box" style="padding:40px 32px; background:rgba(255,247,205,0.05); border:1px solid rgba(255,247,205,0.25); text-align:center; border-radius:4px; opacity:0;">
+            <div style="width:48px; height:3px; background:#FFF7CD; margin:0 auto 20px; border-radius:2px;"></div>
+            <div style="font-size:26px; color:#FFF7CD; letter-spacing:0.15em; text-transform:uppercase; font-weight:800; margin-bottom:14px;">Misión</div>
+            <p style="font-size:16px; color:#FFF7CD; line-height:1.55; margin:0 0 24px 0; font-weight:400; max-width:400px; margin-left:auto; margin-right:auto;">
+              Software a medida de alto valor técnico para problemáticas reales.
             </p>
-            <!-- Iconos misión centrados -->
-            <div style="display:flex; justify-content:center; gap:12px;">
-              <div class="s03-icon-chip" title="Soluciones a medida"><Target size={18} stroke-width={1.8} /></div>
-              <div class="s03-icon-chip" title="Tecnología de valor"><Lightbulb size={18} stroke-width={1.8} /></div>
+            <!-- Iconos misión centrados y ampliados -->
+            <div style="display:flex; justify-content:center; gap:16px;">
+              <div class="s03-icon-chip" title="Soluciones precisas"><Target size={22} stroke-width={2} /></div>
+              <div class="s03-icon-chip" title="Tecnología de valor"><Lightbulb size={22} stroke-width={2} /></div>
             </div>
           </div>
 
           <!-- Visión -->
-          <div id="s03-vision" style="padding:32px 28px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.18); text-align:center; border-radius:3px; opacity:0;">
-            <div style="width:36px; height:3px; background:rgba(255,247,205,0.4); margin:0 auto 16px;"></div>
-            <div style="font-size:22px; color:#FAF0B5; letter-spacing:0.15em; text-transform:uppercase; font-weight:700; margin-bottom:12px;">Visión</div>
-            <p style="font-size:14px; color:#a79f8e; line-height:1.5; margin:0 0 20px 0; font-weight:400;">
-              Ser referentes del software argentino y aliados estratégicos en la digitalización de PyMEs e instituciones.
+          <div id="s03-vision" class="s03-box" style="padding:40px 32px; background:rgba(255,255,255,0.025); border:1px solid rgba(255,247,205,0.18); text-align:center; border-radius:4px; opacity:0;">
+            <div style="width:48px; height:3px; background:rgba(255,247,205,0.5); margin:0 auto 20px; border-radius:2px;"></div>
+            <div style="font-size:26px; color:#FAF0B5; letter-spacing:0.15em; text-transform:uppercase; font-weight:800; margin-bottom:14px;">Visión</div>
+            <p style="font-size:16px; color:#a79f8e; line-height:1.55; margin:0 0 24px 0; font-weight:400; max-width:400px; margin-left:auto; margin-right:auto;">
+              Referentes del software nacional y aliados en la transformación digital.
             </p>
-            <!-- Iconos visión centrados -->
-            <div style="display:flex; justify-content:center; gap:12px;">
-              <div class="s03-icon-chip" title="Alcance nacional"><Globe size={18} stroke-width={1.8} /></div>
-              <div class="s03-icon-chip" title="Alianzas estratégicas"><Users size={18} stroke-width={1.8} /></div>
+            <!-- Iconos visión centrados y ampliados -->
+            <div style="display:flex; justify-content:center; gap:16px;">
+              <div class="s03-icon-chip" title="Alcance nacional"><Globe size={22} stroke-width={2} /></div>
+              <div class="s03-icon-chip" title="Alianzas estratégicas"><Users size={22} stroke-width={2} /></div>
             </div>
           </div>
         </div>
 
-        <!-- Stack tecnológico centrado -->
-        <div id="s03-stack" style="display:flex; align-items:center; justify-content:center; gap:10px; flex-wrap:wrap; opacity:0;">
-          <span style="font-size:11px; color:rgba(167,159,142,0.4); letter-spacing:0.15em; text-transform:uppercase; margin-right:4px;">Stack:</span>
+        <!-- Stack tecnológico centrado con badges más grandes -->
+        <div id="s03-stack" style="display:flex; align-items:center; justify-content:center; gap:12px; flex-wrap:wrap; opacity:0;">
+          <span style="font-size:12px; color:rgba(167,159,142,0.5); letter-spacing:0.2em; text-transform:uppercase; margin-right:6px; font-weight:600;">Stack:</span>
           {["React", "Node.js", "Astro", "PostgreSQL", "Prisma", "TypeScript", "C/C++"].map(tech => (
-            <span style="padding:4px 10px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.15); font-size:11px; color:#a79f8e; font-family:'JetBrains Mono', monospace; border-radius:2px;">{tech}</span>
+            <span class="s03-tech-badge" style="padding:6px 14px; background:rgba(255,255,255,0.035); border:1px solid rgba(255,247,205,0.18); font-size:13px; color:#FFF7CD; font-family:'JetBrains Mono', monospace; border-radius:3px;">{tech}</span>
           ))}
         </div>
       </div>
@@ -60,22 +60,39 @@ import { Target, Lightbulb, Globe, Users } from '@lucide/astro';
 </section>
 
 <style>
+  .s03-box {
+    transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  }
+  .s03-box:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 247, 205, 0.45);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
   .s03-icon-chip {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 4px;
-    background: rgba(255, 247, 205, 0.07);
-    border: 1px solid rgba(255, 247, 205, 0.22);
+    width: 46px;
+    height: 46px;
+    border-radius: 6px;
+    background: rgba(255, 247, 205, 0.08);
+    border: 1px solid rgba(255, 247, 205, 0.25);
     color: #FFF7CD;
-    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   }
   .s03-icon-chip:hover {
+    transform: translateY(-2px) scale(1.08);
+    background: rgba(255, 247, 205, 0.2);
+    border-color: #FFF7CD;
+    box-shadow: 0 0 16px rgba(255, 247, 205, 0.35);
+  }
+  .s03-tech-badge {
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+  }
+  .s03-tech-badge:hover {
     transform: translateY(-2px);
-    background: rgba(255, 247, 205, 0.16);
-    box-shadow: 0 4px 12px rgba(255, 247, 205, 0.18);
+    border-color: rgba(255, 247, 205, 0.5);
+    background: rgba(255, 247, 205, 0.1);
   }
 </style>
 
@@ -83,38 +100,73 @@ import { Target, Lightbulb, Globe, Users } from '@lucide/astro';
   import { animate } from "motion";
 
   const slide = document.getElementById("slide-03");
+  let idleGlows = [];
 
   function runSlide03Animations() {
     if (!slide) return;
 
+    // Limpiar anteriores
+    idleGlows.forEach(a => a.stop());
+    idleGlows = [];
+
     // Label
     const label = slide.querySelector(".s03-label");
-    if (label) animate(label, { opacity: [0, 1], y: [-8, 0] }, { duration: 0.4, ease: "easeOut" });
+    if (label) animate(label, { opacity: [0, 1], y: [-10, 0] }, { duration: 0.4, ease: "easeOut" });
 
     // Misión — entra desde la izquierda
     const mision = slide.querySelector("#s03-mision");
-    if (mision) animate(mision, { opacity: [0, 1], x: [-35, 0] }, { duration: 0.65, delay: 0.15, ease: [0.16, 1, 0.3, 1] });
+    if (mision) animate(mision, { opacity: [0, 1], x: [-40, 0] }, { duration: 0.65, delay: 0.15, ease: [0.16, 1, 0.3, 1] });
 
     // Visión — entra desde la derecha
     const vision = slide.querySelector("#s03-vision");
-    if (vision) animate(vision, { opacity: [0, 1], x: [35, 0] }, { duration: 0.65, delay: 0.25, ease: [0.16, 1, 0.3, 1] });
+    if (vision) animate(vision, { opacity: [0, 1], x: [40, 0] }, { duration: 0.65, delay: 0.25, ease: [0.16, 1, 0.3, 1] });
 
     // Stack — fade desde abajo
     const stack = slide.querySelector("#s03-stack");
-    if (stack) animate(stack, { opacity: [0, 1], y: [12, 0] }, { duration: 0.5, delay: 0.5, ease: "easeOut" });
+    if (stack) animate(stack, { opacity: [0, 1], y: [14, 0] }, { duration: 0.5, delay: 0.45, ease: "easeOut" });
 
     // Iconos — bounce-in escalonado centrado
     const chips = slide.querySelectorAll(".s03-icon-chip");
     chips.forEach((chip, i) => {
       animate(
         chip,
-        { scale: [0, 1.15, 1], opacity: [0, 1] },
-        { duration: 0.4, delay: 0.6 + i * 0.08, ease: [0.34, 1.56, 0.64, 1] }
-      );
+        { scale: [0, 1.2, 1], opacity: [0, 1] },
+        { duration: 0.45, delay: 0.55 + i * 0.08, ease: [0.34, 1.56, 0.64, 1] }
+      ).then(() => {
+        // Animación continua de respiración luminosa (idle glow)
+        const glow = animate(
+          chip,
+          {
+            boxShadow: [
+              "0 0 0px transparent",
+              "0 0 14px rgba(255, 247, 205, 0.35)",
+              "0 0 0px transparent"
+            ],
+            borderColor: [
+              "rgba(255, 247, 205, 0.25)",
+              "rgba(255, 247, 205, 0.65)",
+              "rgba(255, 247, 205, 0.25)"
+            ]
+          },
+          {
+            duration: 2.8,
+            delay: i * 0.3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }
+        );
+        idleGlows.push(glow);
+      });
     });
   }
 
+  function stopSlide03Animations() {
+    idleGlows.forEach(a => a.stop());
+    idleGlows = [];
+  }
+
   slide?.addEventListener("slide:enter", runSlide03Animations);
+  slide?.addEventListener("slide:leave", stopSlide03Animations);
   if (slide?.closest("section.present") || slide?.classList.contains("present")) {
     runSlide03Animations();
   }
