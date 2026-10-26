@@ -13,6 +13,7 @@
         <p class="sorg-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Recursos Humanos · Estructura</p>
         <h2 class="sorg-title" style="font-size:42px; font-weight:800; color:#FFF7CD; margin:0 0 28px 0; letter-spacing:-0.02em; opacity:0;">Organigrama <span style="color:#FAF0B5;">funcional</span></h2>
 
+        <div class="sorg-structure">
         <!-- Nodo raíz -->
         <div style="display:flex; flex-direction:column; align-items:center;">
           <div class="sorg-node sorg-root" style="opacity:0; padding:12px 28px; background:rgba(255,247,205,0.1); border:1px solid rgba(255,247,205,0.45); text-align:center;">
@@ -44,6 +45,16 @@
               <div class="sorg-dept">RR. HH.</div><div class="sorg-role">Talento y cultura</div>
             </div>
           </div>
+
+          <svg class="sorg-connections" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+            <path class="sorg-dotted" d="M50 20 V36" />
+            <path class="sorg-dotted" d="M12.5 36 H87.5" />
+            <path class="sorg-dotted" d="M12.5 36 V45 M37.5 36 V45 M62.5 36 V45 M87.5 36 V45" />
+            <path class="sorg-dotted" d="M50 58 V68" />
+            <path class="sorg-dotted" d="M25 68 H75" />
+            <path class="sorg-dotted" d="M25 68 V76 M50 68 V76 M75 68 V76" />
+          </svg>
+          </div>
         </div>
 
         <!-- Nota legal -->
@@ -71,8 +82,43 @@
     row-gap: 22px !important;
     margin-top: 32px;
   }
+  .sorg-structure {
+    position: relative;
+    width: 100%;
+  }
+  .sorg-connections {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .sorg-dotted {
+    fill: none;
+    stroke: rgba(255,247,205,0.48);
+    stroke-width: 0.45;
+    stroke-linecap: round;
+    stroke-dasharray: 0.8 2.2;
+    stroke-dashoffset: 0;
+    vector-effect: non-scaling-stroke;
+    filter: drop-shadow(0 0 2px rgba(255,247,205,0.35));
+    animation: sorg-dots-flow 2.8s linear infinite;
+  }
+  .sorg-dotted:nth-child(2) { animation-delay: 0.18s; }
+  .sorg-dotted:nth-child(3) { animation-delay: 0.36s; }
+  .sorg-dotted:nth-child(4) { animation-delay: 0.54s; }
+  .sorg-dotted:nth-child(5) { animation-delay: 0.72s; }
+  .sorg-dotted:nth-child(6) { animation-delay: 0.9s; }
+  @keyframes sorg-dots-flow {
+    from { stroke-dashoffset: 0; opacity: 0.35; }
+    45% { opacity: 0.85; }
+    to { stroke-dashoffset: -6; opacity: 0.35; }
+  }
   .sorg-branch {
     position: relative;
+    z-index: 1;
   }
   .sorg-top:nth-child(1) { grid-column: 1 / span 3; }
   .sorg-top:nth-child(2) { grid-column: 4 / span 3; }
