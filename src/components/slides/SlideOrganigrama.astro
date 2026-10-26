@@ -20,30 +20,27 @@
             <div style="font-size:17px; font-weight:700; color:#FFF7CD;">Mesa Co-Fundadora</div>
           </div>
 
-          <!-- Conector -->
-          <div class="sorg-connector" style="width:1px; height:20px; background:rgba(255,247,205,0.25); opacity:0;"></div>
-
           <!-- Siete áreas funcionales, resumidas por su función principal -->
-          <div class="sorg-departments" style="display:grid; grid-template-columns:repeat(4, 1fr); gap:10px; width:100%;">
-            <div class="sorg-node sorg-branch" style="opacity:0; padding:12px 10px; background:rgba(74,144,217,0.08); border:1px solid rgba(74,144,217,0.25); text-align:center;">
+          <div class="sorg-departments" style="display:grid; grid-template-columns:repeat(12, 1fr); column-gap:10px; row-gap:22px; width:100%;">
+            <div class="sorg-node sorg-branch sorg-top" style="opacity:0; padding:12px 10px; background:rgba(74,144,217,0.08); border:1px solid rgba(74,144,217,0.25); text-align:center;">
               <div class="sorg-dept">INGENIERÍA</div><div class="sorg-role">Desarrollo y QA</div>
             </div>
-            <div class="sorg-node sorg-branch" style="opacity:0; padding:12px 10px; background:rgba(255,247,205,0.07); border:1px solid rgba(255,247,205,0.2); text-align:center;">
+            <div class="sorg-node sorg-branch sorg-top" style="opacity:0; padding:12px 10px; background:rgba(255,247,205,0.07); border:1px solid rgba(255,247,205,0.2); text-align:center;">
               <div class="sorg-dept">PRODUCTO · PMO</div><div class="sorg-role">Visión y proyectos</div>
             </div>
-            <div class="sorg-node sorg-branch" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.035); border:1px solid rgba(255,247,205,0.16); text-align:center;">
+            <div class="sorg-node sorg-branch sorg-top" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.035); border:1px solid rgba(255,247,205,0.16); text-align:center;">
               <div class="sorg-dept">DEVOPS</div><div class="sorg-role">Cloud y seguridad</div>
             </div>
-            <div class="sorg-node sorg-branch" style="opacity:0; padding:12px 10px; background:rgba(255,200,100,0.06); border:1px solid rgba(255,200,100,0.18); text-align:center;">
+            <div class="sorg-node sorg-branch sorg-top" style="opacity:0; padding:12px 10px; background:rgba(255,200,100,0.06); border:1px solid rgba(255,200,100,0.18); text-align:center;">
               <div class="sorg-dept">VENTAS</div><div class="sorg-role">Clientes B2B</div>
             </div>
-            <div class="sorg-node sorg-branch" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.14); text-align:center;">
+            <div class="sorg-node sorg-branch sorg-bottom" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.14); text-align:center;">
               <div class="sorg-dept">MARKETING</div><div class="sorg-role">Marca y comunidad</div>
             </div>
-            <div class="sorg-node sorg-branch" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.025); border:1px solid rgba(255,247,205,0.12); text-align:center;">
+            <div class="sorg-node sorg-branch sorg-bottom" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.025); border:1px solid rgba(255,247,205,0.12); text-align:center;">
               <div class="sorg-dept">ADMINISTRACIÓN</div><div class="sorg-role">Finanzas y legal</div>
             </div>
-            <div class="sorg-node sorg-branch" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); text-align:center;">
+            <div class="sorg-node sorg-branch sorg-bottom" style="opacity:0; padding:12px 10px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.1); text-align:center;">
               <div class="sorg-dept">RR. HH.</div><div class="sorg-role">Talento y cultura</div>
             </div>
           </div>
@@ -67,6 +64,23 @@
     border-color: rgba(255,247,205,0.5) !important;
     background: rgba(255,247,205,0.1) !important;
   }
+  .sorg-departments {
+    position: relative;
+    grid-template-columns: repeat(12, 1fr) !important;
+    column-gap: 10px !important;
+    row-gap: 22px !important;
+    margin-top: 32px;
+  }
+  .sorg-branch {
+    position: relative;
+  }
+  .sorg-top:nth-child(1) { grid-column: 1 / span 3; }
+  .sorg-top:nth-child(2) { grid-column: 4 / span 3; }
+  .sorg-top:nth-child(3) { grid-column: 7 / span 3; }
+  .sorg-top:nth-child(4) { grid-column: 10 / span 3; }
+  .sorg-bottom:nth-child(5) { grid-column: 2 / span 3; }
+  .sorg-bottom:nth-child(6) { grid-column: 5 / span 3; }
+  .sorg-bottom:nth-child(7) { grid-column: 8 / span 3; }
   .sorg-dept {
     font-size:10px;
     color:#FFF7CD;
