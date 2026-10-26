@@ -17,12 +17,12 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
       <div style="position:relative; z-index:10; max-width:960px; width:100%; padding:0 64px;">
 
         <p class="s11-label" style="font-size:11px; color:#FFF7CD; letter-spacing:0.25em; text-transform:uppercase; font-weight:600; margin:0 0 14px 0; opacity:0;">Propuesta de Valor</p>
-        <h2 class="s11-title" style="font-size:48px; font-weight:800; color:#FFF7CD; margin:0 0 24px 0; line-height:1.1; letter-spacing:-0.02em; max-width:520px; opacity:0;">¿Por qué elegir<br/><span style="color:#FAF0B5;">Caudex<span class="s11-question">?</span></span></h2>
+        <h2 class="s11-title" style="font-size:48px; font-weight:800; color:#FFF7CD; margin:0 0 24px 0; line-height:1.1; letter-spacing:-0.02em; max-width:520px; opacity:0;"><span class="s11-question-open">¿</span>Por qué elegir<br/><span style="color:#FAF0B5;">Caudex<span class="s11-question-close">?</span></span></h2>
 
         <div style="display:flex; flex-direction:column; gap:11px; max-width:540px;">
 
           <div class="s11-item" style="display:flex; gap:16px; align-items:center; padding:13px 16px; background:rgba(255,247,205,0.06); border:1px solid rgba(255,247,205,0.25); border-radius:3px; opacity:0;">
-            <div style="color:#FFF7CD; flex-shrink:0;"><DollarSign size={18} stroke-width={2} /></div>
+            <div class="s11-icon" style="color:#FFF7CD; flex-shrink:0;"><DollarSign size={18} stroke-width={2} /></div>
             <div>
               <div style="font-size:14px; font-weight:700; color:#FFF7CD; margin-bottom:2px;">Sin licencias en dólares</div>
               <div style="font-size:14px; color:#a79f8e;">Pesos · costo-beneficio</div>
@@ -30,7 +30,7 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
           </div>
 
           <div class="s11-item" style="display:flex; gap:16px; align-items:center; padding:13px 16px; background:rgba(255,255,255,0.03); border:1px solid rgba(255,247,205,0.18); border-radius:3px; opacity:0;">
-            <div style="color:#FFF7CD; flex-shrink:0;"><Play size={18} stroke-width={2} /></div>
+            <div class="s11-icon" style="color:#FFF7CD; flex-shrink:0;"><Play size={18} stroke-width={2} /></div>
             <div>
               <div style="font-size:14px; font-weight:700; color:#FFF7CD; margin-bottom:2px;">Piloto bonificado 30 días</div>
               <div style="font-size:14px; color:#a79f8e;">Probalo sin riesgo</div>
@@ -38,7 +38,7 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
           </div>
 
           <div class="s11-item" style="display:flex; gap:16px; align-items:center; padding:13px 16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.12); border-radius:3px; opacity:0;">
-            <div style="color:#FFF7CD; flex-shrink:0;"><Layers size={18} stroke-width={2} /></div>
+            <div class="s11-icon" style="color:#FFF7CD; flex-shrink:0;"><Layers size={18} stroke-width={2} /></div>
             <div>
               <div style="font-size:14px; font-weight:700; color:#FFF7CD; margin-bottom:2px;">Arquitectura escalable</div>
               <div style="font-size:14px; color:#a79f8e;">Modular · disponible 24/7</div>
@@ -46,7 +46,7 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
           </div>
 
           <div class="s11-item" style="display:flex; gap:16px; align-items:center; padding:13px 16px; background:rgba(255,255,255,0.02); border:1px solid rgba(255,247,205,0.08); border-radius:3px; opacity:0;">
-            <div style="color:#FFF7CD; flex-shrink:0;"><Users size={18} stroke-width={2} /></div>
+            <div class="s11-icon" style="color:#FFF7CD; flex-shrink:0;"><Users size={18} stroke-width={2} /></div>
             <div>
               <div style="font-size:14px; font-weight:700; color:#FFF7CD; margin-bottom:2px;">Equipo técnico directo</div>
               <div style="font-size:14px; color:#a79f8e;">Cercanía técnica directa</div>
@@ -67,9 +67,15 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
     border-color: rgba(255,247,205,0.5);
     background: rgba(255,247,205,0.1);
   }
-  .s11-question {
+  .s11-question-open,
+  .s11-question-close {
     display: inline-block;
     transform-origin: center bottom;
+  }
+  .s11-icon {
+    display: flex;
+    transform-origin: center;
+    will-change: transform, filter;
   }
 </style>
 
@@ -99,12 +105,41 @@ import { DollarSign, Play, Layers, Users } from '@lucide/astro';
       animate(item, { borderColor: ["rgba(255,247,205,0.25)", "rgba(255,247,205,0.48)", "rgba(255,247,205,0.25)"] }, { duration: 3.5, delay: 1.2 + i * 0.25, repeat: Infinity, ease: "easeInOut" });
     });
 
-    const question = slide.querySelector(".s11-question");
-    if (question) {
+    const icons = slide.querySelectorAll(".s11-icon");
+    icons.forEach((icon, i) => {
       animate(
-        question,
-        { y: [0, 18, 30, 8, 0], x: [0, 2, 5, -2, 0], rotate: [0, 10, 22, -5, 0], scale: [1, 1.08, 0.92, 1.04, 1] },
-        { duration: 1.45, delay: 4.8, repeat: Infinity, repeatDelay: 10.5, ease: [0.22, 1, 0.36, 1] }
+        icon,
+        {
+          rotate: [0, -7, 6, -3, 0],
+          x: [0, -1, 2, -1, 0],
+          scale: [1, 1.08, 1.04, 1.06, 1],
+          filter: [
+            "drop-shadow(0 0 0 rgba(255,247,205,0))",
+            "drop-shadow(0 0 7px rgba(255,247,205,0.55))",
+            "drop-shadow(0 0 0 rgba(255,247,205,0))"
+          ]
+        },
+        { duration: 0.7, delay: 2.2 + i * 0.85, repeat: Infinity, repeatDelay: 5.2, ease: "easeInOut" }
+      );
+    });
+
+    const questionOpen = slide.querySelector(".s11-question-open");
+    const questionClose = slide.querySelector(".s11-question-close");
+    if (questionOpen && questionClose) {
+      animate(
+        questionOpen,
+        { y: [0, 3, 0], x: [0, -1, 0], rotate: [0, -8, 0] },
+        { duration: 1.2, delay: 4.8, repeat: Infinity, repeatDelay: 8.8, ease: "easeInOut" }
+      );
+      animate(
+        questionClose,
+        { y: [0, 5, 0], x: [0, 1, 0], rotate: [0, 11, 0] },
+        { duration: 1.35, delay: 5.05, repeat: Infinity, repeatDelay: 8.65, ease: "easeInOut" }
+      );
+      animate(
+        title,
+        { y: [0, 5, 0], rotate: [0, -0.35, 0] },
+        { duration: 1.35, delay: 4.9, repeat: Infinity, repeatDelay: 8.8, ease: "easeInOut" }
       );
     }
   }
